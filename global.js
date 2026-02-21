@@ -90,4 +90,280 @@ const translations = {
     }
 };
 
-// ... (Keep the rest of your DOMContentLoaded event listeners and animations exactly as they were) ...
+document.addEventListener('DOMContentLoaded', () => {
+    // ============================================
+    // 1. LANGUAGE TOGGLE WITH ACCESSIBILITY
+    // ============================================
+    let currentLang = localStorage.getItem('preferredLang') || 'en';
+    const navContainer = document.querySelector('.nav-container');
+    
+    const langBtn = document.createElement('button');
+    langBtn.id = 'lang-toggle';
+    langBtn.setAttribute('data-i18n', 'lang_btn');
+    langBtn.setAttribute('aria-label', 'Toggle language between English and Spanish');
+    langBtn.setAttribute('role', 'button');
+    navContainer.appendChild(langBtn);
+
+    const updateContent = (lang) => {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+        document.documentElement.lang = lang;
+        localStorage.setItem('preferredLang', lang);
+        
+        const ariaText = lang === 'en' ? 
+            'Switch to Spanish - Cambiar a Español' : 
+            'Switch to English - Cambiar a Inglés';
+        langBtn.setAttribute('aria-label', ariaText);
+    };
+
+    langBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        updateContent(currentLang);
+    });
+
+    updateContent(currentLang);
+
+    // ============================================
+    // 2. CUSTOM CURSOR - "NOTARY SEAL" EFFECT
+    // ============================================
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    let cursor;
+    
+    if (!isMobile) {
+        cursor = document.createElement('div');
+        cursor.id = 'custom-cursor';
+        document.body.appendChild(cursor);
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        const animateCursor = () => {
+            const ease = 0.15;
+            cursorX += (mouseX - cursorX) * ease;
+            cursorY += (mouseY - cursorY) * ease;
+            
+            cursor.style.left = `${cursorX - 20}px`;
+            cursor.style.top = `${cursorY - 20}px`;
+            
+            requestAnimationFrame(animateCursor);
+        };
+        animateCursor();
+
+        document.addEventListener('mousedown', () => {
+            cursor.classList.add('click');
+        });
+
+        document.addEventListener('mouseup', () => {
+            cursor.classList.remove('click');
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+        });
+    }
+
+    // ============================================
+    // 3. SCROLL REVEAL ENGINE - INTERSECTION OBSERVER
+    // ============================================
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('reveal');
+                }, index * 100); 
+                revealOnScroll.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.card').forEach(card => {
+        revealOnScroll.observe(card);
+    });
+
+    // ============================================
+    // 4. MICRO-INTERACTIONS - ENHANCED HOVER STATES
+    // ============================================
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            card.style.transform = `
+                translate(-8px, -8px) 
+                perspective(1000px) 
+                rotateX(${rotateX}deg) 
+                rotateY(${rotateY}deg)
+            `;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+    document.querySelectorAll('.btn, .btn-primary, .btn-nav').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                pointer-events: none;
+                animation: ripple-effect 0.6s ease-out;
+            `;
+            
+            this.style.position = 'relative';
+            this.style.overflow = 'hidden';
+            this.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes ripple-effect {
+            from {
+                transform: scale(0);
+                opacity: 1;
+            }
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // ============================================
+    // 5. SMOOTH SCROLL FOR ANCHOR LINKS
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ============================================
+    // 6. PARALLAX EFFECT ON HERO
+    // ============================================
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * 0.3;
+            hero.style.transform = `translateY(${rate}px)`;
+        });
+    }
+
+    // ============================================
+    // 7. DYNAMIC FOOTER YEAR
+    // ============================================
+    const yearDisplay = document.getElementById('year');
+    if (yearDisplay) {
+        yearDisplay.textContent = new Date().getFullYear();
+    }
+
+    // ============================================
+    // 8. LOADING PERFORMANCE OPTIMIZATION
+    // ============================================
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    images.forEach(img => imageObserver.observe(img));
+
+    // ============================================
+    // 9. MOBILE NAVIGATION TOGGLE
+    // ============================================
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            mobileToggle.setAttribute(
+                'aria-expanded', 
+                navLinks.style.display === 'flex' ? 'true' : 'false'
+            );
+        });
+    }
+
+    // ============================================
+    // 10. WCAG COMPLIANCE - REDUCED MOTION
+    // ============================================
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    
+    if (prefersReducedMotion.matches) {
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.transition = 'none';
+            card.classList.add('reveal'); 
+        });
+        
+        if (cursor) {
+            cursor.style.display = 'none';
+        }
+    }
+
+    // ============================================
+    // 11. CONSOLE BRANDING
+    // ============================================
+    console.log(
+        '%c🟠 SERVICIOS QUINTANA LLC %c\n' +
+        'Built with ❤️ by David Quintana Dev\n' +
+        'davidquintana.dev',
+        'font-size: 20px; font-weight: bold; color: #f97316; text-shadow: 2px 2px 0px #0f172a;',
+        'font-size: 12px; color: #0f172a;'
+    );
+});
