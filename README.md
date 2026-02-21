@@ -1,76 +1,54 @@
-# Servicios Quintana LLC
+Servicios Quintana LLC
+Trusted. Mobile. Bilingual. Servicios Quintana LLC is a Colorado-based professional services entity operating at the intersection of document authentication, government navigation, and digital strategy. We bridge the gap between community needs and regulatory compliance through our specialized brands.
 
-**Trusted. Mobile. Bilingual.** Servicios Quintana LLC is a Colorado-based professional services entity operating at the intersection of legal access, government navigation, and digital strategy. We bridge the gap between community needs and regulatory compliance through our specialized brands.
-
----
-
-## 🏛️ Our Brands
-
-### [Ayuda DMV](https://www.google.com/search?q=https://ayudadmv.com)
-
-**Administrative Support & Documentation**
+🏛️ Our Brands
+Ayuda DMV
+Administrative Support & Documentation
 Specialized assistance for Spanish speakers navigating Colorado DMV requirements. We simplify bureaucracy for the community through expert document preparation and logistics.
 
-* 
-**Core Services:** Title transfers, registration, license applications, and VIN verifications.
+Core Services: Title transfers, registration, license applications, and VIN verifications.
 
+Compliance: Certified translations designed to meet the strict submission requirements of USCIS and the State of Colorado.
 
-* 
-**Compliance:** Certified translations accepted by USCIS and the State of Colorado.
-
-
-
-### Quintana Notary & Signing
-
-**Mobile Legal Services**
+Quintana Notary & Signing
+Mobile Document Authentication
 Professional, mobile, and bilingual notary services for real estate closures, affidavits, and powers of attorney. We bring the office to your door across the Denver Metro area.
 
-* **Compliance:** All acts strictly adhere to C.R.S. Title 24, Article 21 with state-mandated fee caps.
+Compliance: All acts strictly adhere to C.R.S. Title 24, Article 21 with state-mandated fee caps.
 
-
-
-### David Quintana Dev
-
-**Digital Strategy & Web Development**
+David Quintana Dev
+Digital Strategy & Web Development
 High-performance web architecture for local businesses, specializing in bilingual accessibility and custom programming.
 
-* **Portfolio Highlight:** Digital strategy and development for *Tienda SalvaDoreña*.
+Portfolio Highlight: Digital strategy and development for Tienda SalvaDoreña.
 
----
+⚖️ Statutory Disclosures & Compliance
+Non-Attorney Disclosure
 
-## ⚖️ Legal Disclosures & Compliance
+English: Important Notice: Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in the State of Colorado. We may not give legal advice or accept fees for legal advice. We provide administrative, translation, and notary public services only.
 
-### Non-Attorney Disclosure
+Español: Aviso Importante: Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No podemos dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrecemos servicios administrativos, de traducción y de notario público.
 
-**English:** I am not an attorney licensed to practice law in the State of Colorado and I may not give legal advice or accept fees for legal advice.
-**Español:** No soy un abogado licenciado para ejercer el derecho en el Estado de Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal.
+Entity Information
 
-### Entity Information
+Entity Structure: Servicios Quintana LLC is a registered entity in the State of Colorado.
 
-* **Legal Entity:** Servicios Quintana LLC is a registered entity in the State of Colorado.
-* **Trade Names:** "Ayuda DMV" and "Quintana Notary & Signing" are registered trade names (DBAs) of Servicios Quintana LLC.
-* 
-**Affiliation:** We are an independent support service and are **not affiliated** with the Colorado DMV, USCIS, or any other government agency.
+Trade Names: "Ayuda DMV", "David Quintana Dev", and "Quintana Notary & Signing" are registered trade names (DBAs) of Servicios Quintana LLC.
 
+Affiliation: We are an independent support service and are not affiliated with the Colorado DMV, USCIS, or any other government agency.
 
-
----
-
-## 🛠️ Technology Stack
-
+🛠️ Technology Stack
 The projects in this repository utilize:
 
-* **Frontend:** HTML5, CSS3, Vanilla JavaScript (Language Manager Version 6.3).
-* **Features:** Dynamic bilingual translation, mobile-responsive menus, and automated SEO metadata management.
+Frontend: HTML5, CSS3, Vanilla JavaScript (Language Manager Version 6.3).
 
----
+Features: Dynamic bilingual translation, mobile-responsive menus, and automated SEO metadata management.
 
-## 📬 Contact
+📬 Contact
+Phone: (303) 500-4122
 
-* **Phone:** (303) 500-4122
-* **Email:** placasfirmas.david@gmail.com
-* **Headquarters:** 5128 E Colfax Ave, Denver, CO 80220
+Email: placasfirmas.david@gmail.com
 
----
+Headquarters: 5128 E Colfax Ave, Denver, CO 80220
 
-*© 2025 Servicios Quintana LLC. All Rights Reserved.*
+© 2026 Servicios Quintana LLC. All Rights Reserved.
