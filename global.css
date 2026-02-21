@@ -597,4 +597,32 @@ address {
     #custom-cursor {
         display: none;
     }
+
+}
+
+/* ============================================
+   STATUTORY NOTARY DISCLAIMER (C.R.S. 24-21-525)
+   ============================================ */
+.statutory-disclaimer {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--orange);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: left;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(248, 250, 252, 0.9);
+}
+
+.statutory-disclaimer p {
+    margin-bottom: 1rem;
+}
+
+.statutory-disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+.statutory-disclaimer strong {
+    color: var(--gold);
+    font-weight: 800;
 }
