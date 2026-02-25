@@ -138,14 +138,17 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.id = 'custom-cursor';
         document.body.appendChild(cursor);
 
-        let mouseX = 0;
-        let mouseY = 0;
-        let cursorX = 0;
-        let cursorY = 0;
+        // Start off-screen to avoid the cursor flashing in the top left corner
+        let mouseX = -100;
+        let mouseY = -100;
+        let cursorX = -100;
+        let cursorY = -100;
 
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
+            // Ensure the cursor is visible once the mouse moves
+            cursor.style.opacity = '1'; 
         });
 
         const animateCursor = () => {
@@ -166,14 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.addEventListener('mouseup', () => {
             cursor.classList.remove('click');
-        });
-
-        document.addEventListener('mouseleave', () => {
-            cursor.style.opacity = '0';
-        });
-
-        document.addEventListener('mouseenter', () => {
-            cursor.style.opacity = '1';
         });
     }
 
