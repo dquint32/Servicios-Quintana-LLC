@@ -26,7 +26,8 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--navy);
     line-height: 1.5;
-    cursor: none;
+    /* Reverted to default so the native cursor is always visible alongside the custom one */
+    cursor: auto; 
     overflow-x: hidden;
 }
 
@@ -37,10 +38,14 @@ body {
     border: 3px solid var(--orange);
     border-radius: 50%;
     position: fixed;
+    top: 0;
+    left: 0;
     pointer-events: none;
     z-index: 9999;
-    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
-    mix-blend-mode: difference;
+    opacity: 0; /* Starts hidden until mouse moves */
+    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, opacity 0.3s ease;
+    /* Removed mix-blend-mode to prevent the cursor from turning invisible on contrasting backgrounds */
+    background-color: rgba(249, 115, 22, 0.1); /* Adds a very slight fill to keep it visible over text */
 }
 
 #custom-cursor.click {
