@@ -703,3 +703,76 @@ address {
         height: 52px;
     }
 }
+
+/* ============================================
+   LOGO INTEGRATION — ADD TO BOTTOM OF global.css
+   ============================================ */
+
+/* ----- HERO WATERMARK ----- */
+/* The hero needs position:relative (already set in global.css) */
+.hero {
+    overflow: hidden; /* keep watermark clipped inside */
+}
+
+/* Giant SQ watermark positioned right-side of hero */
+.hero-watermark {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%);
+    width: min(700px, 85vw);   /* huge but never overflows on small screens */
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    /* mix-blend-mode:multiply drops the black background,
+       leaving only the teal/orange SQ shapes showing through */
+    mix-blend-mode: multiply;
+    opacity: 0.13;             /* subtle ghost — visible but text stays readable */
+    z-index: 0;
+}
+
+/* Make sure hero text sits above the watermark */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ----- FOOTER LOGO ----- */
+.footer-logo {
+    height: 90px;
+    width: auto;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+    .hero-watermark {
+        width: min(500px, 80vw);
+        right: -8%;
+        opacity: 0.10;
+    }
+}
+
+@media (max-width: 768px) {
+    /* On mobile, center watermark behind content and scale down */
+    .hero-watermark {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: min(380px, 90vw);
+        opacity: 0.08;
+    }
+
+    .footer-logo {
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-watermark {
+        width: min(300px, 95vw);
+        opacity: 0.07;
+    }
+}
