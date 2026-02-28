@@ -630,3 +630,59 @@ address {
     color: var(--gold);
     font-weight: 800;
 }
+
+/* ============================================
+   LOGO INTEGRATION — ADD TO BOTTOM OF global.css
+   ============================================ */
+
+/* Nav logo: swap text link for image link */
+.logo--img {
+    /* Remove the text-style overrides that came with .logo */
+    font-size: 0;           /* hides any stray text nodes */
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    transform: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo--img:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: none;
+}
+
+/* The actual <img> in the navbar */
+.header-logo {
+    height: 64px;           /* fits comfortably inside the navbar */
+    width: auto;
+    display: block;
+    /* The logo has a black background — clip it to the icon area
+       and use mix-blend-mode so it reads on the white nav */
+    border-radius: 6px;
+    /* Optionally: if you want to strip the black bg entirely, uncomment:
+       mix-blend-mode: multiply; */
+    transition: transform 0.2s var(--transition-bounce, cubic-bezier(0.34,1.56,0.64,1));
+}
+
+/* Footer logo */
+.footer-logo {
+    height: 80px;
+    width: auto;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .header-logo {
+        height: 48px;
+    }
+
+    .footer-logo {
+        height: 64px;
+    }
+}
