@@ -1,8 +1,12 @@
 /* SERVICIOS QUINTANA LLC - PREMIUM GLOBAL STYLES
    Theme: Neo-Brutalist Latino Tech
    WCAG 2.1 AA Compliant
+   Refactored: duplicates removed, rules consolidated
 */
 
+/* ============================================
+   CUSTOM PROPERTIES
+   ============================================ */
 :root {
     --navy: #0f172a;
     --orange: #f97316;
@@ -15,6 +19,9 @@
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ============================================
+   RESET & BASE
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -26,12 +33,13 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--navy);
     line-height: 1.5;
-    /* Reverted to default so the native cursor is always visible alongside the custom one */
-    cursor: auto; 
+    cursor: auto;
     overflow-x: hidden;
 }
 
-/* Custom Cursor */
+/* ============================================
+   CUSTOM CURSOR
+   ============================================ */
 #custom-cursor {
     width: 40px;
     height: 40px;
@@ -42,10 +50,9 @@ body {
     left: 0;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0; /* Starts hidden until mouse moves */
+    opacity: 0;
     transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, opacity 0.3s ease;
-    /* Removed mix-blend-mode to prevent the cursor from turning invisible on contrasting backgrounds */
-    background-color: rgba(249, 115, 22, 0.1); /* Adds a very slight fill to keep it visible over text */
+    background-color: rgba(249, 115, 22, 0.1);
 }
 
 #custom-cursor.click {
@@ -53,7 +60,9 @@ body {
     background: var(--orange);
 }
 
-/* Structural Components */
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -66,39 +75,47 @@ body {
     position: relative;
 }
 
-.bg-light { 
+.bg-light {
     background-color: var(--white);
-    background-image: 
-        repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 35px,
-            rgba(15, 23, 42, 0.02) 35px,
-            rgba(15, 23, 42, 0.02) 70px
-        );
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 35px,
+        rgba(15, 23, 42, 0.02) 35px,
+        rgba(15, 23, 42, 0.02) 70px
+    );
 }
 
-.bg-dark { 
-    background-color: var(--navy); 
+.bg-dark {
+    background-color: var(--navy);
     color: var(--off-white);
-    background-image: 
-        repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 50px,
-            rgba(249, 115, 22, 0.03) 50px,
-            rgba(249, 115, 22, 0.03) 100px
-        );
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 50px,
+        rgba(249, 115, 22, 0.03) 50px,
+        rgba(249, 115, 22, 0.03) 100px
+    );
 }
 
-/* Navigation - Bold & Blocky */
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+:focus-visible {
+    outline: 4px solid var(--orange);
+    outline-offset: 4px;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
 .navbar {
     background: var(--white);
     border-bottom: var(--border-thick) solid var(--navy);
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1.2rem 0;
+    padding: 0.5rem 0;
     box-shadow: 0 4px 0 var(--navy);
 }
 
@@ -110,6 +127,7 @@ body {
     gap: 1rem;
 }
 
+/* Text-based logo */
 .logo {
     font-weight: 900;
     font-size: 1.5rem;
@@ -132,6 +150,33 @@ body {
     transform: rotate(-2deg);
 }
 
+/* Image-based logo (swap) */
+.logo--img {
+    font-size: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    transform: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo--img:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: none;
+}
+
+.header-logo {
+    height: 90px;
+    width: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.2s var(--transition-bounce);
+}
+
+/* Nav links */
 .nav-links {
     display: flex;
     list-style: none;
@@ -145,7 +190,6 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     font-size: 0.85rem;
-    position: relative;
     padding: 0.7rem 1.3rem;
     border: 3px solid var(--navy);
     background: var(--white);
@@ -182,7 +226,7 @@ body {
     cursor: pointer;
 }
 
-/* The Language Toggle Button */
+/* Language toggle */
 #lang-toggle {
     background: var(--gold);
     border: var(--border-thick) solid var(--navy);
@@ -206,14 +250,15 @@ body {
     box-shadow: 2px 2px 0px var(--navy);
 }
 
-/* News Ticker Marquee */
+/* ============================================
+   NEWS TICKER
+   ============================================ */
 .news-ticker {
     background: var(--orange);
     border-top: var(--border-thick) solid var(--navy);
     border-bottom: var(--border-thick) solid var(--navy);
     padding: 1rem 0;
     overflow: hidden;
-    position: relative;
 }
 
 .ticker-content {
@@ -238,22 +283,24 @@ body {
 }
 
 @keyframes scroll-left {
-    0% { transform: translateX(0); }
+    0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
-/* Hero - High Impact Typography */
+/* ============================================
+   HERO
+   ============================================ */
 .hero {
     padding: 8rem 0;
-    background: 
-        repeating-linear-gradient(
-            45deg,
-            #f1f5f9,
-            #f1f5f9 10px,
-            var(--off-white) 10px,
-            var(--off-white) 20px
-        );
+    background: repeating-linear-gradient(
+        45deg,
+        #f1f5f9,
+        #f1f5f9 10px,
+        var(--off-white) 10px,
+        var(--off-white) 20px
+    );
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -270,6 +317,20 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
+}
+
+.hero-watermark {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%);
+    width: min(700px, 85vw);
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    mix-blend-mode: multiply;
+    opacity: 0.13;
+    z-index: 0;
 }
 
 .eyebrow {
@@ -304,13 +365,9 @@ body {
     flex-wrap: wrap;
 }
 
-/* Card Grid - "Linktree on Steroids" */
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
+/* ============================================
+   SECTION HEADER
+   ============================================ */
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -333,7 +390,15 @@ body {
     color: rgba(248, 250, 252, 0.7);
 }
 
-/* Scroll Reveal Animation Classes */
+/* ============================================
+   CARDS
+   ============================================ */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
 .card {
     background: var(--white);
     border: var(--border-thick) solid var(--navy);
@@ -351,17 +416,9 @@ body {
 }
 
 @keyframes pop-in {
-    0% {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
-    50% {
-        transform: translateY(-5px) scale(1.02);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+    0%   { opacity: 0; transform: translateY(30px) scale(0.95); }
+    50%  { transform: translateY(-5px) scale(1.02); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .card:hover {
@@ -426,7 +483,9 @@ body {
     gap: 1rem;
 }
 
-/* Buttons */
+/* ============================================
+   BUTTONS
+   ============================================ */
 .btn {
     display: inline-block;
     padding: 1.2rem 2.4rem;
@@ -455,7 +514,9 @@ body {
     box-shadow: 2px 2px 0px var(--navy);
 }
 
-/* Split Layout - About Section */
+/* ============================================
+   ABOUT SECTION — SPLIT LAYOUT
+   ============================================ */
 .split-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -508,7 +569,9 @@ body {
     font-size: 0.9rem;
 }
 
-/* Footer */
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
     background: var(--navy);
     color: var(--off-white);
@@ -553,6 +616,17 @@ address {
     color: var(--orange);
 }
 
+.footer-logo {
+    height: 110px;
+    width: auto;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 10px 16px;
+    box-shadow: 4px 4px 0px var(--orange);
+}
+
 .footer-legal {
     border-top: 2px solid rgba(248, 250, 252, 0.2);
     padding-top: 2rem;
@@ -566,46 +640,8 @@ address {
     line-height: 1.6;
 }
 
-/* Accessibility */
-:focus-visible {
-    outline: 4px solid var(--orange);
-    outline-offset: 4px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .mobile-toggle {
-        display: block;
-    }
-    
-    .split-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero {
-        padding: 4rem 0;
-    }
-    
-    body {
-        cursor: auto;
-    }
-    
-    #custom-cursor {
-        display: none;
-    }
-}
-
 /* ============================================
-   STATUTORY NOTARY DISCLAIMER (C.R.S. 24-21-525)
+   STATUTORY DISCLAIMER (C.R.S. 24-21-525)
    ============================================ */
 .statutory-disclaimer {
     background: rgba(255, 255, 255, 0.05);
@@ -632,69 +668,70 @@ address {
 }
 
 /* ============================================
-   LOGO INTEGRATION — ADD TO BOTTOM OF global.css
+   RESPONSIVE
    ============================================ */
-
-/* Nav logo: swap text link for image link */
-.logo--img {
-    font-size: 0;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    padding: 0;
-    transform: none;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-}
-
-.logo--img:hover {
-    transform: scale(1.04) rotate(-1deg);
-    box-shadow: none;
-}
-
-/* The actual <img> in the navbar */
-.header-logo {
-    height: 90px;
-    width: auto;
-    display: block;
-    border-radius: 8px;
-    transition: transform 0.2s var(--transition-bounce, cubic-bezier(0.34,1.56,0.64,1));
-}
-
-/* Give the navbar a little more breathing room for the taller logo */
-.navbar {
-    padding: 0.5rem 0;
-}
-
-/* Footer logo */
-.footer-logo {
-    height: 90px;
-    width: auto;
-    display: block;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
-/* ---- Responsive ---- */
 @media (max-width: 1024px) {
     .header-logo {
         height: 72px;
     }
+
+    .hero-watermark {
+        width: min(500px, 80vw);
+        right: -8%;
+        opacity: 0.10;
+    }
 }
 
 @media (max-width: 768px) {
-    .header-logo {
-        height: 60px;
+    body {
+        cursor: auto;
     }
 
-    .footer-logo {
-        height: 70px;
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
     }
 
     .nav-container {
         padding: 0.4rem 1rem;
         align-items: center;
+    }
+
+    .header-logo {
+        height: 60px;
+    }
+
+    .footer-logo {
+        height: 90px;
+        padding: 8px 12px;
+    }
+
+    #custom-cursor {
+        display: none;
+    }
+
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero-watermark {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: min(380px, 90vw);
+        opacity: 0.08;
     }
 }
 
@@ -702,154 +739,48 @@ address {
     .header-logo {
         height: 52px;
     }
-}
-
-/* ============================================
-   LOGO INTEGRATION — ADD TO BOTTOM OF global.css
-   ============================================ */
-
-/* ----- HERO WATERMARK ----- */
-/* The hero needs position:relative (already set in global.css) */
-.hero {
-    overflow: hidden; /* keep watermark clipped inside */
-}
-
-/* Giant SQ watermark positioned right-side of hero */
-.hero-watermark {
-    position: absolute;
-    top: 50%;
-    right: -5%;
-    transform: translateY(-50%);
-    width: min(700px, 85vw);   /* huge but never overflows on small screens */
-    height: auto;
-    pointer-events: none;
-    user-select: none;
-    /* mix-blend-mode:multiply drops the black background,
-       leaving only the teal/orange SQ shapes showing through */
-    mix-blend-mode: multiply;
-    opacity: 0.13;             /* subtle ghost — visible but text stays readable */
-    z-index: 0;
-}
-
-/* Make sure hero text sits above the watermark */
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-/* ----- FOOTER LOGO ----- */
-.footer-logo {
-    height: 90px;
-    width: auto;
-    display: block;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
-/* ---- Responsive ---- */
-@media (max-width: 1024px) {
-    .hero-watermark {
-        width: min(500px, 80vw);
-        right: -8%;
-        opacity: 0.10;
-    }
-}
-
-@media (max-width: 768px) {
-    /* On mobile, center watermark behind content and scale down */
-    .hero-watermark {
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        width: min(380px, 90vw);
-        opacity: 0.08;
-    }
-
-    .footer-logo {
-        height: 70px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-watermark {
-        width: min(300px, 95vw);
-        opacity: 0.07;
-    }
-}
-
-/* ============================================
-   LOGO INTEGRATION — ADD TO BOTTOM OF global.css
-   ============================================ */
-
-/* ----- HERO WATERMARK ----- */
-.hero {
-    overflow: hidden;
-}
-
-.hero-watermark {
-    position: absolute;
-    top: 50%;
-    right: -5%;
-    transform: translateY(-50%);
-    width: min(700px, 85vw);
-    height: auto;
-    pointer-events: none;
-    user-select: none;
-    mix-blend-mode: multiply;
-    opacity: 0.13;
-    z-index: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-/* ----- FOOTER LOGO ----- */
-.footer-logo {
-    height: 110px;
-    width: auto;
-    display: block;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    /* White background so the dark PNG is readable on the navy footer */
-    background-color: #ffffff;
-    padding: 10px 16px;
-    box-shadow: 4px 4px 0px #f97316;
-}
-
-/* ---- Responsive ---- */
-@media (max-width: 1024px) {
-    .hero-watermark {
-        width: min(500px, 80vw);
-        right: -8%;
-        opacity: 0.10;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-watermark {
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        width: min(380px, 90vw);
-        opacity: 0.08;
-    }
-
-    .footer-logo {
-        height: 90px;
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-watermark {
-        width: min(300px, 95vw);
-        opacity: 0.07;
-    }
 
     .footer-logo {
         height: 78px;
         padding: 6px 10px;
     }
+
+    .hero-watermark {
+        width: min(300px, 95vw);
+        opacity: 0.07;
+    }
 }
+
+/* ============================================
+   JS-DEPENDENT RULES (DO NOT REMOVE)
+   ============================================ */
+
+/* Card scroll-reveal: JS adds .reveal class via IntersectionObserver / direct classList */
+.card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    animation: pop-in 0.6s var(--transition-bounce);
+}
+
+/* Custom cursor: JS sets opacity to 1 on first mousemove */
+#custom-cursor {
+    opacity: 0;
+}
+
+/* Click pulse: JS toggles .click on mousedown/mouseup */
+#custom-cursor.click {
+    transform: scale(0.8);
+    background: var(--orange);
+}
+
+/* Ripple effect injected by JS on .btn / .btn-primary / .btn-nav clicks */
+@keyframes ripple-effect {
+    from { transform: scale(0); opacity: 1; }
+    to   { transform: scale(2); opacity: 0; }
+}
+
+/* Mobile nav: JS toggles display:flex on .nav-links */
+/* (default display:none is already set in the @media block above) */
+
+/* Language toggle: injected into .nav-container by JS */
+/* #lang-toggle styles are in the Navigation section above */
