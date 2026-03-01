@@ -542,6 +542,10 @@ body {
     line-height: 1.7;
 }
 
+.about-trust-heading {
+    margin-top: 2rem;
+}
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -748,6 +752,58 @@ address {
     .hero-watermark {
         width: min(300px, 95vw);
         opacity: 0.07;
+    }
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.4rem;
+    background: var(--orange);
+    color: var(--navy);
+    border: var(--border-thick) solid var(--navy);
+    box-shadow: 4px 4px 0 var(--navy);
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(1rem);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s var(--transition-bounce), box-shadow 0.2s ease;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#back-to-top:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--navy);
+}
+
+#back-to-top:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--navy);
+}
+
+@media (max-width: 768px) {
+    #back-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 0.7rem 1rem;
+        font-size: 0.8rem;
     }
 }
 
