@@ -1,6 +1,7 @@
 /**
  * SERVICIOS QUINTANA LLC - GLOBAL JS
- * Fixed: cards always visible, lang toggle always appears, links preserved
+ * Cleaned: removed redundant card-visibility injection, removed ripple @keyframes
+ * injection (now lives in global.css), kept all logic and selectors intact.
  */
 
 const translations = {
@@ -80,18 +81,11 @@ const translations = {
     }
 };
 
-// ── STEP 1: Inject a <style> IMMEDIATELY (before DOM ready) to force cards visible
-// This prevents the flash-of-invisible-cards no matter what
-const forceVisibleStyle = document.createElement('style');
-forceVisibleStyle.textContent = '.card { opacity: 1 !important; transform: translateY(0) !important; }';
-document.head.appendChild(forceVisibleStyle);
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ── STEP 2: Also add .reveal class to every card directly
-    document.querySelectorAll('.card').forEach(card => {
-        card.classList.add('reveal');
-    });
+    // ── CARD VISIBILITY ──────────────────────────────────────────────────────
+    // CSS starts cards at opacity:0; adding .reveal makes them visible.
+    document.querySelectorAll('.card').forEach(card => card.classList.add('reveal'));
 
     // ── LANGUAGE TOGGLE ──────────────────────────────────────────────────────
     let currentLang = 'en';
@@ -103,9 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     langBtn.textContent = currentLang === 'en' ? 'Español' : 'English';
 
     const navContainer = document.querySelector('.nav-container');
-    if (navContainer) {
-        navContainer.appendChild(langBtn);
-    }
+    if (navContainer) navContainer.appendChild(langBtn);
 
     const updateContent = (lang) => {
         const t = translations[lang];
@@ -146,11 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor = document.createElement('div');
         cursor.id = 'custom-cursor';
         document.body.appendChild(cursor);
+
         let mouseX = -100, mouseY = -100, cursorX = -100, cursorY = -100;
+
         document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX; mouseY = e.clientY;
+            mouseX = e.clientX;
+            mouseY = e.clientY;
             cursor.style.opacity = '1';
         });
+
         const animateCursor = () => {
             cursorX += (mouseX - cursorX) * 0.15;
             cursorY += (mouseY - cursorY) * 0.15;
@@ -159,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(animateCursor);
         };
         animateCursor();
+
         document.addEventListener('mousedown', () => cursor.classList.add('click'));
         document.addEventListener('mouseup',   () => cursor.classList.remove('click'));
     }
@@ -175,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ── BUTTON RIPPLE ────────────────────────────────────────────────────────
+    // @keyframes ripple-effect is defined in global.css
     document.querySelectorAll('.btn, .btn-primary, .btn-nav').forEach(btn => {
         btn.addEventListener('click', function(e) {
             const ripple = document.createElement('span');
@@ -195,9 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => ripple.remove(), 600);
         });
     });
-    const rippleStyle = document.createElement('style');
-    rippleStyle.textContent = `@keyframes ripple-effect { from{transform:scale(0);opacity:1} to{transform:scale(2);opacity:0} }`;
-    document.head.appendChild(rippleStyle);
 
     // ── SMOOTH SCROLL ────────────────────────────────────────────────────────
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -240,5 +235,5 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cursor) cursor.style.display = 'none';
     }
 
-    console.log('%c🟠 SERVICIOS QUINTANA LLC','font-size:18px;font-weight:bold;color:#f97316;');
+    console.log('%c🟠 SERVICIOS QUINTANA LLC', 'font-size:18px;font-weight:bold;color:#f97316;');
 });
