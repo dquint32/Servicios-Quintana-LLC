@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Servicios Quintana LLC: Colorado's home for trusted, bilingual services that make official, government, and digital processes accessible to everyone.">
     <title>Servicios Quintana LLC | Corporate Home</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="global.css">
 </head>
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container nav-container">
             <a href="#" class="logo">Servicios Quintana <span class="llc">LLC</span></a>
             <ul class="nav-links">
@@ -24,9 +24,9 @@
                 <li><a href="#about" data-i18n="nav_about">About</a></li>
                 <li><a href="#contact" class="btn-nav" data-i18n="nav_contact">Contact HQ</a></li>
             </ul>
-            <div class="mobile-toggle">
+            <button class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -47,7 +47,7 @@
         </div>
     </header>
 
-    <div class="news-ticker">
+    <div class="news-ticker" aria-hidden="true">
         <div class="ticker-content">
             <span class="ticker-item">Mobile Notary Services</span>
             <span class="ticker-item">DMV Assistance</span>
@@ -66,33 +66,33 @@
                 <h2 data-i18n="div_header">Our Brands</h2>
                 <p data-i18n="div_sub">We operate three distinct brands serving the Denver Metro area.</p>
             </div>
-            
+
             <div class="grid-3">
                 <article class="card brand-card">
                     <div class="card-icon"><i class="fas fa-file-signature"></i></div>
-                    <h3 data-i18n="card_notary_title">Quintana Notary & Signing</h3>
+                    <h3 data-i18n="card_notary_title">Quintana Notary &amp; Signing</h3>
                     <span class="badge" data-i18n="badge_auth">Document Authentication</span>
                     <p data-i18n="card_notary_text">Mobile, bilingual notary services for real estate closings, affidavits, power of attorney, and more. We bring the office to your doorstep.</p>
-                    <a href="https://quintananotarysigning.com/" target="_blank" class="card-link" data-i18n="card_visit">Visit Official Site <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://quintananotarysigning.com/" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="card_visit">Visit Official Site <i class="fas fa-arrow-right"></i></a>
                 </article>
 
                 <article class="card brand-card">
                     <div class="card-icon"><i class="fas fa-car"></i></div>
                     <h3 data-i18n="card_dmv_title">Ayuda DMV</h3>
                     <span class="badge" data-i18n="badge_admin">Administrative Support</span>
-                    <p data-i18n="card_dmv_text">Specialized assistance for Spanish‑speaking residents navigating Colorado DMV requirements. We simplify state processes so families can move forward without stress.</p>
-                    <a href="https://ayudadmv.com/" target="_blank" class="card-link" data-i18n="card_visit">Visit Official Site <i class="fas fa-arrow-right"></i></a>
+                    <p data-i18n="card_dmv_text">Specialized assistance for Spanish&#8209;speaking residents navigating Colorado DMV requirements. We simplify state processes so families can move forward without stress.</p>
+                    <a href="https://ayudadmv.com/" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="card_visit">Visit Official Site <i class="fas fa-arrow-right"></i></a>
                 </article>
 
                 <article class="card brand-card">
                     <div class="card-icon"><i class="fas fa-code"></i></div>
                     <h3 data-i18n="card_dev_title">David Quintana Dev</h3>
-                    <span class="badge" data-i18n="badge_digital">Digital Strategy & Web Development</span>
-                    <p data-i18n="card_dev_text">High‑performance, bilingual web architecture for local businesses. We build accessible, modern websites with custom coding and community‑focused design.</p>
+                    <span class="badge" data-i18n="badge_digital">Digital Strategy &amp; Web Development</span>
+                    <p data-i18n="card_dev_text">High&#8209;performance, bilingual web architecture for local businesses. We build accessible, modern websites with custom coding and community&#8209;focused design.</p>
                     <div class="portfolio-note">
                         <small><em>Includes portfolio work for Tienda SalvaDoreña</em></small>
                     </div>
-                    <a href="https://davidquintana.dev/" target="_blank" class="card-link" data-i18n="card_portfolio">Visit Portfolio Site <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://davidquintana.dev/" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="card_portfolio">Visit Portfolio Site <i class="fas fa-arrow-right"></i></a>
                 </article>
 
                 <article class="card brand-card">
@@ -100,7 +100,7 @@
                     <h3 data-i18n="card_translation_title">Certified Translation Services</h3>
                     <span class="badge" data-i18n="badge_translation">Translation Services</span>
                     <p data-i18n="card_translation_text">Professional certified translations for families, students, and individuals completing immigration, academic, or government paperwork. Every translation includes a signed Declaration of Accuracy designed to meet the strict submission requirements of USCIS, the Colorado DMV, schools, and state agencies.</p>
-                    <a href="https://quintananotarysigning.com/translate.html" target="_blank" class="card-link" data-i18n="card_translation_contact">Learn More About Translation Services <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://quintananotarysigning.com/translate.html" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="card_translation_contact">Learn More About Translation Services <i class="fas fa-arrow-right"></i></a>
                 </article>
             </div>
         </div>
@@ -112,7 +112,7 @@
                 <div class="split-text">
                     <h2 data-i18n="about_h2">Built on Integrity</h2>
                     <p class="large-text" data-i18n="about_p1">
-                        Servicios Quintana LLC brings together the professional work of <strong>David Quintana</strong>. 
+                        Servicios Quintana LLC brings together the professional work of <strong>David Quintana</strong>.
                     </p>
                     <p data-i18n="about_p2">
                         Whether we are notarizing a loan document in Castle Rock, helping a family register a vehicle, or writing semantic HTML for a local business, our core value remains the same: <strong>Accessibility.</strong>
@@ -120,7 +120,7 @@
                     <p data-i18n="about_p3">
                         Language barriers and technical complexity should never prevent someone from achieving their goals.
                     </p>
-                    <h3 style="margin-top: 2rem;" data-i18n="about_trust_h3">Why Colorado Trusts Us</h3>
+                    <h3 class="about-trust-heading" data-i18n="about_trust_h3">Why Colorado Trusts Us</h3>
                 </div>
                 <div class="split-visual">
                     <div class="stats-grid">
@@ -142,49 +142,56 @@
         </div>
     </section>
 
-<footer id="contact" aria-label="Servicios Quintana LLC Footer">
-    <div class="container">
-        <div class="footer-grid">
+    <footer id="contact" aria-label="Servicios Quintana LLC Footer">
+        <div class="container">
+            <div class="footer-grid">
 
-            <div class="footer-brand">
-                <img
-                    src="serviciosquintanalogo.png"
-                    alt="Servicios Quintana LLC Logo"
-                    class="footer-logo"
-                >
-                <p>Bilingual Services · Community Focused · Colorado Owned</p>
+                <div class="footer-brand">
+                    <img
+                        src="serviciosquintanalogo.png"
+                        alt="Servicios Quintana LLC Logo"
+                        class="footer-logo"
+                    >
+                    <p>Bilingual Services · Community Focused · Colorado Owned</p>
+                </div>
+
+                <div class="footer-info">
+                    <h5>Corporate HQ &amp; Registered Agent</h5>
+                    <address>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 5128 E Colfax Ave<br>
+                        Denver, CO 80220
+                    </address>
+                </div>
+
+                <div class="footer-contact">
+                    <h5>Contact</h5>
+                    <p>
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+13035004122">303&#8209;500&#8209;4122</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@serviciosquintana.com">info@serviciosquintana.com</a>
+                    </p>
+                </div>
+
             </div>
 
-            <div class="footer-info">
-                <h5>Corporate HQ & Registered Agent</h5>
-                <address>
-                    <i class="fas fa-map-marker-alt"></i> 5128 E Colfax Ave<br>
-                    Denver, CO 80220
-                </address>
-            </div>
+            <section class="statutory-disclaimer" aria-label="Statutory Legal Disclaimer">
+                <p data-i18n="footer_statutory_en"><strong>Important Notice:</strong> Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in the State of Colorado. We may not give legal advice or accept fees for legal advice. We provide administrative, translation, and notary public services only.</p>
+                <p data-i18n="footer_statutory_es"><strong>Aviso Importante:</strong> Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No podemos dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrecemos servicios administrativos, de traducción y de notario público.</p>
+            </section>
 
-            <div class="footer-contact">
-                <h5>Contact</h5>
-                <p>
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+13035004122">303‑500‑4122</a>
+            <section class="footer-legal" aria-label="Legal Information">
+                <p>© <span id="year">2026</span> Servicios Quintana LLC. All Rights Reserved.</p>
+                <p class="disclaimer">
+                    "Quintana Notary &amp; Signing," "Ayuda DMV," and "David Quintana Dev" are registered trade names operated under Servicios Quintana LLC, a Colorado Limited Liability Company.
                 </p>
-                <p>
-                    <i class="fas fa-envelope"></i>
-                    <a href="/cdn-cgi/l/email-protection#e8898c858186a89b8d9a9e818b81879b999d81869c898689c68b8785"><span class="__cf_email__" data-cfemail="2243464f4b4c62514750544b414b4d5153574b4c56434c430c414d4f">[email&#160;protected]</span></a>
-                </p>
-            </div>
+            </section>
 
         </div>
+    </footer>
 
-        <section class="statutory-disclaimer" aria-label="Statutory Legal Disclaimer">
-            <p data-i18n="footer_statutory_en"><strong>Important Notice:</strong> Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in the State of Colorado. We may not give legal advice or accept fees for legal advice. We provide administrative, translation, and notary public services only.</p>
-            <p data-i18n="footer_statutory_es"><strong>Aviso Importante:</strong> Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No podemos dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrecemos servicios administrativos, de traducción y de notario público.</p>
-        </section>
-
-        <section class="footer-legal" aria-label="Legal Information">
-            <p>
-                © <span id="year">2026</span> Servicios Quintana LLC. All Rights Reserved.
-            </p>
-            <p class="disclaimer">
-                "Quintana Notary & Signing," "Ayuda DMV," and "David Quintana Dev" are registe
+    <script src="global.js"></script>
+</body>
+</html>
