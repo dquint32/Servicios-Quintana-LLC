@@ -40,7 +40,8 @@ const translations = {
         stat_local: "Locally Owned",
         footer_statutory_en: "<strong>Important Notice:</strong> Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in the State of Colorado. We may not give legal advice or accept fees for legal advice. We provide administrative, translation, and notary public services only.",
         footer_statutory_es: "<strong>Aviso Importante:</strong> Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No podemos dar asesor\u00eda legal ni aceptar honorarios por asesor\u00eda legal. Solo ofrecemos servicios administrativos, de traducci\u00f3n y de notario p\u00fablico.",
-        lang_btn: "Espa\u00f1ol"
+        lang_btn: "Espa\u00f1ol",
+        back_to_top: "Back to Top"
     },
     es: {
         nav_divisions: "Nuestras Marcas",
@@ -77,7 +78,8 @@ const translations = {
         stat_local: "Propiedad Local",
         footer_statutory_en: "<strong>Important Notice:</strong> Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in the State of Colorado. We may not give legal advice or accept fees for legal advice. We provide administrative, translation, and notary public services only.",
         footer_statutory_es: "<strong>Aviso Importante:</strong> Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No podemos dar asesor\u00eda legal ni aceptar honorarios por asesor\u00eda legal.",
-        lang_btn: "English"
+        lang_btn: "English",
+        back_to_top: "Volver Arriba"
     }
 };
 
@@ -211,6 +213,18 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             hero.style.transform = `translateY(${window.pageYOffset * 0.3}px)`;
         }, { passive: true });
+    }
+
+    // ── BACK TO TOP ──────────────────────────────────────────────────────────
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        }, { passive: true });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     }
 
     // ── DYNAMIC YEAR ─────────────────────────────────────────────────────────
