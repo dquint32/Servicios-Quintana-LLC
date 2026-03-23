@@ -236,7 +236,14 @@ document.addEventListener('DOMContentLoaded', () => {
     langBtn.textContent = currentLang === 'en' ? 'Español' : 'English';
 
     const navContainer = document.querySelector('.nav-container');
-    if (navContainer) navContainer.appendChild(langBtn);
+    const mobileToggleBtn = navContainer ? navContainer.querySelector('.mobile-toggle') : null;
+    if (navContainer) {
+        if (mobileToggleBtn) {
+            navContainer.insertBefore(langBtn, mobileToggleBtn);
+        } else {
+            navContainer.appendChild(langBtn);
+        }
+    }
 
     /**
      * updateContent — applies the given language to all [data-i18n] elements.
