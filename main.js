@@ -1,7 +1,7 @@
 /**
  * SERVICIOS QUINTANA LLC — main.js
  * Full bilingual toggle, scroll, ripple, cursor, mobile nav, FAQ, and all interactions.
- * Version: 2026 SEO Update — Extended with FAQ, trust pills, hubs callout translations.
+ * Version: 2026 — First-person (owner-operated) voice + credentials + SEO update.
  */
 
 /* ══════════════════════════════════════════════════════════
@@ -10,7 +10,7 @@
 const translations = {
     en: {
         // ── NAV ──
-        nav_brands:   "Our Brands",
+        nav_brands:   "My Brands",
         nav_services: "Services",
         nav_faq:      "FAQ",
         nav_about:    "About",
@@ -19,13 +19,13 @@ const translations = {
         // ── HERO ──
         hero_eyebrow: "Est. 2026 · Castle Rock &amp; Denver Metro, Colorado",
         hero_h1:      "Bridging the Gap Between<br>Community &amp; Compliance.",
-        hero_sub:     "Servicios Quintana LLC is Colorado's home for trusted, bilingual services that make official, government, and digital processes accessible to everyone. We bring together three specialized brands under one mission: helping our community navigate paperwork, agencies, and technology — with clarity and confidence.",
-        btn_view_services: "View Our Services",
+        hero_sub:     "Servicios Quintana LLC is Colorado's home for trusted, bilingual services that make official, government, and digital processes accessible to everyone. As a one-person, owner-operated practice, I bring together three specialized brands under one mission: helping my community navigate paperwork, agencies, and technology — with clarity and confidence.",
+        btn_view_services: "View My Services",
         btn_hablamos:      "Hablamos Español",
 
         // ── BRANDS SECTION ──
-        brands_h2:  "Our Specialized Brands",
-        brands_sub: "We operate three distinct brands serving Castle Rock, the Denver Metro area, and beyond. Whether we come to you or you meet us at a Community Hub, we are here to help.",
+        brands_h2:  "My Specialized Brands",
+        brands_sub: "I operate three distinct brands serving Castle Rock, the Denver Metro area, and beyond. Whether I come to you or you meet me at a Community Hub, I'm here to help.",
 
         // ── BADGES ──
         badge_auth:        "Document Authentication",
@@ -35,7 +35,7 @@ const translations = {
 
         // ── NOTARY ──
         notary_tagline:      "Professional, Mobile &amp; Bilingual Document Authentication",
-        notary_intro:        "We bring the notary office to your doorstep or meet you at our discounted Community Hubs (MSU Denver &amp; Tienda Salvadoreña).",
+        notary_intro:        "I bring the notary office to your doorstep or meet you at my discounted Community Hubs (MSU Denver &amp; Tienda Salvadoreña).",
         notary_s1:           "<strong>Standard Notarizations:</strong> Acknowledgments, Oaths/Affirmations, and Copy Certifications.",
         notary_s2:           "<strong>Apostille Processing:</strong> Full-service handling for international documents via the CO Secretary of State.",
         notary_s3:           "<strong>Loan Signings:</strong> Professional packages for Refinances, Purchases, and HELOCs.",
@@ -46,26 +46,26 @@ const translations = {
 
         // ── DMV ──
         dmv_tagline: "Administrative Support &amp; DMV Proxy Services",
-        dmv_intro:   "Specialized assistance for residents navigating complex Colorado DMV requirements. We simplify state processes so families can move forward without stress.",
+        dmv_intro:   "Specialized assistance for residents navigating complex Colorado DMV requirements. I simplify state processes so families can move forward without stress.",
         dmv_s1:      "<strong>DMV Document Preparation:</strong> Accurate forms for address changes, private-party title transfers, and bills of sale.",
-        dmv_s2:      "<strong>In-Person Proxy Services:</strong> Can't go to the DMV? We act as your authorized proxy to submit documents in person.",
-        dmv_s3:      "<strong>Out-of-State Title Transfers:</strong> We coordinate with out-of-state owners, dealerships, and lienholders.",
+        dmv_s2:      "<strong>In-Person Proxy Services:</strong> Can't go to the DMV? I act as your authorized proxy to submit documents in person.",
+        dmv_s3:      "<strong>Out-of-State Title Transfers:</strong> I coordinate with out-of-state owners, dealerships, and lienholders.",
         dmv_s4:      "<strong>Same-Day Rush Services:</strong> Available for urgent document prep and DMV submissions.",
         dmv_cta:     "Explore DMV Services",
 
         // ── WEB DEV ──
         dev_tagline:       "Digital Strategy &amp; Web Development",
-        dev_intro:         "High-performance, fully bilingual (EN/ES) web architecture for local businesses. We build accessible, modern websites from scratch — no cheap templates.",
+        dev_intro:         "High-performance, fully bilingual (EN/ES) web architecture for local businesses. I build accessible, modern websites from scratch — no cheap templates.",
         dev_s1:            "<strong>Custom Websites:</strong> From basic landing pages to full Business and E-Commerce builds.",
         dev_s2:            "<strong>Bilingual Integration:</strong> Reach more customers with seamless English and Spanish user experiences.",
-        dev_s3:            "<strong>Healthcare-Aligned Tools:</strong> Secure patient intake forms, validation workflows, and FHIR-ready JSON output for clinics.",
+        dev_s3:            "<strong>Healthcare-Aligned Tools:</strong> As an MSU Denver Health Care Information Systems (HCIS) student, I build secure patient intake forms, validation workflows, and FHIR-ready JSON output for clinics.",
         dev_s4:            "<strong>Ongoing Maintenance:</strong> Hosting setup, domain management, security patches, and SEO fundamentals.",
         dev_portfolio_note:"Includes portfolio work for Tienda SalvaDoreña",
         dev_cta:           "View Web Portfolio &amp; Pricing",
 
         // ── HUBS CALLOUT ──
-        hubs_callout_h3:   "Save More at Our Community Hubs",
-        hubs_callout_body: "Meet us at a Community Hub and pay <strong>$10 per notarial act</strong> (vs. the standard $15 maximum) with <strong>no travel fee</strong>. These are real discounts — voluntarily offered below the Colorado statutory maximum.",
+        hubs_callout_h3:   "Save More at My Community Hubs",
+        hubs_callout_body: "Meet me at a Community Hub and pay <strong>$10 per notarial act</strong> (vs. the standard $15 maximum) with <strong>no travel fee</strong>. These are real discounts — voluntarily offered below the Colorado statutory maximum.",
         hub_tienda_sub:    "Community Hub — Castle Rock area",
         hub_crrec_sub:     "Community Hub — Castle Rock, CO",
         hub_msu_sub:       "Campus / Community Hub — Denver, CO",
@@ -73,7 +73,7 @@ const translations = {
         // ── TRANSLATION ──
         trans_h2:           "Certified Translation Services",
         trans_sub:          "Professional Spanish ↔ English Translations — USCIS, DMV, Schools &amp; State Agencies",
-        trans_body:         "We provide word-for-word certified translations for families, students, and businesses. Every translation includes a signed <strong>Certificate of Accuracy</strong> compliant with USCIS, the Colorado DMV, schools, and state agencies. Rush turnaround available.",
+        trans_body:         "I provide word-for-word certified translations for families, students, and businesses. Every translation includes a signed <strong>Certificate of Accuracy</strong> compliant with USCIS, the Colorado DMV, schools, and state agencies. Rush turnaround available.",
         trans_s1:           "Immigration &amp; USCIS filings",
         trans_s2:           "Colorado DMV title &amp; registration documents",
         trans_s3:           "School &amp; university enrollment records",
@@ -83,29 +83,31 @@ const translations = {
 
         // ── FAQ ──
         faq_h2: "Frequently Asked Questions",
-        faq_sub: "Quick answers to the most common questions about our services.",
+        faq_sub: "Quick answers to the most common questions about my services.",
         faq_q1: "What areas do you serve?",
-        faq_a1: "We primarily serve Castle Rock, the Denver Metro area, and the South Metro region of Colorado. Mobile notary services extend beyond this area for an additional travel fee. We also operate Community Hubs at MSU Denver, Castle Rock Rec Center, and Tienda Salvadoreña where discounted fees apply — no travel charge.",
+        faq_a1: "I primarily serve Castle Rock, the Denver Metro area, and the South Metro region of Colorado. Mobile notary services extend beyond this area for an additional travel fee. I also operate Community Hubs at MSU Denver, Castle Rock Rec Center, and Tienda Salvadoreña where discounted fees apply — no travel charge.",
         faq_q2: "Do you offer services in Spanish?",
-        faq_a2: "Yes — all services are fully bilingual in English and Spanish. David Quintana has native-level fluency in both languages and can assist with bilingual consultations, certified translations, and bilingual accompaniment to government appointments.",
+        faq_a2: "Yes — all services are fully bilingual in English and Spanish. I have native-level fluency in both languages and can assist with bilingual consultations, certified translations, and bilingual accompaniment to government appointments.",
         faq_q3: "What notary services are available?",
         faq_a3: "Quintana Notary &amp; Signing offers standard notarizations (acknowledgments, oaths, copy certifications), apostille processing for international documents via the Colorado Secretary of State, loan signing packages, I-9 employment verification, and U.S. passport concierge services.",
         faq_q4: "Can you help with out-of-state vehicle title transfers?",
-        faq_a4: "Yes. Through the Ayuda DMV brand, we handle out-of-state title transfers, in-person DMV proxy services, and document preparation for private-party title transfers and bills of sale in Colorado.",
-        faq_q5: "Are you attorneys? Can you give legal advice?",
-        faq_a5: "No. Per C.R.S. § 24-21-525, Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in Colorado. We cannot give legal advice or accept fees for legal advice. We provide administrative, notarial, translation, and clerical services only.",
+        faq_a4: "Yes. Through the Ayuda DMV brand, I handle out-of-state title transfers, in-person DMV proxy services, and document preparation for private-party title transfers and bills of sale in Colorado.",
+        faq_q5: "Are you an attorney? Can you give legal advice?",
+        faq_a5: "No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado. Although I am a paralegal candidate at MSU Denver's Center for Legal Studies, I cannot give legal advice or accept fees for legal advice. I provide administrative, notarial, translation, and clerical services only.",
         faq_q6: "What payment methods do you accept?",
-        faq_a6: "We accept Cash, Venmo, Zelle, and Credit/Debit Card. A 3% processing fee applies to card payments. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
+        faq_a6: "I accept Cash, Venmo, Zelle, and Credit/Debit Card. A 3% processing fee applies to card payments. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
 
         // ── ABOUT ──
         about_h2:        "Built on Integrity",
-        about_p1:        "Servicios Quintana LLC brings together the professional work of <strong>David Quintana</strong> — Colorado notary, DMV specialist, certified translator, and bilingual web developer.",
-        about_p2:        "Whether we are notarizing a loan document in Castle Rock, helping a family register an out-of-state vehicle, or writing custom code for a local business, our core value remains the same: <strong>Accessibility.</strong>",
+        about_p1:        "Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, certified Spanish-English translator, and bilingual web developer.",
+        about_creds:     "I'm also a <strong>paralegal candidate at MSU Denver's Center for Legal Studies</strong> and a <strong>B.S. candidate in Health Care Information Systems (HCIS)</strong> at Metropolitan State University of Denver — training that sharpens my legal research, document preparation, and secure healthcare-technology work.",
+        about_p2:        "Whether I'm notarizing a loan document in Castle Rock, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>",
         about_p3:        "Language barriers and technical complexity should never prevent someone from achieving their goals.",
-        about_trust_h3:  "Why Colorado Trusts Us",
+        about_trust_h3:  "Why Colorado Trusts Me",
         trust_1:         "<strong>100% Bilingual:</strong> Native-level fluency in English and Spanish — no interpreter needed.",
         trust_2:         "<strong>Transparent Pricing:</strong> No hidden fees; every cost is disclosed and agreed in writing before your appointment.",
-        trust_3:         "<strong>Community Focused:</strong> Discounted fees available at our Community Hubs in Castle Rock and Denver.",
+        trust_3:         "<strong>Community Focused:</strong> Discounted fees available at my Community Hubs in Castle Rock and Denver.",
+        trust_5:         "<strong>Legally Informed:</strong> Paralegal candidate at MSU Denver's Center for Legal Studies — trained in legal research and document preparation (not legal advice).",
         trust_4:         "<strong>Locally Owned:</strong> Proudly serving the Denver Metro &amp; South Metro areas since 2026.",
 
         // ── STATS ──
@@ -121,9 +123,9 @@ const translations = {
         hub_note:   "$10 per notarial act &amp; no travel fee at these locations.",
 
         // ── FOOTER ──
-        footer_brands_nav_h5: "Our Brands",
-        footer_statutory_en:  "<strong>Important Notice:</strong> Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in the State of Colorado. We may not give legal advice or accept fees for legal advice. We provide administrative, translation, and notary public services only. (C.R.S. § 24-21-525)",
-        footer_statutory_es:  "<strong>Aviso Importante:</strong> Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No podemos dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrecemos servicios administrativos, de traducción y de notario público.",
+        footer_brands_nav_h5: "My Brands",
+        footer_statutory_en:  "<strong>Important Notice:</strong> David Quintana and Servicios Quintana LLC are not attorneys licensed to practice law in the State of Colorado. I may not give legal advice or accept fees for legal advice. I provide administrative, translation, and notary public services only. (C.R.S. § 24-21-525)",
+        footer_statutory_es:  "<strong>Aviso Importante:</strong> David Quintana y Servicios Quintana LLC no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No puedo dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrezco servicios administrativos, de traducción y de notario público.",
 
         // ── MISC ──
         lang_btn:    "Español",
@@ -132,7 +134,7 @@ const translations = {
 
     es: {
         // ── NAV ──
-        nav_brands:   "Nuestras Marcas",
+        nav_brands:   "Mis Marcas",
         nav_services: "Servicios",
         nav_faq:      "Preguntas",
         nav_about:    "Nosotros",
@@ -141,13 +143,13 @@ const translations = {
         // ── HERO ──
         hero_eyebrow: "Est. 2026 · Castle Rock y Denver Metro, Colorado",
         hero_h1:      "Cerrando la Brecha Entre<br>Comunidad y Cumplimiento.",
-        hero_sub:     "Servicios Quintana LLC es el hogar de Colorado para servicios bilingües confiables que hacen que los procesos oficiales, gubernamentales y digitales sean accesibles para todos. Reunimos tres marcas especializadas bajo una sola misión: ayudar a nuestra comunidad a navegar trámites, agencias y tecnología con claridad y confianza.",
-        btn_view_services: "Ver Nuestros Servicios",
+        hero_sub:     "Servicios Quintana LLC es el hogar de Colorado para servicios bilingües confiables que hacen que los procesos oficiales, gubernamentales y digitales sean accesibles para todos. Como práctica de una sola persona, reúno tres marcas especializadas bajo una sola misión: ayudar a mi comunidad a navegar trámites, agencias y tecnología con claridad y confianza.",
+        btn_view_services: "Ver Mis Servicios",
         btn_hablamos:      "We Speak English",
 
         // ── BRANDS SECTION ──
-        brands_h2:  "Nuestras Marcas Especializadas",
-        brands_sub: "Operamos tres marcas distintas que sirven a Castle Rock, el área metropolitana de Denver y más allá. Ya sea que vayamos a usted o que nos visite en un Hub Comunitario, estamos aquí para ayudar.",
+        brands_h2:  "Mis Marcas Especializadas",
+        brands_sub: "Opero tres marcas distintas que sirven a Castle Rock, el área metropolitana de Denver y más allá. Ya sea que yo vaya a usted o que me visite en un Hub Comunitario, estoy aquí para ayudar.",
 
         // ── BADGES ──
         badge_auth:        "Autenticación de Documentos",
@@ -157,7 +159,7 @@ const translations = {
 
         // ── NOTARY ──
         notary_tagline:      "Autenticación de Documentos Profesional, Móvil y Bilingüe",
-        notary_intro:        "Llevamos la oficina notarial a su puerta o nos reunimos con usted en nuestros Hubs Comunitarios con descuento (MSU Denver y Tienda Salvadoreña).",
+        notary_intro:        "Llevo la oficina notarial a su puerta o me reúno con usted en mis Hubs Comunitarios con descuento (MSU Denver y Tienda Salvadoreña).",
         notary_s1:           "<strong>Notarizaciones Estándar:</strong> Reconocimientos, Juramentos/Afirmaciones y Certificaciones de Copia.",
         notary_s2:           "<strong>Procesamiento de Apostilla:</strong> Servicio completo para documentos internacionales a través de la Secretaría de Estado de Colorado.",
         notary_s3:           "<strong>Firmas de Préstamos:</strong> Paquetes profesionales para Refinanciamientos, Compras y HELOCs.",
@@ -168,26 +170,26 @@ const translations = {
 
         // ── DMV ──
         dmv_tagline: "Apoyo Administrativo y Servicios de Representación en el DMV",
-        dmv_intro:   "Asistencia especializada para residentes que navegan los complejos requisitos del DMV de Colorado. Simplificamos los procesos estatales para que las familias puedan avanzar sin estrés.",
+        dmv_intro:   "Asistencia especializada para residentes que navegan los complejos requisitos del DMV de Colorado. Simplifico los procesos estatales para que las familias puedan avanzar sin estrés.",
         dmv_s1:      "<strong>Preparación de Documentos DMV:</strong> Formularios precisos para cambios de dirección, transferencias privadas de título y facturas de venta.",
-        dmv_s2:      "<strong>Servicios de Representación en Persona:</strong> ¿No puede ir al DMV? Actuamos como su representante autorizado para entregar sus documentos en persona.",
-        dmv_s3:      "<strong>Transferencias de Título de Otros Estados:</strong> Coordinamos con propietarios de otros estados, concesionarios y acreedores.",
+        dmv_s2:      "<strong>Servicios de Representación en Persona:</strong> ¿No puede ir al DMV? Actúo como su representante autorizado para entregar sus documentos en persona.",
+        dmv_s3:      "<strong>Transferencias de Título de Otros Estados:</strong> Coordino con propietarios de otros estados, concesionarios y acreedores.",
         dmv_s4:      "<strong>Servicios Urgentes el Mismo Día:</strong> Disponibles para preparación urgente de documentos y entregas en el DMV.",
         dmv_cta:     "Explorar Servicios del DMV",
 
         // ── WEB DEV ──
         dev_tagline:        "Estrategia Digital y Desarrollo Web",
-        dev_intro:          "Arquitectura web de alto rendimiento, completamente bilingüe (EN/ES) para negocios locales. Construimos sitios web accesibles y modernos desde cero — sin plantillas baratas.",
+        dev_intro:          "Arquitectura web de alto rendimiento, completamente bilingüe (EN/ES) para negocios locales. Construyo sitios web accesibles y modernos desde cero — sin plantillas baratas.",
         dev_s1:             "<strong>Sitios Web Personalizados:</strong> Desde páginas de destino básicas hasta sitios completos de negocios y comercio electrónico.",
         dev_s2:             "<strong>Integración Bilingüe:</strong> Llegue a más clientes con experiencias fluidas en inglés y español.",
-        dev_s3:             "<strong>Herramientas para Salud:</strong> Formularios seguros de ingreso de pacientes, flujos de validación y salida JSON compatible con FHIR para clínicas.",
+        dev_s3:             "<strong>Herramientas para Salud:</strong> Como estudiante de Sistemas de Información de Salud (HCIS) en MSU Denver, creo formularios seguros de ingreso de pacientes, flujos de validación y salida JSON compatible con FHIR para clínicas.",
         dev_s4:             "<strong>Mantenimiento Continuo:</strong> Configuración de hosting, gestión de dominio, parches de seguridad y fundamentos de SEO.",
         dev_portfolio_note: "Incluye trabajo de portafolio para Tienda SalvaDoreña",
         dev_cta:            "Ver Portafolio Web y Precios",
 
         // ── HUBS CALLOUT ──
-        hubs_callout_h3:   "Ahorre Más en Nuestros Hubs Comunitarios",
-        hubs_callout_body: "Visítenos en un Hub Comunitario y pague <strong>$10 por acto notarial</strong> (en lugar del máximo estándar de $15) <strong>sin tarifa de desplazamiento</strong>. Son descuentos reales — ofrecidos voluntariamente por debajo del máximo legal de Colorado.",
+        hubs_callout_h3:   "Ahorre Más en Mis Hubs Comunitarios",
+        hubs_callout_body: "Visíteme en un Hub Comunitario y pague <strong>$10 por acto notarial</strong> (en lugar del máximo estándar de $15) <strong>sin tarifa de desplazamiento</strong>. Son descuentos reales — ofrecidos voluntariamente por debajo del máximo legal de Colorado.",
         hub_tienda_sub:    "Hub Comunitario — área de Castle Rock",
         hub_crrec_sub:     "Hub Comunitario — Castle Rock, CO",
         hub_msu_sub:       "Hub Universitario / Comunitario — Denver, CO",
@@ -195,7 +197,7 @@ const translations = {
         // ── TRANSLATION ──
         trans_h2:           "Servicios de Traducción Certificada",
         trans_sub:          "Traducciones Profesionales Español ↔ Inglés — USCIS, DMV, Escuelas y Agencias Estatales",
-        trans_body:         "Proporcionamos traducciones certificadas palabra por palabra para familias, estudiantes y empresas. Cada traducción incluye un <strong>Certificado de Exactitud</strong> firmado, cumpliendo con los requisitos de USCIS, el DMV de Colorado, escuelas y agencias estatales. Entrega urgente disponible.",
+        trans_body:         "Proporciono traducciones certificadas palabra por palabra para familias, estudiantes y empresas. Cada traducción incluye un <strong>Certificado de Exactitud</strong> firmado, cumpliendo con los requisitos de USCIS, el DMV de Colorado, escuelas y agencias estatales. Entrega urgente disponible.",
         trans_s1:           "Trámites de Inmigración y USCIS",
         trans_s2:           "Documentos de título y registro del DMV de Colorado",
         trans_s3:           "Registros de inscripción escolar y universitaria",
@@ -205,29 +207,31 @@ const translations = {
 
         // ── FAQ ──
         faq_h2:  "Preguntas Frecuentes",
-        faq_sub: "Respuestas rápidas a las preguntas más comunes sobre nuestros servicios.",
-        faq_q1:  "¿A qué áreas sirven?",
-        faq_a1:  "Principalmente servimos Castle Rock, el área metropolitana de Denver y la región sur del metro de Colorado. Los servicios de notaría móvil se extienden más allá de esta área con una tarifa de desplazamiento adicional. También operamos Hubs Comunitarios en MSU Denver, Castle Rock Rec Center y Tienda Salvadoreña donde aplican tarifas con descuento — sin cargo de viaje.",
-        faq_q2:  "¿Ofrecen servicios en español?",
-        faq_a2:  "Sí — todos los servicios son completamente bilingües en inglés y español. David Quintana tiene fluidez de nivel nativo en ambos idiomas y puede asistir con consultas bilingües, traducciones certificadas y acompañamiento bilingüe a citas gubernamentales.",
+        faq_sub: "Respuestas rápidas a las preguntas más comunes sobre mis servicios.",
+        faq_q1:  "¿A qué áreas sirve?",
+        faq_a1:  "Principalmente sirvo Castle Rock, el área metropolitana de Denver y la región sur del metro de Colorado. Los servicios de notaría móvil se extienden más allá de esta área con una tarifa de desplazamiento adicional. También opero Hubs Comunitarios en MSU Denver, Castle Rock Rec Center y Tienda Salvadoreña donde aplican tarifas con descuento — sin cargo de viaje.",
+        faq_q2:  "¿Ofrece servicios en español?",
+        faq_a2:  "Sí — todos los servicios son completamente bilingües en inglés y español. Tengo fluidez de nivel nativo en ambos idiomas y puedo asistir con consultas bilingües, traducciones certificadas y acompañamiento bilingüe a citas gubernamentales.",
         faq_q3:  "¿Qué servicios notariales están disponibles?",
         faq_a3:  "Quintana Notary &amp; Signing ofrece notarizaciones estándar (reconocimientos, juramentos, certificaciones de copia), procesamiento de apostillas para documentos internacionales a través de la Secretaría de Estado de Colorado, paquetes de firma de préstamos, verificación de empleo I-9 y servicios de conserje de pasaporte estadounidense.",
-        faq_q4:  "¿Pueden ayudar con transferencias de título de vehículos de otros estados?",
-        faq_a4:  "Sí. A través de la marca Ayuda DMV, manejamos transferencias de título de otros estados, servicios de representación en persona en el DMV, y preparación de documentos para transferencias privadas de título y facturas de venta en Colorado.",
-        faq_q5:  "¿Son abogados? ¿Pueden dar asesoría legal?",
-        faq_a5:  "No. Conforme a C.R.S. § 24-21-525, Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en Colorado. No podemos dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrecemos servicios administrativos, notariales, de traducción y de trámites.",
-        faq_q6:  "¿Qué métodos de pago aceptan?",
-        faq_a6:  "Aceptamos Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Se aplica un cargo de procesamiento del 3% a los pagos con tarjeta. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
+        faq_q4:  "¿Puede ayudar con transferencias de título de vehículos de otros estados?",
+        faq_a4:  "Sí. A través de la marca Ayuda DMV, manejo transferencias de título de otros estados, servicios de representación en persona en el DMV, y preparación de documentos para transferencias privadas de título y facturas de venta en Colorado.",
+        faq_q5:  "¿Es abogado? ¿Puede dar asesoría legal?",
+        faq_a5:  "No. Conforme a C.R.S. § 24-21-525, no soy abogado licenciado para ejercer el derecho en Colorado. Aunque soy candidato a asistente legal (paralegal) en el Center for Legal Studies de MSU Denver, no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrezco servicios administrativos, notariales, de traducción y de trámites.",
+        faq_q6:  "¿Qué métodos de pago acepta?",
+        faq_a6:  "Acepto Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Se aplica un cargo de procesamiento del 3% a los pagos con tarjeta. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
 
         // ── ABOUT ──
         about_h2:       "Construido Sobre Integridad",
-        about_p1:       "Servicios Quintana LLC reúne el trabajo profesional de <strong>David Quintana</strong> — notario de Colorado, especialista en DMV, traductor certificado y desarrollador web bilingüe.",
-        about_p2:       "Ya sea que estemos notarizando un documento de préstamo en Castle Rock, ayudando a una familia a registrar un vehículo de otro estado, o escribiendo código personalizado para un negocio local, nuestro valor fundamental sigue siendo el mismo: <strong>Accesibilidad.</strong>",
+        about_p1:       "Servicios Quintana LLC es la práctica individual de <strong>David Quintana</strong> — notario móvil de Colorado, especialista en DMV, traductor certificado inglés-español y desarrollador web bilingüe.",
+        about_creds:    "También soy <strong>candidato a asistente legal (paralegal) en el Center for Legal Studies de MSU Denver</strong> y <strong>candidato a la licenciatura en Sistemas de Información de Salud (HCIS)</strong> en Metropolitan State University of Denver — formación que fortalece mi investigación legal, preparación de documentos y trabajo seguro en tecnología de salud.",
+        about_p2:       "Ya sea que esté notarizando un documento de préstamo en Castle Rock, ayudando a una familia a registrar un vehículo de otro estado, o escribiendo código personalizado para un negocio local, mi valor fundamental sigue siendo el mismo: <strong>Accesibilidad.</strong>",
         about_p3:       "Las barreras del idioma y la complejidad técnica nunca deben impedir que alguien alcance sus objetivos.",
-        about_trust_h3: "Por Qué Colorado Confía en Nosotros",
+        about_trust_h3: "Por Qué Colorado Confía en Mí",
         trust_1:        "<strong>100% Bilingüe:</strong> Dominio nativo del inglés y español — sin intérprete necesario.",
         trust_2:        "<strong>Precios Transparentes:</strong> Sin cargos ocultos; todo se comunica y se acuerda por escrito antes de su cita.",
-        trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en nuestros Hubs Comunitarios en Castle Rock y Denver.",
+        trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en mis Hubs Comunitarios en Castle Rock y Denver.",
+        trust_5:        "<strong>Con Formación Legal:</strong> Candidato a asistente legal (paralegal) en el Center for Legal Studies de MSU Denver — capacitado en investigación legal y preparación de documentos (no asesoría legal).",
         trust_4:        "<strong>Propiedad Local:</strong> Sirviendo con orgullo al área metropolitana de Denver y el Sur del Metro desde 2026.",
 
         // ── STATS ──
@@ -243,9 +247,9 @@ const translations = {
         hub_note:   "$10 por acto notarial y sin tarifa de desplazamiento en estas ubicaciones.",
 
         // ── FOOTER ──
-        footer_brands_nav_h5: "Nuestras Marcas",
-        footer_statutory_en:  "<strong>Important Notice:</strong> Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in the State of Colorado. We may not give legal advice or accept fees for legal advice. We provide administrative, translation, and notary public services only. (C.R.S. § 24-21-525)",
-        footer_statutory_es:  "<strong>Aviso Importante:</strong> Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No podemos dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrecemos servicios administrativos, de traducción y de notario público.",
+        footer_brands_nav_h5: "Mis Marcas",
+        footer_statutory_en:  "<strong>Important Notice:</strong> David Quintana and Servicios Quintana LLC are not attorneys licensed to practice law in the State of Colorado. I may not give legal advice or accept fees for legal advice. I provide administrative, translation, and notary public services only. (C.R.S. § 24-21-525)",
+        footer_statutory_es:  "<strong>Aviso Importante:</strong> David Quintana y Servicios Quintana LLC no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No puedo dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrezco servicios administrativos, de traducción y de notario público.",
 
         // ── MISC ──
         lang_btn:    "English",
@@ -401,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect    = card.getBoundingClientRect();
             const rotateX = ((e.clientY - rect.top)  - rect.height / 2) / 20;
             const rotateY = (rect.width / 2 - (e.clientX - rect.left)) / 20;
-            card.style.transform = `translate(-8px,-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         });
         card.addEventListener('mouseleave', () => { card.style.transform = ''; });
     });
