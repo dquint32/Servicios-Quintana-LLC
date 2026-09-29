@@ -1698,17 +1698,30 @@ address {
     .translation-text .btn-gold { white-space: normal; text-align: center; max-width: 100%; }
 }
 
-
 /* ============================================
-   HERO WATERMARK IN DARK MODE  (2026-09-29)
-   The logo's lettering is near-black teal, so on the dark theme it
-   vanished and only the orange lines showed. invert + hue-rotate turns
-   the lettering light while keeping the orange accent orange.
-   Light theme is unchanged.
+   HERO WATERMARK — BOTH THEMES  (2026-09-29)
+   The base rule used mix-blend-mode: screen, which can only lighten:
+   on the light theme the dark logo disappeared (browser/GPU dependent),
+   and on the dark theme the near-black lettering was unreadable.
+   Now: normal blending everywhere, the dark theme inverts the logo
+   (hue-rotated so the orange stays orange), and each theme gets an
+   opacity that keeps "SERVICIOS QUINTANA LLC" readable. Phones keep it
+   fainter because it sits behind the hero text there.
    ============================================ */
-html:not([data-theme="light"]) .hero-watermark {
-    filter: invert(1) hue-rotate(180deg) drop-shadow(0 0 60px var(--glow-soft));
-    opacity: 0.16;
+.hero-watermark { mix-blend-mode: normal; }
+html[data-theme="light"] .hero-watermark {
+    filter: none;
+    opacity: 0.22;
 }
-@media (max-width: 1024px) { html:not([data-theme="light"]) .hero-watermark { opacity: 0.14; } }
-@media (max-width: 480px)  { html:not([data-theme="light"]) .hero-watermark { opacity: 0.10; } }
+html:not([data-theme="light"]) .hero-watermark {
+    filter: invert(1) hue-rotate(180deg);
+    opacity: 0.30;
+}
+@media (max-width: 1024px) {
+    html[data-theme="light"] .hero-watermark { opacity: 0.20; }
+    html:not([data-theme="light"]) .hero-watermark { opacity: 0.26; }
+}
+@media (max-width: 768px) {
+    html[data-theme="light"] .hero-watermark { opacity: 0.12; }
+    html:not([data-theme="light"]) .hero-watermark { opacity: 0.14; }
+}
