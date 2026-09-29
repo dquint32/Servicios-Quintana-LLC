@@ -17,7 +17,7 @@ const translations = {
         nav_contact:  "Contact HQ",
 
         // ── HERO ──
-        hero_eyebrow: "Est. 2026 · Castle Rock &amp; Denver Metro, Colorado",
+        hero_eyebrow: "Est. 2026 · Denver Metro, Colorado",
         hero_h1:      "Bridging the Gap Between<br>Community &amp; Compliance.",
         hero_sub:     "Servicios Quintana LLC is Colorado's home for trusted, bilingual services that make official, government, and digital processes accessible to everyone. As a one-person, owner-operated practice, I bring together three specialized brands under one mission: helping my community navigate paperwork, agencies, and technology — with clarity and confidence.",
         btn_view_services: "View My Services",
@@ -25,7 +25,7 @@ const translations = {
 
         // ── BRANDS SECTION ──
         brands_h2:  "My Specialized Brands",
-        brands_sub: "I operate three distinct brands serving Castle Rock, the Denver Metro area, and beyond. Whether I come to you or you meet me at a Community Hub, I'm here to help.",
+        brands_sub: "I operate three distinct brands serving the Denver Metro area and beyond. Whether I come to you or you meet me at a Community Hub, I'm here to help.",
 
         // ── BADGES ──
         badge_auth:        "Document Authentication",
@@ -58,17 +58,17 @@ const translations = {
         dev_intro:         "High-performance, fully bilingual (EN/ES) web architecture for local businesses. I build accessible, modern websites from scratch — no cheap templates.",
         dev_s1:            "<strong>Custom Websites:</strong> From basic landing pages to full Business and E-Commerce builds.",
         dev_s2:            "<strong>Bilingual Integration:</strong> Reach more customers with seamless English and Spanish user experiences.",
-        dev_s3:            "<strong>Healthcare-Aligned Tools:</strong> As an MSU Denver Health Care Information Systems (HCIS) student, I build secure patient intake forms, validation workflows, and FHIR-ready JSON output for clinics.",
+        dev_s3:            "<strong>Healthcare-Aligned Tools:</strong> As an MSU Denver Health Informatics graduate, I build secure patient intake forms, validation workflows, and FHIR-ready JSON output for clinics.",
         dev_s4:            "<strong>Ongoing Maintenance:</strong> Hosting setup, domain management, security patches, and SEO fundamentals.",
-        dev_portfolio_note:"Includes portfolio work for Tienda SalvaDoreña",
+        dev_portfolio_note:"Includes portfolio work for Tienda Salvadoreña",
         dev_cta:           "View Web Portfolio &amp; Pricing",
 
         // ── HUBS CALLOUT ──
         hubs_callout_h3:   "Save More at My Community Hubs",
         hubs_callout_body: "Meet me at a Community Hub and pay <strong>$10 per notarial act</strong> (vs. the standard $15 maximum) with <strong>no travel fee</strong>. These are real discounts — voluntarily offered below the Colorado statutory maximum.",
-        hub_tienda_sub:    "Community Hub — Castle Rock area",
-        hub_crrec_sub:     "Community Hub — Castle Rock, CO",
-        hub_msu_sub:       "Campus / Community Hub — Denver, CO",
+        hub_tienda_sub:    "Community Hub — East Colfax, Denver",
+        hub_crrec_sub:     "Community Hub — any branch in Denver",
+        hub_msu_sub:       "Auraria Library — Denver, CO",
 
         // ── TRANSLATION ──
         trans_h2:           "Certified Translation Services",
@@ -85,7 +85,7 @@ const translations = {
         faq_h2: "Frequently Asked Questions",
         faq_sub: "Quick answers to the most common questions about my services.",
         faq_q1: "What areas do you serve?",
-        faq_a1: "I primarily serve Castle Rock, the Denver Metro area, and the South Metro region of Colorado. Mobile notary services extend beyond this area for an additional travel fee. I also operate Community Hubs at MSU Denver, Castle Rock Rec Center, and Tienda Salvadoreña where discounted fees apply — no travel charge.",
+        faq_a1: "I primarily serve the Denver Metro area of Colorado. Mobile notary services extend beyond this area for an additional travel fee. I also operate Community Hubs at Tienda Salvadoreña, MSU Denver (Auraria Library), and any Denver Public Library branch, where notarization is $10 per act with no travel charge.",
         faq_q2: "Do you offer services in Spanish?",
         faq_a2: "Yes — all services are fully bilingual in English and Spanish. I have native-level fluency in both languages and can assist with bilingual consultations, certified translations, and bilingual accompaniment to government appointments.",
         faq_q3: "What notary services are available?",
@@ -100,14 +100,14 @@ const translations = {
         // ── ABOUT ──
         about_h2:        "Built on Integrity",
         about_p1:        "Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, certified Spanish-English translator, and bilingual web developer.",
-        about_creds:     "I'm also a <strong>B.S. candidate in Health Care Information Systems (HCIS)</strong> at Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work.",
-        about_p2:        "Whether I'm notarizing a loan document in Castle Rock, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>",
+        about_creds:     "I'm also a <strong>Health Informatics (B.S.) graduate</strong> of Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work.",
+        about_p2:        "Whether I'm notarizing a loan document in Denver, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>",
         about_p3:        "Language barriers and technical complexity should never prevent someone from achieving their goals.",
         about_trust_h3:  "Why Colorado Trusts Me",
         trust_1:         "<strong>100% Bilingual:</strong> Native-level fluency in English and Spanish — no interpreter needed.",
         trust_2:         "<strong>Transparent Pricing:</strong> No hidden fees; every cost is disclosed and agreed in writing before your appointment.",
-        trust_3:         "<strong>Community Focused:</strong> Discounted fees available at my Community Hubs in Castle Rock and Denver.",
-        trust_4:         "<strong>Locally Owned:</strong> Proudly serving the Denver Metro &amp; South Metro areas since 2026.",
+        trust_3:         "<strong>Community Focused:</strong> Discounted fees available at my Community Hubs across Denver.",
+        trust_4:         "<strong>Locally Owned:</strong> Proudly serving the Denver Metro area since 2026.",
 
         // ── STATS ──
         stat_brands:    "Active Brands",
@@ -118,7 +118,8 @@ const translations = {
         hubs_h4:    "Community Hubs",
         hub_msu:    "MSU Denver — Denver, CO",
         hub_tienda: "Tienda Salvadoreña",
-        hub_crrec:  "Castle Rock Rec Center",
+        hub_crrec:  "Denver Public Library (all branches)",
+        hub_dpl:    "Denver Public Library (all branches)",
         hub_note:   "$10 per notarial act &amp; no travel fee at these locations.",
 
         // ── FOOTER ──
@@ -140,7 +141,7 @@ const translations = {
         nav_contact:  "Contacto",
 
         // ── HERO ──
-        hero_eyebrow: "Est. 2026 · Castle Rock y Denver Metro, Colorado",
+        hero_eyebrow: "Est. 2026 · Área Metropolitana de Denver, Colorado",
         hero_h1:      "Cerrando la Brecha Entre<br>Comunidad y Cumplimiento.",
         hero_sub:     "Servicios Quintana LLC es el hogar de Colorado para servicios bilingües confiables que hacen que los procesos oficiales, gubernamentales y digitales sean accesibles para todos. Como práctica de una sola persona, reúno tres marcas especializadas bajo una sola misión: ayudar a mi comunidad a navegar trámites, agencias y tecnología con claridad y confianza.",
         btn_view_services: "Ver Mis Servicios",
@@ -148,7 +149,7 @@ const translations = {
 
         // ── BRANDS SECTION ──
         brands_h2:  "Mis Marcas Especializadas",
-        brands_sub: "Opero tres marcas distintas que sirven a Castle Rock, el área metropolitana de Denver y más allá. Ya sea que yo vaya a usted o que me visite en un Hub Comunitario, estoy aquí para ayudar.",
+        brands_sub: "Opero tres marcas distintas que sirven al área metropolitana de Denver y más allá. Ya sea que yo vaya a usted o que me visite en un Hub Comunitario, estoy aquí para ayudar.",
 
         // ── BADGES ──
         badge_auth:        "Autenticación de Documentos",
@@ -181,17 +182,17 @@ const translations = {
         dev_intro:          "Arquitectura web de alto rendimiento, completamente bilingüe (EN/ES) para negocios locales. Construyo sitios web accesibles y modernos desde cero — sin plantillas baratas.",
         dev_s1:             "<strong>Sitios Web Personalizados:</strong> Desde páginas de destino básicas hasta sitios completos de negocios y comercio electrónico.",
         dev_s2:             "<strong>Integración Bilingüe:</strong> Llegue a más clientes con experiencias fluidas en inglés y español.",
-        dev_s3:             "<strong>Herramientas para Salud:</strong> Como estudiante de Sistemas de Información de Salud (HCIS) en MSU Denver, creo formularios seguros de ingreso de pacientes, flujos de validación y salida JSON compatible con FHIR para clínicas.",
+        dev_s3:             "<strong>Herramientas para Salud:</strong> Como graduado en Informática de la Salud de MSU Denver, creo formularios seguros de ingreso de pacientes, flujos de validación y salida JSON compatible con FHIR para clínicas.",
         dev_s4:             "<strong>Mantenimiento Continuo:</strong> Configuración de hosting, gestión de dominio, parches de seguridad y fundamentos de SEO.",
-        dev_portfolio_note: "Incluye trabajo de portafolio para Tienda SalvaDoreña",
+        dev_portfolio_note: "Incluye trabajo de portafolio para Tienda Salvadoreña",
         dev_cta:            "Ver Portafolio Web y Precios",
 
         // ── HUBS CALLOUT ──
         hubs_callout_h3:   "Ahorre Más en Mis Hubs Comunitarios",
         hubs_callout_body: "Visíteme en un Hub Comunitario y pague <strong>$10 por acto notarial</strong> (en lugar del máximo estándar de $15) <strong>sin tarifa de desplazamiento</strong>. Son descuentos reales — ofrecidos voluntariamente por debajo del máximo legal de Colorado.",
-        hub_tienda_sub:    "Hub Comunitario — área de Castle Rock",
-        hub_crrec_sub:     "Hub Comunitario — Castle Rock, CO",
-        hub_msu_sub:       "Hub Universitario / Comunitario — Denver, CO",
+        hub_tienda_sub:    "Hub Comunitario — East Colfax, Denver",
+        hub_crrec_sub:     "Hub Comunitario — cualquier sucursal en Denver",
+        hub_msu_sub:       "Biblioteca Auraria — Denver, CO",
 
         // ── TRANSLATION ──
         trans_h2:           "Servicios de Traducción Certificada",
@@ -208,7 +209,7 @@ const translations = {
         faq_h2:  "Preguntas Frecuentes",
         faq_sub: "Respuestas rápidas a las preguntas más comunes sobre mis servicios.",
         faq_q1:  "¿A qué áreas sirve?",
-        faq_a1:  "Principalmente sirvo Castle Rock, el área metropolitana de Denver y la región sur del metro de Colorado. Los servicios de notaría móvil se extienden más allá de esta área con una tarifa de desplazamiento adicional. También opero Hubs Comunitarios en MSU Denver, Castle Rock Rec Center y Tienda Salvadoreña donde aplican tarifas con descuento — sin cargo de viaje.",
+        faq_a1:  "Principalmente sirvo el área metropolitana de Denver, Colorado. Los servicios de notaría móvil se extienden más allá de esta área con una tarifa de desplazamiento adicional. También opero Hubs Comunitarios en Tienda Salvadoreña, MSU Denver (Biblioteca Auraria) y cualquier sucursal de la Biblioteca Pública de Denver, donde la notarización cuesta $10 por acto sin cargo de viaje.",
         faq_q2:  "¿Ofrece servicios en español?",
         faq_a2:  "Sí — todos los servicios son completamente bilingües en inglés y español. Tengo fluidez de nivel nativo en ambos idiomas y puedo asistir con consultas bilingües, traducciones certificadas y acompañamiento bilingüe a citas gubernamentales.",
         faq_q3:  "¿Qué servicios notariales están disponibles?",
@@ -223,14 +224,14 @@ const translations = {
         // ── ABOUT ──
         about_h2:       "Construido Sobre Integridad",
         about_p1:       "Servicios Quintana LLC es la práctica individual de <strong>David Quintana</strong> — notario móvil de Colorado, especialista en DMV, traductor certificado inglés-español y desarrollador web bilingüe.",
-        about_creds:    "También soy <strong>candidato a la licenciatura en Sistemas de Información de Salud (HCIS)</strong> en Metropolitan State University of Denver — formación que fortalece mi trabajo seguro en tecnología de salud.",
-        about_p2:       "Ya sea que esté notarizando un documento de préstamo en Castle Rock, ayudando a una familia a registrar un vehículo de otro estado, o escribiendo código personalizado para un negocio local, mi valor fundamental sigue siendo el mismo: <strong>Accesibilidad.</strong>",
+        about_creds:    "También soy <strong>graduado en Informática de la Salud (Licenciatura)</strong> de Metropolitan State University of Denver — formación que fortalece mi trabajo seguro en tecnología de salud.",
+        about_p2:       "Ya sea que esté notarizando un documento de préstamo en Denver, ayudando a una familia a registrar un vehículo de otro estado, o escribiendo código personalizado para un negocio local, mi valor fundamental sigue siendo el mismo: <strong>Accesibilidad.</strong>",
         about_p3:       "Las barreras del idioma y la complejidad técnica nunca deben impedir que alguien alcance sus objetivos.",
         about_trust_h3: "Por Qué Colorado Confía en Mí",
         trust_1:        "<strong>100% Bilingüe:</strong> Dominio nativo del inglés y español — sin intérprete necesario.",
         trust_2:        "<strong>Precios Transparentes:</strong> Sin cargos ocultos; todo se comunica y se acuerda por escrito antes de su cita.",
-        trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en mis Hubs Comunitarios en Castle Rock y Denver.",
-        trust_4:        "<strong>Propiedad Local:</strong> Sirviendo con orgullo al área metropolitana de Denver y el Sur del Metro desde 2026.",
+        trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en mis Hubs Comunitarios en Denver.",
+        trust_4:        "<strong>Propiedad Local:</strong> Sirviendo con orgullo al área metropolitana de Denver desde 2026.",
 
         // ── STATS ──
         stat_brands:    "Marcas Activas",
@@ -241,7 +242,8 @@ const translations = {
         hubs_h4:    "Hubs Comunitarios",
         hub_msu:    "MSU Denver — Denver, CO",
         hub_tienda: "Tienda Salvadoreña",
-        hub_crrec:  "Castle Rock Rec Center",
+        hub_crrec:  "Biblioteca Pública de Denver (todas las sucursales)",
+        hub_dpl:    "Biblioteca Pública de Denver (todas las sucursales)",
         hub_note:   "$10 por acto notarial y sin tarifa de desplazamiento en estas ubicaciones.",
 
         // ── FOOTER ──
