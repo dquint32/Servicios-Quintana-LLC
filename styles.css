@@ -1697,3 +1697,18 @@ address {
     .translation-layout { grid-template-columns: minmax(0, 1fr); }
     .translation-text .btn-gold { white-space: normal; text-align: center; max-width: 100%; }
 }
+
+
+/* ============================================
+   HERO WATERMARK IN DARK MODE  (2026-09-29)
+   The logo's lettering is near-black teal, so on the dark theme it
+   vanished and only the orange lines showed. invert + hue-rotate turns
+   the lettering light while keeping the orange accent orange.
+   Light theme is unchanged.
+   ============================================ */
+html:not([data-theme="light"]) .hero-watermark {
+    filter: invert(1) hue-rotate(180deg) drop-shadow(0 0 60px var(--glow-soft));
+    opacity: 0.16;
+}
+@media (max-width: 1024px) { html:not([data-theme="light"]) .hero-watermark { opacity: 0.14; } }
+@media (max-width: 480px)  { html:not([data-theme="light"]) .hero-watermark { opacity: 0.10; } }
