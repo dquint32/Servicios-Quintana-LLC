@@ -6,8 +6,8 @@
 
     <!-- ══ PRIMARY META ══════════════════════════════════════════ -->
     <title>Bilingual Mobile Notary, Apostille, DMV &amp; Translation — Castle Rock &amp; Denver, CO | Servicios Quintana LLC</title>
-    <meta name="description" content="David Quintana — a bilingual (EN/ES) mobile notary, apostille agent, DMV proxy, and certified Spanish-English translator serving Castle Rock &amp; Denver Metro, Colorado. Out-of-state title transfers, I-9 verification, U.S. passport concierge, loan signings, and bilingual web development. Owner-operated, transparent pricing, and a paralegal candidate at MSU Denver's Center for Legal Studies.">
-    <meta name="keywords" content="mobile notary near me, mobile notary Castle Rock, bilingual notary Denver, notario Denver, apostille Colorado, apostille agent Denver, DMV proxy services Denver, out-of-state title transfers Colorado, I-9 verification Colorado, loan signing agent Denver, US passport concierge Colorado, certified Spanish English translation Colorado, USCIS certified translation Denver, bilingual web development Colorado, David Quintana notary, Servicios Quintana LLC, paralegal Denver, servicios bilingues Colorado">
+    <meta name="description" content="David Quintana — a bilingual (EN/ES) mobile notary, apostille agent, DMV proxy, and certified Spanish-English translator serving Castle Rock &amp; Denver Metro, Colorado. Out-of-state title transfers, I-9 verification, U.S. passport concierge, loan signings, and bilingual web development. Owner-operated with transparent pricing.">
+    <meta name="keywords" content="mobile notary near me, mobile notary Castle Rock, bilingual notary Denver, notario Denver, apostille Colorado, apostille agent Denver, DMV proxy services Denver, out-of-state title transfers Colorado, I-9 verification Colorado, loan signing agent Denver, US passport concierge Colorado, certified Spanish English translation Colorado, USCIS certified translation Denver, bilingual web development Colorado, David Quintana notary, Servicios Quintana LLC, servicios bilingues Colorado">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="David Quintana — Servicios Quintana LLC">
     <link rel="canonical" href="https://serviciosquintana.com/">
@@ -39,6 +39,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <script>
+        /* Light/dark: saved choice, else the visitor's system setting (site is designed dark) */
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem('sqTheme'); } catch (e) {}
+            if (t !== 'light' && t !== 'dark') {
+                t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -120,11 +131,6 @@
         "name": "Metropolitan State University of Denver"
       },
       "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "Paralegal Certificate (Candidate)",
-          "recognizedBy": {"@type": "Organization", "name": "MSU Denver — Center for Legal Studies"}
-        },
         {
           "@type": "EducationalOccupationalCredential",
           "credentialCategory": "B.S. Health Care Information Systems (Candidate)",
@@ -237,7 +243,7 @@
           "name": "Is David Quintana an attorney?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. I am not an attorney licensed to practice law in the State of Colorado. Although I am a paralegal candidate at MSU Denver's Center for Legal Studies, I provide administrative, notarial, translation, and clerical services only and cannot provide legal advice."
+            "text": "No. I am not an attorney licensed to practice law in the State of Colorado. I provide administrative, notarial, translation, and clerical services only and cannot provide legal advice."
           }
         }
       ]
@@ -280,6 +286,10 @@
                 <li><a href="#about"           data-i18n="nav_about">About</a></li>
                 <li><a href="#contact" class="btn-nav" data-i18n="nav_contact">Contact HQ</a></li>
             </ul>
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light mode" title="Light / dark">
+                <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+                <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+            </button>
             <button class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
                 <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
@@ -562,7 +572,7 @@
                     <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                         <summary class="faq-question" itemprop="name" data-i18n="faq_q5">Are you an attorney? Can you give legal advice?</summary>
                         <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                            <p itemprop="text" data-i18n="faq_a5">No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado. Although I am a paralegal candidate at MSU Denver's Center for Legal Studies, I cannot give legal advice or accept fees for legal advice. I provide administrative, notarial, translation, and clerical services only.</p>
+                            <p itemprop="text" data-i18n="faq_a5">No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado, and I cannot give legal advice or accept fees for legal advice. I provide administrative, notarial, translation, and clerical services only.</p>
                         </div>
                     </details>
 
@@ -589,7 +599,7 @@
                             Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, certified Spanish-English translator, and bilingual web developer.
                         </p>
                         <p data-i18n="about_creds">
-                            I'm also a <strong>paralegal candidate at MSU Denver's Center for Legal Studies</strong> and a <strong>B.S. candidate in Health Care Information Systems (HCIS)</strong> at Metropolitan State University of Denver — training that sharpens my legal research, document preparation, and secure healthcare-technology work.
+                            I'm also a <strong>B.S. candidate in Health Care Information Systems (HCIS)</strong> at Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work.
                         </p>
                         <p data-i18n="about_p2">
                             Whether I'm notarizing a loan document in Castle Rock, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>
@@ -603,7 +613,6 @@
                             <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_1"><strong>100% Bilingual:</strong> Native-level fluency in English and Spanish — no interpreter needed.</span></li>
                             <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_2"><strong>Transparent Pricing:</strong> No hidden fees; every cost is disclosed and agreed in writing before your appointment.</span></li>
                             <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_3"><strong>Community Focused:</strong> Discounted fees available at my Community Hubs in Castle Rock and Denver.</span></li>
-                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_5"><strong>Legally Informed:</strong> Paralegal candidate at MSU Denver's Center for Legal Studies — trained in legal research and document preparation (not legal advice).</span></li>
                             <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_4"><strong>Locally Owned:</strong> Proudly serving the Denver Metro &amp; South Metro areas since 2026.</span></li>
                         </ul>
                     </div>

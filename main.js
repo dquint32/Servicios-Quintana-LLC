@@ -93,21 +93,20 @@ const translations = {
         faq_q4: "Can you help with out-of-state vehicle title transfers?",
         faq_a4: "Yes. Through the Ayuda DMV brand, I handle out-of-state title transfers, in-person DMV proxy services, and document preparation for private-party title transfers and bills of sale in Colorado.",
         faq_q5: "Are you an attorney? Can you give legal advice?",
-        faq_a5: "No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado. Although I am a paralegal candidate at MSU Denver's Center for Legal Studies, I cannot give legal advice or accept fees for legal advice. I provide administrative, notarial, translation, and clerical services only.",
+        faq_a5: "No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado, and I cannot give legal advice or accept fees for legal advice. I provide administrative, notarial, translation, and clerical services only.",
         faq_q6: "What payment methods do you accept?",
         faq_a6: "I accept Cash, Venmo, Zelle, and Credit/Debit Card. A 3% processing fee applies to card payments. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
 
         // ── ABOUT ──
         about_h2:        "Built on Integrity",
         about_p1:        "Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, certified Spanish-English translator, and bilingual web developer.",
-        about_creds:     "I'm also a <strong>paralegal candidate at MSU Denver's Center for Legal Studies</strong> and a <strong>B.S. candidate in Health Care Information Systems (HCIS)</strong> at Metropolitan State University of Denver — training that sharpens my legal research, document preparation, and secure healthcare-technology work.",
+        about_creds:     "I'm also a <strong>B.S. candidate in Health Care Information Systems (HCIS)</strong> at Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work.",
         about_p2:        "Whether I'm notarizing a loan document in Castle Rock, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>",
         about_p3:        "Language barriers and technical complexity should never prevent someone from achieving their goals.",
         about_trust_h3:  "Why Colorado Trusts Me",
         trust_1:         "<strong>100% Bilingual:</strong> Native-level fluency in English and Spanish — no interpreter needed.",
         trust_2:         "<strong>Transparent Pricing:</strong> No hidden fees; every cost is disclosed and agreed in writing before your appointment.",
         trust_3:         "<strong>Community Focused:</strong> Discounted fees available at my Community Hubs in Castle Rock and Denver.",
-        trust_5:         "<strong>Legally Informed:</strong> Paralegal candidate at MSU Denver's Center for Legal Studies — trained in legal research and document preparation (not legal advice).",
         trust_4:         "<strong>Locally Owned:</strong> Proudly serving the Denver Metro &amp; South Metro areas since 2026.",
 
         // ── STATS ──
@@ -217,21 +216,20 @@ const translations = {
         faq_q4:  "¿Puede ayudar con transferencias de título de vehículos de otros estados?",
         faq_a4:  "Sí. A través de la marca Ayuda DMV, manejo transferencias de título de otros estados, servicios de representación en persona en el DMV, y preparación de documentos para transferencias privadas de título y facturas de venta en Colorado.",
         faq_q5:  "¿Es abogado? ¿Puede dar asesoría legal?",
-        faq_a5:  "No. Conforme a C.R.S. § 24-21-525, no soy abogado licenciado para ejercer el derecho en Colorado. Aunque soy candidato a asistente legal (paralegal) en el Center for Legal Studies de MSU Denver, no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrezco servicios administrativos, notariales, de traducción y de trámites.",
+        faq_a5:  "No. Conforme a C.R.S. § 24-21-525, no soy abogado licenciado para ejercer el derecho en Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrezco servicios administrativos, notariales, de traducción y de trámites.",
         faq_q6:  "¿Qué métodos de pago acepta?",
         faq_a6:  "Acepto Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Se aplica un cargo de procesamiento del 3% a los pagos con tarjeta. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
 
         // ── ABOUT ──
         about_h2:       "Construido Sobre Integridad",
         about_p1:       "Servicios Quintana LLC es la práctica individual de <strong>David Quintana</strong> — notario móvil de Colorado, especialista en DMV, traductor certificado inglés-español y desarrollador web bilingüe.",
-        about_creds:    "También soy <strong>candidato a asistente legal (paralegal) en el Center for Legal Studies de MSU Denver</strong> y <strong>candidato a la licenciatura en Sistemas de Información de Salud (HCIS)</strong> en Metropolitan State University of Denver — formación que fortalece mi investigación legal, preparación de documentos y trabajo seguro en tecnología de salud.",
+        about_creds:    "También soy <strong>candidato a la licenciatura en Sistemas de Información de Salud (HCIS)</strong> en Metropolitan State University of Denver — formación que fortalece mi trabajo seguro en tecnología de salud.",
         about_p2:       "Ya sea que esté notarizando un documento de préstamo en Castle Rock, ayudando a una familia a registrar un vehículo de otro estado, o escribiendo código personalizado para un negocio local, mi valor fundamental sigue siendo el mismo: <strong>Accesibilidad.</strong>",
         about_p3:       "Las barreras del idioma y la complejidad técnica nunca deben impedir que alguien alcance sus objetivos.",
         about_trust_h3: "Por Qué Colorado Confía en Mí",
         trust_1:        "<strong>100% Bilingüe:</strong> Dominio nativo del inglés y español — sin intérprete necesario.",
         trust_2:        "<strong>Precios Transparentes:</strong> Sin cargos ocultos; todo se comunica y se acuerda por escrito antes de su cita.",
         trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en mis Hubs Comunitarios en Castle Rock y Denver.",
-        trust_5:        "<strong>Con Formación Legal:</strong> Candidato a asistente legal (paralegal) en el Center for Legal Studies de MSU Denver — capacitado en investigación legal y preparación de documentos (no asesoría legal).",
         trust_4:        "<strong>Propiedad Local:</strong> Sirviendo con orgullo al área metropolitana de Denver y el Sur del Metro desde 2026.",
 
         // ── STATS ──
@@ -280,6 +278,28 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(card);
         }
     });
+
+    /* ── LIGHT / DARK TOGGLE ─────────────────────────────── */
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const themeLabel = () => {
+        const light = document.documentElement.getAttribute('data-theme') === 'light';
+        const es = document.documentElement.getAttribute('lang') === 'es';
+        return light ? (es ? 'Cambiar a modo oscuro' : 'Switch to dark mode')
+                     : (es ? 'Cambiar a modo claro' : 'Switch to light mode');
+    };
+    const applyTheme = (mode, save) => {
+        document.documentElement.setAttribute('data-theme', mode);
+        if (themeMeta) themeMeta.setAttribute('content', mode === 'light' ? '#f5f6fa' : '#070b16');
+        if (themeBtn) { themeBtn.setAttribute('aria-label', themeLabel()); themeBtn.title = themeLabel(); }
+        if (save) { try { localStorage.setItem('sqTheme', mode); } catch (e) {} }
+    };
+    applyTheme(document.documentElement.getAttribute('data-theme') || 'dark', false);
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            applyTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light', true);
+        });
+    }
 
     /* ── LANGUAGE TOGGLE ─────────────────────────────────── */
     let currentLang = 'en';
@@ -344,6 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('lang', lang);
 
         try { localStorage.setItem('sqLang', lang); } catch (e) {}
+        if (themeBtn) { themeBtn.setAttribute('aria-label', themeLabel()); themeBtn.title = themeLabel(); }
     };
 
     // Main language toggle

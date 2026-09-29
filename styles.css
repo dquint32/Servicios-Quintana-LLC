@@ -1587,3 +1587,113 @@ address {
     #custom-cursor { display: none; }
     * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+
+/* ============================================
+   LIGHT THEME + THEME TOGGLE  (2026-09-28)
+   The site is designed dark; [data-theme="light"] swaps the
+   tokens and fixes the few spots that hard-code dark values.
+   Orange stays bright on buttons (dark text on it); orange TEXT
+   gets a deeper shade so it passes contrast on white.
+   ============================================ */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+    border-radius: var(--radius-pill);
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    color: var(--gold);
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+.theme-toggle:hover { border-color: var(--orange); box-shadow: 0 0 20px var(--glow-soft); }
+.theme-toggle:active { transform: scale(0.94); }
+.theme-toggle:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+/* dark theme shows the sun (tap for light); light theme shows the moon */
+.theme-icon-moon { display: none; }
+.theme-icon-sun { display: block; }
+:root[data-theme="light"] .theme-icon-sun { display: none; }
+:root[data-theme="light"] .theme-icon-moon { display: block; }
+
+@media (max-width: 768px) {
+    .theme-toggle { order: 1; margin-left: 0.25rem; }
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg:            #f5f6fa;
+    --bg-2:          #ffffff;
+    --bg-3:          #eef1f7;
+    --glass:         rgba(15, 23, 42, 0.035);
+    --glass-strong:  rgba(15, 23, 42, 0.06);
+    --glass-border:  rgba(15, 23, 42, 0.13);
+    --orange:        #c2410c;   /* text/icon orange, 5.2:1 on white */
+    --orange-bright: #b93e0b;
+    --gold:          #92400e;
+    --glow-orange:   rgba(242, 102, 10, 0.28);
+    --glow-soft:     rgba(242, 102, 10, 0.12);
+    --glow-gold:     rgba(217, 119, 6, 0.18);
+    --text:          #0f172a;
+    --text-soft:     #334155;
+    --text-dim:      #526079;
+    --white:         #0b1120;   /* "white" headings become ink */
+}
+
+/* keep the bright brand gradient on filled buttons (dark text stays readable) */
+:root[data-theme="light"] .btn-primary,
+:root[data-theme="light"] .llc,
+:root[data-theme="light"] .btn-nav,
+:root[data-theme="light"] .btn-nav:hover,
+:root[data-theme="light"] #back-to-top {
+    background: linear-gradient(135deg, #ff9f52, #f2660a) !important;
+    color: #0b1120 !important;
+}
+:root[data-theme="light"] .skip-link { background: #ff9f52; }
+:root[data-theme="light"] .btn-gold { background: linear-gradient(135deg, #ffd35c, #fbbf24); color: #3a2c05; }
+
+/* gradient-filled headline text */
+:root[data-theme="light"] .hero h1,
+:root[data-theme="light"] .section-header h2,
+:root[data-theme="light"] .split-text h2 {
+    background: linear-gradient(180deg, #0b1120 35%, #3b4a66 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* surfaces that hard-code dark values */
+:root[data-theme="light"] .navbar {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+    border-bottom-color: rgba(15, 23, 42, 0.08);
+}
+:root[data-theme="light"] .card {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+:root[data-theme="light"] .card:hover { box-shadow: 0 18px 44px rgba(15, 23, 42, 0.12), 0 0 30px var(--glow-soft); }
+:root[data-theme="light"] .card::after {
+    background: linear-gradient(140deg, rgba(15, 23, 42, 0.14), rgba(15, 23, 42, 0.04) 45%, rgba(242, 102, 10, 0.4));
+}
+:root[data-theme="light"] .hubs-callout,
+:root[data-theme="light"] .community-hubs { box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+:root[data-theme="light"] .section,
+:root[data-theme="light"] .hero,
+:root[data-theme="light"] .about-section,
+:root[data-theme="light"] .faq-answer,
+:root[data-theme="light"] .footer-legal,
+:root[data-theme="light"] .footer-brands-nav { border-color: rgba(15, 23, 42, 0.08); }
+:root[data-theme="light"] .legal-banner { background: #fff7ed; }
+:root[data-theme="light"] body::before { opacity: 0.6; }
+
+/* Phones: the translation column could be pushed wider than the screen
+   by the gold button's unbreakable label (sideways scroll at 390px) */
+@media (max-width: 768px) {
+    .translation-layout { grid-template-columns: minmax(0, 1fr); }
+    .translation-text .btn-gold { white-space: normal; text-align: center; max-width: 100%; }
+}
