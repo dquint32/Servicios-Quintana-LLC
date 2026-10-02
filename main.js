@@ -35,19 +35,19 @@ const translations = {
 
         // ── NOTARY ──
         notary_tagline:      "Professional, Mobile &amp; Bilingual Document Authentication",
-        notary_intro:        "I bring the notary office to your doorstep or meet you at my discounted Community Hubs (MSU Denver &amp; Tienda Salvadoreña).",
+        notary_intro:        "I bring the notary office to your doorstep or meet you at discounted Community Hubs (MSU Denver &amp; Tienda Salvadoreña).",
         notary_s1:           "<strong>Standard Notarizations:</strong> Acknowledgments, Oaths/Affirmations, and Copy Certifications.",
         notary_s2:           "<strong>Apostille Processing:</strong> Full-service handling for international documents via the CO Secretary of State.",
         notary_s3:           "<strong>Loan Signings:</strong> Professional packages for Refinances, Purchases, and HELOCs.",
         notary_s4:           "<strong>Business &amp; Agent Services:</strong> I-9 Employment Verifications.",
-        notary_s5:           "<strong>U.S. Passport Concierge:</strong> Clerical prep for DS-11/DS-82 and bilingual chaperone at the post office or clerk's office.",
+        notary_s5:           "<strong>U.S. Passport Concierge:</strong> Clerical prep for DS-11/DS-82 and bilingual chaperone at the post office or clerk's office. The forms are free from the government; I charge only for typing and my time.",
         notary_pricing_note: "Notarial acts from <strong>$10–$15</strong> · Mobile fee quoted in writing before every appointment.",
         notary_cta:          "Explore Notary &amp; Passport Services",
 
         // ── DMV ──
         dmv_tagline: "Administrative Support &amp; DMV Proxy Services",
         dmv_intro:   "Specialized assistance for residents navigating complex Colorado DMV requirements. I simplify state processes so families can move forward without stress.",
-        dmv_s1:      "<strong>DMV Document Preparation:</strong> Accurate forms for address changes, private-party title transfers, and bills of sale.",
+        dmv_s1:      "<strong>DMV Document Preparation:</strong> I type the forms you choose for address changes, private-party title transfers, and bills of sale. The forms are free from the government; I charge only for typing and my time.",
         dmv_s2:      "<strong>In-Person Proxy Services:</strong> Can't go to the DMV? I act as your authorized proxy to submit documents in person.",
         dmv_s3:      "<strong>Out-of-State Title Transfers:</strong> I coordinate with out-of-state owners, dealerships, and lienholders.",
         dmv_s4:      "<strong>Same-Day Rush Services:</strong> Available for urgent document prep and DMV submissions.",
@@ -64,7 +64,7 @@ const translations = {
         dev_cta:           "View Web Portfolio &amp; Pricing",
 
         // ── HUBS CALLOUT ──
-        hubs_callout_h3:   "Save More at My Community Hubs",
+        hubs_callout_h3:   "Save More at a Community Hub",
         hubs_callout_body: "Meet me at a Community Hub and pay <strong>$10 per notarial act</strong> (vs. the standard $15 maximum) with <strong>no travel fee</strong>. These are real discounts — voluntarily offered below the Colorado statutory maximum.",
         hub_tienda_sub:    "Community Hub — East Colfax, Denver",
         hub_crrec_sub:     "Community Hub — any branch in Denver",
@@ -85,7 +85,7 @@ const translations = {
         faq_h2: "Frequently Asked Questions",
         faq_sub: "Quick answers to the most common questions about my services.",
         faq_q1: "What areas do you serve?",
-        faq_a1: "I primarily serve the Denver Metro area of Colorado. Mobile notary services extend beyond this area for an additional travel fee. I also operate Community Hubs at Tienda Salvadoreña, MSU Denver (Auraria Library), and any Denver Public Library branch, where notarization is $10 per act with no travel charge.",
+        faq_a1: "I primarily serve the Denver Metro area of Colorado. Mobile notary services extend beyond this area for an additional travel fee. I also meet clients by appointment at Community Hubs (Tienda Salvadoreña, MSU Denver's Auraria Library, and any Denver Public Library branch), where notarization is $10 per act with no travel charge. These are public places where I meet clients; I am not affiliated with or endorsed by them.",
         faq_q2: "Do you offer services in Spanish?",
         faq_a2: "Yes — all services are fully bilingual in English and Spanish. I have native-level fluency in both languages and can assist with bilingual consultations, certified translations, and bilingual accompaniment to government appointments.",
         faq_q3: "What notary services are available?",
@@ -95,7 +95,7 @@ const translations = {
         faq_q5: "Are you an attorney? Can you give legal advice?",
         faq_a5: "No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado, and I cannot give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. I provide administrative, notarial, translation, and clerical services only.",
         faq_q6: "What payment methods do you accept?",
-        faq_a6: "I accept Cash, Venmo, Zelle, and Credit/Debit Card. I do not charge a card fee; the payment processor, Helcim, may add a fee that depends on your card institution. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
+        faq_a6: "I accept Cash, Venmo, Zelle, and Credit/Debit Card. Credit card payments have a processing surcharge of up to 2%, added at checkout by my payment processor, Helcim; there is no surcharge for cash, Venmo, Zelle, or debit card. Notice required by Colorado: To cover the cost of processing a credit or charge card transaction, and pursuant to section 5-2-212, Colorado Revised Statutes, a seller or lessor may impose a processing surcharge in an amount not to exceed 2% of the total payment made for goods or services purchased or leased by use of a credit or charge card. A seller or lessor shall not impose a processing surcharge on payments made by use of cash, a check, or a debit card or redemption of a gift card. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
 
         // ── ABOUT ──
         about_h2:        "Built on Integrity",
@@ -106,7 +106,7 @@ const translations = {
         about_trust_h3:  "Why Colorado Trusts Me",
         trust_1:         "<strong>100% Bilingual:</strong> Native-level fluency in English and Spanish — no interpreter needed.",
         trust_2:         "<strong>Transparent Pricing:</strong> No hidden fees; every cost is disclosed and agreed in writing before your appointment.",
-        trust_3:         "<strong>Community Focused:</strong> Discounted fees available at my Community Hubs across Denver.",
+        trust_3:         "<strong>Community Focused:</strong> Discounted fees available at Community Hubs across Denver.",
         trust_4:         "<strong>Locally Owned:</strong> Proudly serving the Denver Metro area since 2026.",
 
         // ── STATS ──
@@ -120,7 +120,7 @@ const translations = {
         hub_tienda: "Tienda Salvadoreña",
         hub_crrec:  "Denver Public Library (all branches)",
         hub_dpl:    "Denver Public Library (all branches)",
-        hub_note:   "$10 per notarial act &amp; no travel fee at these locations.",
+        hub_note:   "$10 per notarial act &amp; no travel fee at these locations. These are public places where I meet clients by appointment; I am not affiliated with or endorsed by them.",
 
         // ── FOOTER ──
         footer_brands_nav_h5: "My Brands",
@@ -159,19 +159,19 @@ const translations = {
 
         // ── NOTARY ──
         notary_tagline:      "Autenticación de Documentos Profesional, Móvil y Bilingüe",
-        notary_intro:        "Llevo la oficina notarial a su puerta o me reúno con usted en mis Hubs Comunitarios con descuento (MSU Denver y Tienda Salvadoreña).",
+        notary_intro:        "Llevo la oficina notarial a su puerta o me reúno con usted en Hubs Comunitarios con descuento (MSU Denver y Tienda Salvadoreña).",
         notary_s1:           "<strong>Notarizaciones Estándar:</strong> Reconocimientos, Juramentos/Afirmaciones y Certificaciones de Copia.",
         notary_s2:           "<strong>Procesamiento de Apostilla:</strong> Servicio completo para documentos internacionales a través de la Secretaría de Estado de Colorado.",
         notary_s3:           "<strong>Firmas de Préstamos:</strong> Paquetes profesionales para Refinanciamientos, Compras y HELOCs.",
         notary_s4:           "<strong>Servicios para Empresas y Agentes:</strong> Verificaciones de Empleo I-9.",
-        notary_s5:           "<strong>Conserje de Pasaporte EE.UU.:</strong> Preparación de formularios DS-11/DS-82 y acompañamiento bilingüe en la oficina de correos o juzgado.",
+        notary_s5:           "<strong>Conserje de Pasaporte EE.UU.:</strong> Preparación de formularios DS-11/DS-82 y acompañamiento bilingüe en la oficina de correos o juzgado. Los formularios son gratuitos del gobierno; solo cobro por la mecanografía y mi tiempo.",
         notary_pricing_note: "Actos notariales desde <strong>$10–$15</strong> · Tarifa de desplazamiento cotizada por escrito antes de cada cita.",
         notary_cta:          "Explorar Servicios Notariales y de Pasaporte",
 
         // ── DMV ──
         dmv_tagline: "Apoyo Administrativo y Servicios de Representación en el DMV",
         dmv_intro:   "Asistencia especializada para residentes que navegan los complejos requisitos del DMV de Colorado. Simplifico los procesos estatales para que las familias puedan avanzar sin estrés.",
-        dmv_s1:      "<strong>Preparación de Documentos DMV:</strong> Formularios precisos para cambios de dirección, transferencias privadas de título y facturas de venta.",
+        dmv_s1:      "<strong>Preparación de Documentos DMV:</strong> Escribo los formularios que usted elige para cambios de dirección, transferencias privadas de título y facturas de venta. Los formularios son gratuitos del gobierno; solo cobro por la mecanografía y mi tiempo.",
         dmv_s2:      "<strong>Servicios de Representación en Persona:</strong> ¿No puede ir al DMV? Actúo como su representante autorizado para entregar sus documentos en persona.",
         dmv_s3:      "<strong>Transferencias de Título de Otros Estados:</strong> Coordino con propietarios de otros estados, concesionarios y acreedores.",
         dmv_s4:      "<strong>Servicios Urgentes el Mismo Día:</strong> Disponibles para preparación urgente de documentos y entregas en el DMV.",
@@ -188,7 +188,7 @@ const translations = {
         dev_cta:            "Ver Portafolio Web y Precios",
 
         // ── HUBS CALLOUT ──
-        hubs_callout_h3:   "Ahorre Más en Mis Hubs Comunitarios",
+        hubs_callout_h3:   "Ahorre Más en un Hub Comunitario",
         hubs_callout_body: "Visíteme en un Hub Comunitario y pague <strong>$10 por acto notarial</strong> (en lugar del máximo estándar de $15) <strong>sin tarifa de desplazamiento</strong>. Son descuentos reales — ofrecidos voluntariamente por debajo del máximo legal de Colorado.",
         hub_tienda_sub:    "Hub Comunitario — East Colfax, Denver",
         hub_crrec_sub:     "Hub Comunitario — cualquier sucursal en Denver",
@@ -209,7 +209,7 @@ const translations = {
         faq_h2:  "Preguntas Frecuentes",
         faq_sub: "Respuestas rápidas a las preguntas más comunes sobre mis servicios.",
         faq_q1:  "¿A qué áreas sirve?",
-        faq_a1:  "Principalmente sirvo el área metropolitana de Denver, Colorado. Los servicios notariales móviles se extienden más allá de esta área con una tarifa de desplazamiento adicional. También opero Hubs Comunitarios en Tienda Salvadoreña, MSU Denver (Biblioteca Auraria) y cualquier sucursal de la Biblioteca Pública de Denver, donde la notarización cuesta $10 por acto sin cargo de viaje.",
+        faq_a1:  "Principalmente sirvo el área metropolitana de Denver, Colorado. Los servicios notariales móviles se extienden más allá de esta área con una tarifa de desplazamiento adicional. También me reúno con clientes, con cita previa, en Hubs Comunitarios (Tienda Salvadoreña, la Biblioteca Auraria de MSU Denver y cualquier sucursal de la Biblioteca Pública de Denver), donde la notarización cuesta $10 por acto sin cargo de viaje. Son lugares públicos donde me reúno con clientes; no estoy afiliado ni respaldado por ellos.",
         faq_q2:  "¿Ofrece servicios en español?",
         faq_a2:  "Sí — todos los servicios son completamente bilingües en inglés y español. Tengo fluidez de nivel nativo en ambos idiomas y puedo asistir con consultas bilingües, traducciones certificadas y acompañamiento bilingüe a citas gubernamentales.",
         faq_q3:  "¿Qué servicios notariales están disponibles?",
@@ -219,7 +219,7 @@ const translations = {
         faq_q5:  "¿Es abogado? ¿Puede dar asesoría legal?",
         faq_a5:  "No. Conforme a C.R.S. § 24-21-525, no soy abogado licenciado para ejercer el derecho en Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Solo ofrezco servicios administrativos, notariales, de traducción y de trámites.",
         faq_q6:  "¿Qué métodos de pago acepta?",
-        faq_a6:  "Acepto Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Yo no cobro un cargo por tarjeta; el procesador de pagos, Helcim, puede agregar un cargo según la institución de su tarjeta. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
+        faq_a6:  "Acepto Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Los pagos con tarjeta de crédito tienen un recargo de procesamiento de hasta 2%, que agrega al pagar mi procesador de pagos, Helcim; no hay recargo por efectivo, Venmo, Zelle ni tarjeta de débito. Aviso requerido por Colorado: Para cubrir el costo de procesar una transacción con tarjeta de crédito o de cargo, y conforme a la sección 5-2-212 de los Estatutos Revisados de Colorado, un vendedor o arrendador puede imponer un recargo de procesamiento por un monto que no exceda el 2% del pago total realizado por bienes o servicios comprados o arrendados con tarjeta de crédito o de cargo. Un vendedor o arrendador no impondrá un recargo de procesamiento a los pagos realizados en efectivo, con cheque o con tarjeta de débito, ni al canje de una tarjeta de regalo. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
 
         // ── ABOUT ──
         about_h2:       "Construido Sobre Integridad",
@@ -230,7 +230,7 @@ const translations = {
         about_trust_h3: "Por Qué Colorado Confía en Mí",
         trust_1:        "<strong>100% Bilingüe:</strong> Dominio nativo del inglés y español — sin intérprete necesario.",
         trust_2:        "<strong>Precios Transparentes:</strong> Sin cargos ocultos; todo se comunica y se acuerda por escrito antes de su cita.",
-        trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en mis Hubs Comunitarios en Denver.",
+        trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en Hubs Comunitarios en Denver.",
         trust_4:        "<strong>Propiedad Local:</strong> Sirviendo con orgullo al área metropolitana de Denver desde 2026.",
 
         // ── STATS ──
@@ -244,7 +244,7 @@ const translations = {
         hub_tienda: "Tienda Salvadoreña",
         hub_crrec:  "Biblioteca Pública de Denver (todas las sucursales)",
         hub_dpl:    "Biblioteca Pública de Denver (todas las sucursales)",
-        hub_note:   "$10 por acto notarial y sin tarifa de desplazamiento en estas ubicaciones.",
+        hub_note:   "$10 por acto notarial y sin tarifa de desplazamiento en estas ubicaciones. Son lugares públicos donde me reúno con clientes con cita previa; no estoy afiliado ni respaldado por ellos.",
 
         // ── FOOTER ──
         footer_brands_nav_h5: "Mis Marcas",
