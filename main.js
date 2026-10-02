@@ -74,7 +74,7 @@ const translations = {
         trans_h2:           "Certified Translation Services",
         trans_sub:          "Professional Spanish ↔ English Translations — USCIS, DMV, Schools &amp; State Agencies",
         trans_body:         "I provide word-for-word certified translations for families, students, and businesses. Every translation includes a signed <strong>Certificate of Accuracy</strong> compliant with USCIS, the Colorado DMV, schools, and state agencies. Rush turnaround available.",
-        trans_s1:           "Immigration &amp; USCIS filings",
+        trans_s1:           "Documents for USCIS (translation only)",
         trans_s2:           "Colorado DMV title &amp; registration documents",
         trans_s3:           "School &amp; university enrollment records",
         trans_s4:           "State agency &amp; government paperwork",
@@ -93,13 +93,13 @@ const translations = {
         faq_q4: "Can you help with out-of-state vehicle title transfers?",
         faq_a4: "Yes. Through the Ayuda DMV brand, I handle out-of-state title transfers, in-person DMV proxy services, and document preparation for private-party title transfers and bills of sale in Colorado.",
         faq_q5: "Are you an attorney? Can you give legal advice?",
-        faq_a5: "No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado, and I cannot give legal advice or accept fees for legal advice. I provide administrative, notarial, translation, and clerical services only.",
+        faq_a5: "No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado, and I cannot give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. I provide administrative, notarial, translation, and clerical services only.",
         faq_q6: "What payment methods do you accept?",
-        faq_a6: "I accept Cash, Venmo, Zelle, and Credit/Debit Card. A 3% processing fee applies to card payments. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
+        faq_a6: "I accept Cash, Venmo, Zelle, and Credit/Debit Card. I do not charge a card fee; the payment processor, Helcim, may add a fee that depends on your card institution. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
 
         // ── ABOUT ──
         about_h2:        "Built on Integrity",
-        about_p1:        "Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, certified Spanish-English translator, and bilingual web developer.",
+        about_p1:        "Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, native bilingual Spanish-English translator, and bilingual web developer.",
         about_creds:     "I'm also a <strong>Health Informatics (B.S.) graduate</strong> of Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work.",
         about_p2:        "Whether I'm notarizing a loan document in Denver, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>",
         about_p3:        "Language barriers and technical complexity should never prevent someone from achieving their goals.",
@@ -124,8 +124,8 @@ const translations = {
 
         // ── FOOTER ──
         footer_brands_nav_h5: "My Brands",
-        footer_statutory_en:  "<strong>Important Notice:</strong> David Quintana and Servicios Quintana LLC are not attorneys licensed to practice law in the State of Colorado. I may not give legal advice or accept fees for legal advice. I provide administrative, translation, and notary public services only. (C.R.S. § 24-21-525)",
-        footer_statutory_es:  "<strong>Aviso Importante:</strong> David Quintana y Servicios Quintana LLC no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No puedo dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrezco servicios administrativos, de traducción y de notario público.",
+        footer_statutory_en:  "<strong>Important Notice:</strong> David Quintana and Servicios Quintana LLC are not attorneys licensed to practice law in the State of Colorado. I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. I provide administrative, translation, and notary public services only. (C.R.S. § 24-21-525)",
+        footer_statutory_es:  "<strong>Aviso Importante:</strong> David Quintana y Servicios Quintana LLC no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Solo ofrezco servicios administrativos, de traducción y notariales.",
 
         // ── MISC ──
         lang_btn:    "Español",
@@ -166,7 +166,7 @@ const translations = {
         notary_s4:           "<strong>Servicios para Empresas y Agentes:</strong> Verificaciones de Empleo I-9.",
         notary_s5:           "<strong>Conserje de Pasaporte EE.UU.:</strong> Preparación de formularios DS-11/DS-82 y acompañamiento bilingüe en la oficina de correos o juzgado.",
         notary_pricing_note: "Actos notariales desde <strong>$10–$15</strong> · Tarifa de desplazamiento cotizada por escrito antes de cada cita.",
-        notary_cta:          "Explorar Servicios de Notaría y Pasaporte",
+        notary_cta:          "Explorar Servicios Notariales y de Pasaporte",
 
         // ── DMV ──
         dmv_tagline: "Apoyo Administrativo y Servicios de Representación en el DMV",
@@ -198,7 +198,7 @@ const translations = {
         trans_h2:           "Servicios de Traducción Certificada",
         trans_sub:          "Traducciones Profesionales Español ↔ Inglés — USCIS, DMV, Escuelas y Agencias Estatales",
         trans_body:         "Proporciono traducciones certificadas palabra por palabra para familias, estudiantes y empresas. Cada traducción incluye un <strong>Certificado de Exactitud</strong> firmado, cumpliendo con los requisitos de USCIS, el DMV de Colorado, escuelas y agencias estatales. Entrega urgente disponible.",
-        trans_s1:           "Trámites de Inmigración y USCIS",
+        trans_s1:           "Documentos para USCIS (solo traducción)",
         trans_s2:           "Documentos de título y registro del DMV de Colorado",
         trans_s3:           "Registros de inscripción escolar y universitaria",
         trans_s4:           "Trámites de agencias estatales y gubernamentales",
@@ -209,7 +209,7 @@ const translations = {
         faq_h2:  "Preguntas Frecuentes",
         faq_sub: "Respuestas rápidas a las preguntas más comunes sobre mis servicios.",
         faq_q1:  "¿A qué áreas sirve?",
-        faq_a1:  "Principalmente sirvo el área metropolitana de Denver, Colorado. Los servicios de notaría móvil se extienden más allá de esta área con una tarifa de desplazamiento adicional. También opero Hubs Comunitarios en Tienda Salvadoreña, MSU Denver (Biblioteca Auraria) y cualquier sucursal de la Biblioteca Pública de Denver, donde la notarización cuesta $10 por acto sin cargo de viaje.",
+        faq_a1:  "Principalmente sirvo el área metropolitana de Denver, Colorado. Los servicios notariales móviles se extienden más allá de esta área con una tarifa de desplazamiento adicional. También opero Hubs Comunitarios en Tienda Salvadoreña, MSU Denver (Biblioteca Auraria) y cualquier sucursal de la Biblioteca Pública de Denver, donde la notarización cuesta $10 por acto sin cargo de viaje.",
         faq_q2:  "¿Ofrece servicios en español?",
         faq_a2:  "Sí — todos los servicios son completamente bilingües en inglés y español. Tengo fluidez de nivel nativo en ambos idiomas y puedo asistir con consultas bilingües, traducciones certificadas y acompañamiento bilingüe a citas gubernamentales.",
         faq_q3:  "¿Qué servicios notariales están disponibles?",
@@ -217,13 +217,13 @@ const translations = {
         faq_q4:  "¿Puede ayudar con transferencias de título de vehículos de otros estados?",
         faq_a4:  "Sí. A través de la marca Ayuda DMV, manejo transferencias de título de otros estados, servicios de representación en persona en el DMV, y preparación de documentos para transferencias privadas de título y facturas de venta en Colorado.",
         faq_q5:  "¿Es abogado? ¿Puede dar asesoría legal?",
-        faq_a5:  "No. Conforme a C.R.S. § 24-21-525, no soy abogado licenciado para ejercer el derecho en Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrezco servicios administrativos, notariales, de traducción y de trámites.",
+        faq_a5:  "No. Conforme a C.R.S. § 24-21-525, no soy abogado licenciado para ejercer el derecho en Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Solo ofrezco servicios administrativos, notariales, de traducción y de trámites.",
         faq_q6:  "¿Qué métodos de pago acepta?",
-        faq_a6:  "Acepto Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Se aplica un cargo de procesamiento del 3% a los pagos con tarjeta. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
+        faq_a6:  "Acepto Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Yo no cobro un cargo por tarjeta; el procesador de pagos, Helcim, puede agregar un cargo según la institución de su tarjeta. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
 
         // ── ABOUT ──
         about_h2:       "Construido Sobre Integridad",
-        about_p1:       "Servicios Quintana LLC es la práctica individual de <strong>David Quintana</strong> — notario móvil de Colorado, especialista en DMV, traductor certificado inglés-español y desarrollador web bilingüe.",
+        about_p1:       "Servicios Quintana LLC es la práctica individual de <strong>David Quintana</strong> — Notary Public móvil comisionado en Colorado, especialista en DMV, traductor inglés-español (bilingüe nativo) y desarrollador web bilingüe.",
         about_creds:    "También soy <strong>graduado en Informática de la Salud (Licenciatura)</strong> de Metropolitan State University of Denver — formación que fortalece mi trabajo seguro en tecnología de salud.",
         about_p2:       "Ya sea que esté notarizando un documento de préstamo en Denver, ayudando a una familia a registrar un vehículo de otro estado, o escribiendo código personalizado para un negocio local, mi valor fundamental sigue siendo el mismo: <strong>Accesibilidad.</strong>",
         about_p3:       "Las barreras del idioma y la complejidad técnica nunca deben impedir que alguien alcance sus objetivos.",
@@ -248,8 +248,8 @@ const translations = {
 
         // ── FOOTER ──
         footer_brands_nav_h5: "Mis Marcas",
-        footer_statutory_en:  "<strong>Important Notice:</strong> David Quintana and Servicios Quintana LLC are not attorneys licensed to practice law in the State of Colorado. I may not give legal advice or accept fees for legal advice. I provide administrative, translation, and notary public services only. (C.R.S. § 24-21-525)",
-        footer_statutory_es:  "<strong>Aviso Importante:</strong> David Quintana y Servicios Quintana LLC no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No puedo dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrezco servicios administrativos, de traducción y de notario público.",
+        footer_statutory_en:  "<strong>Important Notice:</strong> David Quintana and Servicios Quintana LLC are not attorneys licensed to practice law in the State of Colorado. I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. I provide administrative, translation, and notary public services only. (C.R.S. § 24-21-525)",
+        footer_statutory_es:  "<strong>Aviso Importante:</strong> David Quintana y Servicios Quintana LLC no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Solo ofrezco servicios administrativos, de traducción y notariales.",
 
         // ── MISC ──
         lang_btn:    "English",
