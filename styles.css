@@ -557,7 +557,12 @@ body::after {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    white-space: nowrap;
+    /* Long labels (especially in Spanish) wrap onto a second line instead of
+       being cut off at the edges of the button. */
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    line-height: 1.3;
 }
 
 .btn-primary {
@@ -1724,4 +1729,11 @@ html:not([data-theme="light"]) .hero-watermark {
 @media (max-width: 768px) {
     html[data-theme="light"] .hero-watermark { opacity: 0.12; }
     html:not([data-theme="light"]) .hero-watermark { opacity: 0.14; }
+}
+
+/* Very narrow phones (320px): let the translation badge label wrap so the
+   page does not scroll sideways. */
+@media (max-width: 380px) {
+    .trans-accent-label { white-space: normal; text-align: center; }
+    .trans-accent-box { padding: 1.25rem 1rem; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
 }
