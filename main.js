@@ -95,7 +95,7 @@ const translations = {
         faq_q5: "Are you an attorney? Can you give legal advice?",
         faq_a5: "No. Per C.R.S. § 24-21-525, I am not an attorney licensed to practice law in Colorado, and I cannot give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. I provide administrative, notarial, translation, and clerical services only.",
         faq_q6: "What payment methods do you accept?",
-        faq_a6: "I accept Cash, Venmo, Zelle, and Credit/Debit Card. Credit card payments have a processing surcharge added at checkout by my payment processor, Helcim; there is no surcharge for cash, Venmo, or Zelle. Notice required by Colorado: To cover the cost of processing a credit or charge card transaction, and pursuant to section 5-2-212, Colorado Revised Statutes, a seller or lessor may impose a processing surcharge in an amount not to exceed the merchant discount fee that the seller or lessor incurs in processing the sales or lease transaction. A seller or lessor shall not impose a processing surcharge on payments made by use of cash, a check, or a debit card or redemption of a gift card. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
+        faq_a6: "I accept Cash, Venmo, Zelle, and Credit/Debit Card. Credit card payments have a 2% processing surcharge; debit cards have none; there is no surcharge for cash, Venmo, or Zelle. Notice required by Colorado: To cover the cost of processing a credit or charge card transaction, and pursuant to section 5-2-212, Colorado Revised Statutes, a seller or lessor may impose a processing surcharge in an amount not to exceed 2% of the total payment made for goods or services purchased or leased by use of a credit or charge card. A seller or lessor shall not impose a processing surcharge on payments made by use of cash, a check, or a debit card or redemption of a gift card. Payment is required upfront to confirm appointments. You will always receive an exact quote in writing before your appointment is confirmed.",
 
         // ── ABOUT ──
         about_h2:        "Built on Integrity",
@@ -219,7 +219,7 @@ const translations = {
         faq_q5:  "¿Es abogado? ¿Puede dar asesoría legal?",
         faq_a5:  "No. Conforme a C.R.S. § 24-21-525, no soy abogado licenciado para ejercer el derecho en Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Solo ofrezco servicios administrativos, notariales, de traducción y de trámites.",
         faq_q6:  "¿Qué métodos de pago acepta?",
-        faq_a6:  "Acepto Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Los pagos con tarjeta de crédito tienen un recargo de procesamiento que agrega al pagar mi procesador de pagos, Helcim; no hay recargo por efectivo, Venmo ni Zelle. Aviso requerido por Colorado: Para cubrir el costo de procesar una transacción con tarjeta de crédito o de cargo, y conforme a la sección 5-2-212 de los Estatutos Revisados de Colorado, un vendedor o arrendador puede imponer un recargo de procesamiento por un monto que no exceda la tarifa de descuento comercial que el vendedor o arrendador paga por procesar la transacción de venta o arrendamiento. Un vendedor o arrendador no impondrá un recargo de procesamiento a los pagos realizados en efectivo, con cheque o con tarjeta de débito, ni al canje de una tarjeta de regalo. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
+        faq_a6:  "Acepto Efectivo, Venmo, Zelle y Tarjeta de Crédito/Débito. Los pagos con tarjeta de crédito tienen un recargo de procesamiento de 2%; las tarjetas de débito no tienen recargo; no hay recargo por efectivo, Venmo ni Zelle. Aviso requerido por Colorado: Para cubrir el costo de procesar una transacción con tarjeta de crédito o de cargo, y conforme a la sección 5-2-212 de los Estatutos Revisados de Colorado, un vendedor o arrendador puede imponer un recargo de procesamiento por un monto que no exceda el 2% del pago total realizado por bienes o servicios comprados o arrendados con tarjeta de crédito o de cargo. Un vendedor o arrendador no impondrá un recargo de procesamiento a los pagos realizados en efectivo, con cheque o con tarjeta de débito, ni al canje de una tarjeta de regalo. Se requiere pago por adelantado para confirmar citas. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
 
         // ── ABOUT ──
         about_h2:       "Construido Sobre Integridad",
@@ -304,8 +304,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ── LANGUAGE TOGGLE ─────────────────────────────────── */
-    let currentLang = 'en';
-    try { currentLang = localStorage.getItem('sqLang') || 'en'; } catch (e) {}
+    // Language: a choice made with the button wins; otherwise follow the
+    // visitor's device (Spanish phone or browser -> Spanish, anything else -> English).
+    let currentLang = '';
+    try { currentLang = localStorage.getItem('sqLang') || ''; } catch (e) {}
+    if (currentLang !== 'en' && currentLang !== 'es') {
+        const deviceLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        currentLang = /^es\b/i.test(deviceLang) ? 'es' : 'en';
+    }
 
     const langBtn = document.createElement('button');
     langBtn.id = 'lang-toggle';
