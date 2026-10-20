@@ -376,6 +376,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Floating language switch — stays on screen while scrolling
+    const floatLang = document.createElement('button');
+    floatLang.type = 'button';
+    floatLang.id = 'float-lang';
+    floatLang.innerHTML = '<span class="float-lang-globe" aria-hidden="true"></span>' +
+        '<span class="float-lang-opt" data-lang="en">EN</span>' +
+        '<span class="float-lang-opt" data-lang="es">ES</span>' +
+        '<span class="float-lang-label"></span>';
+    document.body.appendChild(floatLang);
+    const syncFloatLang = (lang) => {
+        floatLang.querySelectorAll('.float-lang-opt').forEach(o =>
+            o.classList.toggle('is-active', o.dataset.lang === lang));
+        floatLang.querySelector('.float-lang-label').textContent = lang === 'en' ? 'Español' : 'English';
+        floatLang.setAttribute('aria-label', lang === 'en'
+            ? 'Cambiar a Español / Switch to Spanish'
+            : 'Switch to English / Cambiar a Inglés');
+        floatLang.title = floatLang.getAttribute('aria-label');
+    };
+
     /**
      * updateContent — applies the given language to all [data-i18n] elements.
      */
@@ -420,15 +439,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('lang', lang);
 
         try { localStorage.setItem('sqLang', lang); } catch (e) {}
+        syncFloatLang(lang);
         document.dispatchEvent(new CustomEvent('sq:lang', { detail: lang }));
         if (themeBtn) { themeBtn.setAttribute('aria-label', themeLabel()); themeBtn.title = themeLabel(); }
     };
 
-    // Main language toggle
-    langBtn.addEventListener('click', () => {
+    // Main language toggle (nav) + floating toggle share one handler
+    const toggleLang = () => {
         currentLang = currentLang === 'en' ? 'es' : 'en';
         updateContent(currentLang);
-    });
+    };
+    langBtn.addEventListener('click', toggleLang);
+    floatLang.addEventListener('click', toggleLang);
 
     // Hero "Hablamos Español" button — switch lang AND smooth-scroll to brands
     const heroEsBtn = document.getElementById('hero-es-btn');

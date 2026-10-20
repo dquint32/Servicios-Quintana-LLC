@@ -2209,3 +2209,85 @@ address {
 @media (prefers-reduced-motion: reduce) {
     .status-dot, .term-cursor, .hub-panel--swap { animation: none; }
 }
+
+/* ============================================
+   FLOATING LANGUAGE SWITCH  (2026-10)
+   Bottom-left so it never collides with Back to Top (bottom-right).
+   ============================================ */
+#float-lang {
+    position: fixed;
+    left: 1.75rem;
+    bottom: 1.75rem;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.35rem 0.9rem 0.35rem 0.4rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(255, 122, 26, 0.45);
+    background: rgba(7, 11, 22, 0.82);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    color: #eaf0fb;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 24px -6px rgba(255, 122, 26, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+#float-lang:hover {
+    transform: translateY(-2px);
+    border-color: #ff7a1a;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45), 0 0 30px -4px rgba(255, 122, 26, 0.65);
+}
+#float-lang:active { transform: scale(0.97); }
+#float-lang:focus-visible { outline: 3px solid #ff7a1a; outline-offset: 3px; }
+
+.float-lang-globe::before {
+    content: '\f0ac';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #ff7a1a;
+    display: inline-grid;
+    place-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+}
+
+.float-lang-opt {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    padding: 0.3rem 0.55rem;
+    border-radius: var(--radius-pill);
+    color: #8592ab;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.float-lang-opt.is-active {
+    background: linear-gradient(135deg, #ff9f52, #f2660a);
+    color: #0b1120;
+}
+
+.float-lang-label {
+    margin-left: 0.45rem;
+    padding-left: 0.65rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+:root[data-theme="light"] #float-lang {
+    background: rgba(255, 255, 255, 0.92);
+    color: #0f172a;
+    border-color: rgba(194, 65, 12, 0.4);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.15), 0 0 20px -6px rgba(242, 102, 10, 0.4);
+}
+:root[data-theme="light"] .float-lang-opt { color: #526079; }
+:root[data-theme="light"] .float-lang-opt.is-active { color: #0b1120; }
+:root[data-theme="light"] .float-lang-globe::before { color: #c2410c; }
+:root[data-theme="light"] .float-lang-label { border-left-color: rgba(15, 23, 42, 0.15); }
+
+@media (max-width: 768px) {
+    #float-lang { left: 1rem; bottom: 1rem; padding-right: 0.4rem; }
+    .float-lang-label { display: none; }   /* compact EN | ES pill on phones */
+}
+
+@media print { #float-lang { display: none; } }
