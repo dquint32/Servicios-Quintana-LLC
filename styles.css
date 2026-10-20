@@ -2291,3 +2291,7 @@ address {
 }
 
 @media print { #float-lang { display: none; } }
+
+/* Banner always paints above the hero (guards against any hero motion) */
+.stats-banner { position: relative; z-index: 2; }
+.hero-blueprint { will-change: transform; }

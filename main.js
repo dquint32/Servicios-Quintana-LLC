@@ -445,9 +445,38 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Main language toggle (nav) + floating toggle share one handler
-    const toggleLang = () => {
+    // Keeps the reader exactly where they were: remember which element sits
+    // just under the sticky nav, swap the language, then put that element back
+    // at the same spot (Spanish text is longer, so the page height changes).
+    const toggleLang = (e) => {
+        if (e) e.preventDefault();
+        const nav = document.querySelector('.navbar');
+        const probeY = (nav ? nav.getBoundingClientRect().bottom : 0) + 12;
+        let anchor = document.elementFromPoint(window.innerWidth / 2, probeY);
+        if (anchor && (anchor.closest('#float-lang') || anchor === document.body || anchor === document.documentElement)) anchor = null;
+        const anchorTop = anchor ? anchor.getBoundingClientRect().top : 0;
+        const startY = window.scrollY;
+        const html = document.documentElement;
+        const prevBehavior = html.style.scrollBehavior;
+        html.style.scrollBehavior = 'auto';          // no smooth-scroll animation on restore
+        html.style.overflowAnchor = 'none';          // we handle anchoring ourselves
+
         currentLang = currentLang === 'en' ? 'es' : 'en';
         updateContent(currentLang);
+
+        const restore = () => {
+            if (anchor && anchor.isConnected) {
+                window.scrollTo(0, window.scrollY + (anchor.getBoundingClientRect().top - anchorTop));
+            } else {
+                window.scrollTo(0, startY);
+            }
+        };
+        restore();
+        requestAnimationFrame(() => {
+            restore();
+            html.style.scrollBehavior = prevBehavior;
+            html.style.overflowAnchor = '';
+        });
     };
     langBtn.addEventListener('click', toggleLang);
     floatLang.addEventListener('click', toggleLang);
@@ -601,10 +630,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ── HERO PARALLAX ───────────────────────────────────── */
-    const hero = document.querySelector('.hero');
-    if (hero) {
+    // Only the decorative grid drifts — moving the whole hero made it slide
+    // over the stats/hub banner (and the profile card on phones).
+    const heroGrid = document.querySelector('.hero-blueprint');
+    const heroEl   = document.querySelector('.hero');
+    const calmMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (heroGrid && heroEl && !calmMotion) {
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            hero.style.transform = `translateY(${window.pageYOffset * 0.3}px)`;
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                const y = Math.min(window.scrollY, heroEl.offsetHeight);
+                heroGrid.style.transform = `translateY(${y * 0.25}px)`;
+                ticking = false;
+            });
         }, { passive: true });
     }
 
