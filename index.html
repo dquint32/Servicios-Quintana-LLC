@@ -38,7 +38,7 @@
     <!-- ══ FONTS & ICONS ══════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
         /* Light/dark: saved choice, else the visitor's system setting (site is designed dark) */
         (function () {
@@ -307,54 +307,90 @@
          HERO
     ══════════════════════════════════════════════════════ -->
     <header class="hero" id="top" role="banner">
-        <img
-            src="serviciosquintanalogo.png"
-            alt=""
-            aria-hidden="true"
-            class="hero-watermark"
-        >
-        <div class="container hero-content">
-            <span class="eyebrow" data-i18n="hero_eyebrow">Est. 2026 · Denver Metro, Colorado</span>
-            <h1 data-i18n="hero_h1">Bridging the Gap Between<br>Community &amp; Compliance.</h1>
-            <p class="hero-sub" data-i18n="hero_sub">
-                Servicios Quintana LLC is Colorado's home for trusted, bilingual services that make official, government, and digital processes accessible to everyone.
-                As a one-person, owner-operated practice, I bring together three specialized brands under one mission: helping my community navigate paperwork, agencies, and technology — with clarity and confidence.
-            </p>
-            <div class="hero-trust-pills" aria-label="Trust indicators">
-                <span class="trust-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> 100% Bilingual EN / ES</span>
-                <span class="trust-pill"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Denver Metro Area</span>
-                <span class="trust-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i> Transparent Pricing</span>
+        <!-- Architectural backdrop: faint blueprint grid + code-gutter lines (decorative) -->
+        <div class="hero-blueprint" aria-hidden="true">
+            <div class="hero-gutter">
+                <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span>
             </div>
-            <div class="hero-buttons">
-                <a href="#brands" class="btn btn-primary" data-i18n="btn_view_services" aria-label="View my three specialized service brands">View My Services</a>
-                <button class="btn btn-secondary" id="hero-es-btn" data-i18n="btn_hablamos" aria-label="Switch to Spanish — Hablamos Español">Hablamos Español</button>
+            <pre class="hero-code">&lt;practice owner="David Quintana" lang="en|es"&gt;
+  &lt;notary  mobile hubs="3" /&gt;
+  &lt;dmv     proxy titles="out-of-state" /&gt;
+  &lt;dev     bilingual fhir="ready" /&gt;
+&lt;/practice&gt;</pre>
+        </div>
+
+        <div class="container hero-layout">
+            <div class="hero-content">
+                <span class="eyebrow" data-i18n="hero_eyebrow">Est. 2026 · Denver Metro, Colorado</span>
+                <h1 data-i18n="hero_h1">Hi, I'm David.<br><span class="hero-h1-sub">Bilingual notary, DMV help &amp; web development — one person, start to finish.</span></h1>
+                <p class="hero-sub" data-i18n="hero_sub">
+                    Servicios Quintana isn't a call center or a franchise — it's me. When you book, I'm the notary who shows up, the one who stands in line at the DMV for you, and the developer who builds your website. Same person from first message to final signature, in English or Spanish.
+                </p>
+                <div class="hero-trust-pills" aria-label="Trust indicators">
+                    <span class="trust-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="pill_bilingual">100% Bilingual EN / ES</span></span>
+                    <span class="trust-pill"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="pill_area">Denver Metro Area</span></span>
+                    <span class="trust-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span data-i18n="pill_pricing">Transparent Pricing</span></span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#brands" class="btn btn-primary" data-i18n="btn_view_services" aria-label="View my three specialized service brands">View My Services</a>
+                    <button class="btn btn-secondary" id="hero-es-btn" data-i18n="btn_hablamos" aria-label="Switch to Spanish — Hablamos Español">Hablamos Español</button>
+                </div>
             </div>
+
+            <!-- Personal card: drop a photo named david-quintana.jpg in the repo root and it shows here.
+                 Until then the DQ monogram is displayed. -->
+            <aside class="hero-profile" aria-label="About David Quintana">
+                <div class="profile-photo">
+                    <img src="david-quintana.jpg" alt="David Quintana, owner of Servicios Quintana LLC" width="320" height="320"
+                         onerror="this.remove()">
+                    <span class="profile-monogram" aria-hidden="true">DQ</span>
+                </div>
+                <div class="profile-meta">
+                    <p class="profile-name">David Quintana</p>
+                    <p class="profile-role" data-i18n="profile_role">Owner &amp; sole operator</p>
+                </div>
+                <ul class="profile-facts" aria-label="Quick facts">
+                    <li><span class="mono-key">lang</span><span class="mono-val">en · es</span></li>
+                    <li><span class="mono-key">edu</span><span class="mono-val" data-i18n="profile_edu">B.S. Health Informatics, MSU Denver</span></li>
+                    <li><span class="mono-key">base</span><span class="mono-val">Denver, CO</span></li>
+                    <li><span class="mono-key">hub_rate</span><span class="mono-val mono-accent">$10/act</span></li>
+                </ul>
+                <a class="profile-status" href="tel:+13035004122" aria-label="Call or text David at 303-500-4122"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="profile_status">Call or text me directly</span> <span class="mono">303&#8209;500&#8209;4122</span></a>
+            </aside>
         </div>
     </header>
 
     <!-- ══════════════════════════════════════════════════════
-         NEWS TICKER
+         STATS + HUB BANNER (replaces the old scrolling ticker)
     ══════════════════════════════════════════════════════ -->
-    <div class="news-ticker" aria-hidden="true" role="presentation">
-        <div class="ticker-content">
-            <span class="ticker-item">Mobile Notary · Denver Metro</span>
-            <span class="ticker-item">Apostille Colorado</span>
-            <span class="ticker-item">DMV Proxy Services</span>
-            <span class="ticker-item">Out-of-State Title Transfers</span>
-            <span class="ticker-item">Certified Translations</span>
-            <span class="ticker-item">100% Bilingual EN / ES</span>
-            <span class="ticker-item">Bilingual Web Development</span>
-            <span class="ticker-item">I-9 Verification</span>
-            <span class="ticker-item">Mobile Notary · Denver Metro</span>
-            <span class="ticker-item">Apostille Colorado</span>
-            <span class="ticker-item">DMV Proxy Services</span>
-            <span class="ticker-item">Out-of-State Title Transfers</span>
-            <span class="ticker-item">Certified Translations</span>
-            <span class="ticker-item">100% Bilingual EN / ES</span>
-            <span class="ticker-item">Bilingual Web Development</span>
-            <span class="ticker-item">I-9 Verification</span>
+    <section class="stats-banner" aria-label="At a glance">
+        <div class="container stats-banner-inner">
+            <dl class="banner-stats">
+                <div class="banner-stat">
+                    <dt data-i18n="bs_rate_label">Hub notarial act</dt>
+                    <dd class="mono">$10</dd>
+                </div>
+                <div class="banner-stat">
+                    <dt data-i18n="bs_travel_label">Travel fee at hubs</dt>
+                    <dd class="mono">$0</dd>
+                </div>
+                <div class="banner-stat">
+                    <dt data-i18n="bs_brands_label">Brands · one owner</dt>
+                    <dd class="mono">3·1</dd>
+                </div>
+                <div class="banner-stat">
+                    <dt data-i18n="bs_lang_label">Languages</dt>
+                    <dd class="mono">EN⇄ES</dd>
+                </div>
+            </dl>
+            <div class="banner-hubs">
+                <span class="banner-hubs-label" data-i18n="bs_hubs_label">Meet me at</span>
+                <a href="#hubs" class="hub-pill"><i class="fas fa-store" aria-hidden="true"></i> Tienda Salvadoreña</a>
+                <a href="#hubs" class="hub-pill"><i class="fas fa-graduation-cap" aria-hidden="true"></i> MSU Denver</a>
+                <a href="#hubs" class="hub-pill"><i class="fas fa-book" aria-hidden="true"></i> <span data-i18n="pill_dpl">Denver Public Libraries</span></a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <main id="main-content">
 
@@ -368,18 +404,26 @@
                     <p data-i18n="brands_sub">I operate three distinct brands serving the Denver Metro area and beyond. Whether I come to you or you meet me at a Community Hub, I'm here to help.</p>
                 </header>
 
-                <div class="brands-grid">
+                <div class="brands-grid brands-grid--asym">
 
-                    <!-- ── Notary Brand Card ── -->
-                    <article class="card brand-card" id="notary" aria-labelledby="notary-heading">
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-file-signature"></i></div>
-                        <div class="badge-row">
-                            <span class="badge" data-i18n="badge_auth">Document Authentication</span>
+                    <!-- ── Notary Brand Card (clean & official) ── -->
+                    <article class="card brand-card brand-card--official" id="notary" aria-labelledby="notary-heading">
+                        <div class="official-rule" aria-hidden="true">
+                            <span>Quintana Notary &amp; Signing</span>
+                            <span class="mono">CO · EN/ES</span>
                         </div>
-                        <h3 id="notary-heading">Quintana Notary &amp; Signing</h3>
-                        <p class="card-tagline" data-i18n="notary_tagline">Professional, Mobile &amp; Bilingual Document Authentication</p>
+                        <div class="official-head">
+                            <div class="official-seal" aria-hidden="true"><i class="fas fa-stamp"></i></div>
+                            <div>
+                                <div class="badge-row">
+                                    <span class="badge" data-i18n="badge_auth">Document Authentication</span>
+                                </div>
+                                <h3 id="notary-heading">Quintana Notary &amp; Signing</h3>
+                                <p class="card-tagline" data-i18n="notary_tagline">Professional, Mobile &amp; Bilingual Document Authentication</p>
+                            </div>
+                        </div>
                         <p data-i18n="notary_intro">I bring the notary office to your doorstep or meet you at discounted Community Hubs (MSU Denver &amp; Tienda Salvadoreña).</p>
-                        <ul class="service-list" aria-label="Notary services offered">
+                        <ul class="service-list service-list--cols" aria-label="Notary services offered">
                             <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s1"><strong>Standard Notarizations:</strong> Acknowledgments, Oaths/Affirmations, and Copy Certifications.</span></li>
                             <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s2"><strong>Apostille Processing:</strong> Full-service handling for international documents via the CO Secretary of State.</span></li>
                             <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s3"><strong>Loan Signings:</strong> Professional packages for Refinances, Purchases, and HELOCs.</span></li>
@@ -388,7 +432,7 @@
                         </ul>
                         <div class="card-pricing-note" aria-label="Pricing summary">
                             <i class="fas fa-tag" aria-hidden="true"></i>
-                            <span data-i18n="notary_pricing_note">Notarial acts from <strong>$10–$15</strong> · Mobile fee quoted in writing before every appointment.</span>
+                            <span data-i18n="notary_pricing_note">Notarial acts from <strong class="mono">$10–$15</strong> · Mobile fee quoted in writing before every appointment.</span>
                         </div>
                         <a href="https://quintananotarysigning.com/"
                            target="_blank"
@@ -400,8 +444,8 @@
                         </a>
                     </article>
 
-                    <!-- ── DMV Brand Card ── -->
-                    <article class="card brand-card" id="dmv" aria-labelledby="dmv-heading">
+                    <!-- ── DMV Brand Card (compact) ── -->
+                    <article class="card brand-card brand-card--compact" id="dmv" aria-labelledby="dmv-heading">
                         <div class="card-icon" aria-hidden="true"><i class="fas fa-car"></i></div>
                         <div class="badge-row">
                             <span class="badge" data-i18n="badge_admin">Administrative Support</span>
@@ -425,67 +469,96 @@
                         </a>
                     </article>
 
-                    <!-- ── Web Dev Brand Card ── -->
-                    <article class="card brand-card" id="webdev" aria-labelledby="webdev-heading">
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
-                        <div class="badge-row">
-                            <span class="badge" data-i18n="badge_digital">Digital Strategy &amp; Web Development</span>
+                    <!-- ── Web Dev Brand Card (terminal window) ── -->
+                    <article class="card brand-card brand-card--terminal" id="webdev" aria-labelledby="webdev-heading">
+                        <div class="term-bar" aria-hidden="true">
+                            <span class="term-dots"><i></i><i></i><i></i></span>
+                            <span class="term-path mono">david@quintana: ~/dev</span>
+                            <span class="term-tab mono">index.html</span>
                         </div>
-                        <h3 id="webdev-heading">David Quintana Dev</h3>
-                        <p class="card-tagline" data-i18n="dev_tagline">Digital Strategy &amp; Web Development</p>
-                        <p data-i18n="dev_intro">High-performance, fully bilingual (EN/ES) web architecture for local businesses. I build accessible, modern websites from scratch — no cheap templates.</p>
-                        <ul class="service-list" aria-label="Web development services offered">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s1"><strong>Custom Websites:</strong> From basic landing pages to full Business and E-Commerce builds.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s2"><strong>Bilingual Integration:</strong> Reach more customers with seamless English and Spanish user experiences.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s3"><strong>Healthcare-Aligned Tools:</strong> As an MSU Denver Health Informatics graduate, I build secure patient intake forms, validation workflows, and FHIR-ready JSON output for clinics.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s4"><strong>Ongoing Maintenance:</strong> Hosting setup, domain management, security patches, and SEO fundamentals.</span></li>
-                        </ul>
-                        <div class="portfolio-note">
-                            <small><em data-i18n="dev_portfolio_note">Includes portfolio work for Tienda Salvadoreña</em></small>
+                        <div class="term-body">
+                            <div class="term-main">
+                                <div class="badge-row">
+                                    <span class="badge badge--mono" data-i18n="badge_digital">Digital Strategy &amp; Web Development</span>
+                                </div>
+                                <h3 id="webdev-heading"><span class="term-prompt mono" aria-hidden="true">$</span> David Quintana Dev</h3>
+                                <p class="card-tagline" data-i18n="dev_tagline">Digital Strategy &amp; Web Development</p>
+                                <p data-i18n="dev_intro">High-performance, fully bilingual (EN/ES) web architecture for local businesses. I build accessible, modern websites from scratch — no cheap templates.</p>
+                                <ul class="service-list service-list--term" aria-label="Web development services offered">
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s1"><strong>Custom Websites:</strong> From basic landing pages to full Business and E-Commerce builds.</span></li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s2"><strong>Bilingual Integration:</strong> Reach more customers with seamless English and Spanish user experiences.</span></li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s3"><strong>Healthcare-Aligned Tools:</strong> As an MSU Denver Health Informatics graduate, I build secure patient intake forms, validation workflows, and FHIR-ready JSON output for clinics.</span></li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s4"><strong>Ongoing Maintenance:</strong> Hosting setup, domain management, security patches, and SEO fundamentals.</span></li>
+                                </ul>
+                                <p class="term-comment mono"><span aria-hidden="true">// </span><span data-i18n="dev_portfolio_note">Includes portfolio work for Tienda Salvadoreña</span></p>
+                                <a href="https://davidquintana.dev/"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="btn btn-primary btn-card"
+                                   data-i18n="dev_cta"
+                                   aria-label="Visit David Quintana Dev — bilingual web development portfolio and pricing">
+                                    View Web Portfolio &amp; Pricing <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <pre class="term-snippet mono" aria-hidden="true"><span class="c">// patient-intake.json — FHIR R4</span>
+{
+  <span class="k">"resourceType"</span>: <span class="s">"Patient"</span>,
+  <span class="k">"communication"</span>: [
+    { <span class="k">"language"</span>: <span class="s">"es"</span>, <span class="k">"preferred"</span>: <span class="n">true</span> },
+    { <span class="k">"language"</span>: <span class="s">"en"</span> }
+  ],
+  <span class="k">"validated"</span>: <span class="n">true</span>
+}
+<span class="c">&gt; build ✓  a11y ✓  i18n en|es ✓</span><span class="term-cursor"></span></pre>
                         </div>
-                        <a href="https://davidquintana.dev/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-primary btn-card"
-                           data-i18n="dev_cta"
-                           aria-label="Visit David Quintana Dev — bilingual web development portfolio and pricing">
-                            View Web Portfolio &amp; Pricing <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
                     </article>
 
                 </div><!-- /.brands-grid -->
 
-                <!-- ── Community Hubs Callout ── -->
-                <aside class="hubs-callout" aria-labelledby="hubs-callout-heading">
-                    <div class="hubs-callout-icon" aria-hidden="true"><i class="fas fa-store"></i></div>
-                    <div class="hubs-callout-body">
+                <!-- ── Interactive Community Hub Locator ── -->
+                <section class="hub-locator" id="hubs" aria-labelledby="hubs-callout-heading">
+                    <div class="hub-rate">
+                        <span class="hub-rate-tag" data-i18n="hub_rate_tag">Community-first rate</span>
+                        <p class="hub-rate-price mono"><span class="hub-rate-num">$10</span><span class="hub-rate-unit" data-i18n="hub_rate_unit">/ notarial act</span></p>
+                        <ul class="hub-rate-compare mono" aria-label="Rate comparison">
+                            <li><span data-i18n="hub_cmp_max">CO max</span><s>$15</s></li>
+                            <li><span data-i18n="hub_cmp_travel">Travel</span><b>$0</b></li>
+                        </ul>
                         <h3 id="hubs-callout-heading" data-i18n="hubs_callout_h3">Save More at a Community Hub</h3>
                         <p data-i18n="hubs_callout_body">Meet me at a Community Hub and pay <strong>$10 per notarial act</strong> (vs. the standard $15 maximum) with <strong>no travel fee</strong>. These are real discounts — voluntarily offered below the Colorado statutory maximum.</p>
-                        <div class="hubs-callout-list">
-                            <div class="hub-item">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <div>
-                                    <strong>Tienda Salvadoreña</strong>
-                                    <span data-i18n="hub_tienda_sub">Community Hub — East Colfax, Denver</span>
-                                </div>
+                    </div>
+
+                    <div class="hub-picker">
+                        <div class="hub-tabs" role="tablist" aria-label="Choose a Community Hub">
+                            <button type="button" class="hub-tab" role="tab" id="hubtab-tienda" aria-controls="hubpanel" aria-selected="true" data-hub="tienda">
+                                <i class="fas fa-store" aria-hidden="true"></i>
+                                <span class="hub-tab-name">Tienda Salvadoreña</span>
+                                <span class="hub-tab-sub" data-i18n="hub_tienda_sub">Community Hub — East Colfax, Denver</span>
+                            </button>
+                            <button type="button" class="hub-tab" role="tab" id="hubtab-msu" aria-controls="hubpanel" aria-selected="false" tabindex="-1" data-hub="msu">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                <span class="hub-tab-name">MSU Denver</span>
+                                <span class="hub-tab-sub" data-i18n="hub_msu_sub">Auraria Library — Denver, CO</span>
+                            </button>
+                            <button type="button" class="hub-tab" role="tab" id="hubtab-dpl" aria-controls="hubpanel" aria-selected="false" tabindex="-1" data-hub="dpl">
+                                <i class="fas fa-book" aria-hidden="true"></i>
+                                <span class="hub-tab-name" data-i18n="hub_dpl">Denver Public Library (all branches)</span>
+                                <span class="hub-tab-sub" data-i18n="hub_crrec_sub">Community Hub — any branch in Denver</span>
+                            </button>
+                        </div>
+
+                        <div class="hub-panel" id="hubpanel" role="tabpanel" aria-labelledby="hubtab-tienda" aria-live="polite">
+                            <p class="hub-panel-label mono" data-i18n="hub_panel_label">// selected hub</p>
+                            <p class="hub-panel-title" id="hub-panel-title">Tienda Salvadoreña</p>
+                            <p class="hub-panel-desc" id="hub-panel-desc">Neighborhood market on East Colfax. Tell me a time and I'll meet you there — just bring your unsigned document and a valid photo ID.</p>
+                            <div class="hub-panel-actions">
+                                <a class="btn btn-primary hub-book" href="tel:+13035004122"><i class="fas fa-phone" aria-hidden="true"></i> <span data-i18n="hub_book">Book a hub visit</span></a>
+                                <a class="btn btn-secondary hub-map" id="hub-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tienda+Salvadore%C3%B1a+East+Colfax+Denver" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="hub_directions">Directions</span></a>
                             </div>
-                            <div class="hub-item">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <div>
-                                    <strong data-i18n="hub_dpl">Denver Public Library (all branches)</strong>
-                                    <span data-i18n="hub_crrec_sub">Community Hub — any branch in Denver</span>
-                                </div>
-                            </div>
-                            <div class="hub-item">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <div>
-                                    <strong>MSU Denver (Auraria Library)</strong>
-                                    <span data-i18n="hub_msu_sub">Auraria Library — Denver, CO</span>
-                                </div>
-                            </div>
+                            <p class="hub-note" data-i18n="hub_note">$10 per notarial act &amp; no travel fee at these locations. These are public places where I meet clients by appointment; I am not affiliated with or endorsed by them.</p>
                         </div>
                     </div>
-                </aside>
+                </section>
 
             </div>
         </section>

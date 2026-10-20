@@ -1,7 +1,7 @@
 /**
  * SERVICIOS QUINTANA LLC — main.js
  * Full bilingual toggle, scroll, ripple, cursor, mobile nav, FAQ, and all interactions.
- * Version: 2026 — First-person (owner-operated) voice + credentials + SEO update.
+ * Version: 2026-10 — Personal hero, stats banner, asymmetric brand cards, hub locator.
  */
 
 /* ══════════════════════════════════════════════════════════
@@ -18,8 +18,22 @@ const translations = {
 
         // ── HERO ──
         hero_eyebrow: "Est. 2026 · Denver Metro, Colorado",
-        hero_h1:      "Bridging the Gap Between<br>Community &amp; Compliance.",
-        hero_sub:     "Servicios Quintana LLC is Colorado's home for trusted, bilingual services that make official, government, and digital processes accessible to everyone. As a one-person, owner-operated practice, I bring together three specialized brands under one mission: helping my community navigate paperwork, agencies, and technology — with clarity and confidence.",
+        hero_h1:      "Hi, I'm David.<br><span class=\"hero-h1-sub\">Bilingual notary, DMV help &amp; web development — one person, start to finish.</span>",
+        hero_sub:     "Servicios Quintana isn't a call center or a franchise — it's me. When you book, I'm the notary who shows up, the one who stands in line at the DMV for you, and the developer who builds your website. Same person from first message to final signature, in English or Spanish.",
+        pill_bilingual: "100% Bilingual EN / ES",
+        pill_area:      "Denver Metro Area",
+        pill_pricing:   "Transparent Pricing",
+        profile_role:   "Owner &amp; sole operator",
+        profile_edu:    "B.S. Health Informatics, MSU Denver",
+        profile_status: "Call or text me directly",
+
+        // ── STATS BANNER ──
+        bs_rate_label:   "Hub notarial act",
+        bs_travel_label: "Travel fee at hubs",
+        bs_brands_label: "Brands · one owner",
+        bs_lang_label:   "Languages",
+        bs_hubs_label:   "Meet me at",
+        pill_dpl:        "Denver Public Libraries",
         btn_view_services: "View My Services",
         btn_hablamos:      "Hablamos Español",
 
@@ -41,7 +55,7 @@ const translations = {
         notary_s3:           "<strong>Loan Signings:</strong> Professional packages for Refinances, Purchases, and HELOCs.",
         notary_s4:           "<strong>Business &amp; Agent Services:</strong> I-9 Employment Verifications.",
         notary_s5:           "<strong>U.S. Passport Concierge:</strong> Clerical prep for DS-11/DS-82 and bilingual chaperone at the post office or clerk's office. The forms are free from the government; I charge only for typing and my time.",
-        notary_pricing_note: "Notarial acts from <strong>$10–$15</strong> · Mobile fee quoted in writing before every appointment.",
+        notary_pricing_note: "Notarial acts from <strong class=\"mono\">$10–$15</strong> · Mobile fee quoted in writing before every appointment.",
         notary_cta:          "Explore Notary &amp; Passport Services",
 
         // ── DMV ──
@@ -69,6 +83,16 @@ const translations = {
         hub_tienda_sub:    "Community Hub — East Colfax, Denver",
         hub_crrec_sub:     "Community Hub — any branch in Denver",
         hub_msu_sub:       "Auraria Library — Denver, CO",
+        hub_rate_tag:      "Community-first rate",
+        hub_rate_unit:     "/ notarial act",
+        hub_cmp_max:       "CO max",
+        hub_cmp_travel:    "Travel",
+        hub_panel_label:   "// selected hub",
+        hub_book:          "Book a hub visit",
+        hub_directions:    "Directions",
+        hub_desc_tienda:   "Neighborhood market on East Colfax. Tell me a time and I'll meet you there — just bring your unsigned document and a valid photo ID.",
+        hub_desc_msu:      "Auraria Library on the downtown Auraria Campus — convenient for students, faculty, and anyone working near downtown.",
+        hub_desc_dpl:      "Any Denver Public Library branch. Pick the one closest to you and I'll meet you there by appointment.",
 
         // ── TRANSLATION ──
         trans_h2:           "Certified Translation Services",
@@ -142,8 +166,22 @@ const translations = {
 
         // ── HERO ──
         hero_eyebrow: "Est. 2026 · Área Metropolitana de Denver, Colorado",
-        hero_h1:      "Cerrando la Brecha Entre<br>Comunidad y Cumplimiento.",
-        hero_sub:     "Servicios Quintana LLC es el hogar de Colorado para servicios bilingües confiables que hacen que los procesos oficiales, gubernamentales y digitales sean accesibles para todos. Como práctica de una sola persona, reúno tres marcas especializadas bajo una sola misión: ayudar a mi comunidad a navegar trámites, agencias y tecnología con claridad y confianza.",
+        hero_h1:      "Hola, soy David.<br><span class=\"hero-h1-sub\">Servicios notariales, ayuda con el DMV y desarrollo web — una sola persona, de principio a fin.</span>",
+        hero_sub:     "Servicios Quintana no es un centro de llamadas ni una franquicia — soy yo. Cuando hace una cita, yo soy quien llega a notarizar, quien hace la fila en el DMV por usted y quien construye su sitio web. La misma persona desde el primer mensaje hasta la firma final, en español o en inglés.",
+        pill_bilingual: "100% Bilingüe ES / EN",
+        pill_area:      "Área Metropolitana de Denver",
+        pill_pricing:   "Precios Transparentes",
+        profile_role:   "Dueño y único operador",
+        profile_edu:    "B.S. Informática de la Salud, MSU Denver",
+        profile_status: "Llámeme o escríbame directo",
+
+        // ── STATS BANNER ──
+        bs_rate_label:   "Acto notarial en hub",
+        bs_travel_label: "Desplazamiento en hubs",
+        bs_brands_label: "Marcas · un dueño",
+        bs_lang_label:   "Idiomas",
+        bs_hubs_label:   "Encuéntreme en",
+        pill_dpl:        "Bibliotecas Públicas de Denver",
         btn_view_services: "Ver Mis Servicios",
         btn_hablamos:      "We Speak English",
 
@@ -165,7 +203,7 @@ const translations = {
         notary_s3:           "<strong>Firmas de Préstamos:</strong> Paquetes profesionales para Refinanciamientos, Compras y HELOCs.",
         notary_s4:           "<strong>Servicios para Empresas y Agentes:</strong> Verificaciones de Empleo I-9.",
         notary_s5:           "<strong>Conserje de Pasaporte EE.UU.:</strong> Preparación de formularios DS-11/DS-82 y acompañamiento bilingüe en la oficina de correos o juzgado. Los formularios son gratuitos del gobierno; solo cobro por la mecanografía y mi tiempo.",
-        notary_pricing_note: "Actos notariales desde <strong>$10–$15</strong> · Tarifa de desplazamiento cotizada por escrito antes de cada cita.",
+        notary_pricing_note: "Actos notariales desde <strong class=\"mono\">$10–$15</strong> · Tarifa de desplazamiento cotizada por escrito antes de cada cita.",
         notary_cta:          "Explorar Servicios Notariales y de Pasaporte",
 
         // ── DMV ──
@@ -193,6 +231,16 @@ const translations = {
         hub_tienda_sub:    "Hub Comunitario — East Colfax, Denver",
         hub_crrec_sub:     "Hub Comunitario — cualquier sucursal en Denver",
         hub_msu_sub:       "Biblioteca Auraria — Denver, CO",
+        hub_rate_tag:      "Tarifa comunitaria",
+        hub_rate_unit:     "/ acto notarial",
+        hub_cmp_max:       "Máx. CO",
+        hub_cmp_travel:    "Viaje",
+        hub_panel_label:   "// hub seleccionado",
+        hub_book:          "Agendar en un hub",
+        hub_directions:    "Cómo llegar",
+        hub_desc_tienda:   "Mercado del barrio en East Colfax. Dígame a qué hora y nos vemos ahí — solo traiga su documento sin firmar y una identificación vigente con foto.",
+        hub_desc_msu:      "Biblioteca Auraria en el campus Auraria del centro — práctico para estudiantes, profesores y quien trabaje cerca del centro.",
+        hub_desc_dpl:      "Cualquier sucursal de la Biblioteca Pública de Denver. Elija la más cercana y nos vemos ahí con cita previa.",
 
         // ── TRANSLATION ──
         trans_h2:           "Servicios de Traducción Certificada",
@@ -372,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('lang', lang);
 
         try { localStorage.setItem('sqLang', lang); } catch (e) {}
+        document.dispatchEvent(new CustomEvent('sq:lang', { detail: lang }));
         if (themeBtn) { themeBtn.setAttribute('aria-label', themeLabel()); themeBtn.title = themeLabel(); }
     };
 
@@ -395,6 +444,62 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    /* ── COMMUNITY HUB LOCATOR ───────────────────────────── */
+    const hubData = {
+        tienda: { name: { en: 'Tienda Salvadoreña', es: 'Tienda Salvadoreña' },
+                  q: 'Tienda Salvadore%C3%B1a East Colfax Denver' },
+        msu:    { name: { en: 'MSU Denver · Auraria Library', es: 'MSU Denver · Biblioteca Auraria' },
+                  q: 'Auraria Library Denver' },
+        dpl:    { name: { en: 'Denver Public Library', es: 'Biblioteca Pública de Denver' },
+                  q: 'Denver Public Library' }
+    };
+    const hubTabs  = Array.from(document.querySelectorAll('.hub-tab'));
+    const hubPanel = document.getElementById('hubpanel');
+    let activeHub  = 'tienda';
+    const renderHub = () => {
+        if (!hubPanel) return;
+        const lang = document.documentElement.getAttribute('lang') === 'es' ? 'es' : 'en';
+        const h = hubData[activeHub];
+        const title = document.getElementById('hub-panel-title');
+        const desc  = document.getElementById('hub-panel-desc');
+        const map   = document.getElementById('hub-map-link');
+        if (title) title.textContent = h.name[lang];
+        if (desc)  desc.textContent  = (translations[lang] || translations.en)['hub_desc_' + activeHub];
+        if (map)   map.href = 'https://www.google.com/maps/search/?api=1&query=' + h.q.replace(/ /g, '+');
+        hubPanel.setAttribute('aria-labelledby', 'hubtab-' + activeHub);
+    };
+    const selectHub = (tab, focus) => {
+        activeHub = tab.dataset.hub;
+        hubTabs.forEach(t => {
+            const on = t === tab;
+            t.setAttribute('aria-selected', String(on));
+            t.tabIndex = on ? 0 : -1;
+        });
+        if (focus) tab.focus();
+        if (hubPanel) {
+            hubPanel.classList.remove('hub-panel--swap');
+            void hubPanel.offsetWidth; // restart the fade
+            hubPanel.classList.add('hub-panel--swap');
+        }
+        renderHub();
+    };
+    hubTabs.forEach((tab, i) => {
+        tab.addEventListener('click', () => selectHub(tab, false));
+        tab.addEventListener('keydown', (e) => {
+            let next = null;
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = hubTabs[(i + 1) % hubTabs.length];
+            if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   next = hubTabs[(i - 1 + hubTabs.length) % hubTabs.length];
+            if (e.key === 'Home') next = hubTabs[0];
+            if (e.key === 'End')  next = hubTabs[hubTabs.length - 1];
+            if (next) { e.preventDefault(); selectHub(next, true); }
+        });
+    });
+    document.addEventListener('sq:lang', renderHub);
+    // Pills in the stats banner open the matching hub
+    document.querySelectorAll('.hub-pill').forEach((pill, i) => {
+        pill.addEventListener('click', () => { if (hubTabs[i]) selectHub(hubTabs[i], false); });
+    });
 
     // Apply saved/default language on load
     updateContent(currentLang);
@@ -432,9 +537,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect    = card.getBoundingClientRect();
-            const rotateX = ((e.clientY - rect.top)  - rect.height / 2) / 20;
-            const rotateY = (rect.width / 2 - (e.clientX - rect.left)) / 20;
-            card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            // normalised to the card size so wide cards don't over-rotate (max ~3deg)
+            const rotateX = (((e.clientY - rect.top)  / rect.height) - 0.5) * 6;
+            const rotateY = (0.5 - ((e.clientX - rect.left) / rect.width)) * 6;
+            card.style.transform = `translateY(-6px) perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         });
         card.addEventListener('mouseleave', () => { card.style.transform = ''; });
     });
