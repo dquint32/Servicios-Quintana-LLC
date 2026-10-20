@@ -2295,3 +2295,31 @@ address {
 /* Banner always paints above the hero (guards against any hero motion) */
 .stats-banner { position: relative; z-index: 2; }
 .hero-blueprint { will-change: transform; }
+
+/* ============================================
+   FLOATING BUTTONS — keep content visible  (2026-10)
+   ============================================ */
+#float-lang,
+#back-to-top.visible { transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+body.is-scrolling #float-lang,
+body.is-scrolling #back-to-top.visible {
+    opacity: 0;
+    transform: translateY(0.75rem);
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    /* room at the very bottom so the footer's last lines clear the buttons */
+    body { padding-bottom: 4.5rem; }
+    #float-lang { padding: 0.25rem 0.3rem 0.25rem 0.15rem; gap: 0.15rem; }
+    .float-lang-globe::before { width: 1.6rem; height: 1.6rem; font-size: 0.85rem; }
+    .float-lang-opt { padding: 0.25rem 0.5rem; font-size: 0.72rem; }
+    #back-to-top { padding: 0.75rem; }
+}
+
+/* Small phones: no hidden sideways-scroll in the code sample, and the
+   notary title gets the full card width instead of sharing it with the seal */
+@media (max-width: 480px) {
+    .term-snippet { white-space: pre-wrap; word-break: break-word; overflow-x: visible; }
+    .official-head { flex-direction: column; gap: 0.75rem; }
+}

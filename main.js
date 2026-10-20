@@ -660,6 +660,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ── FLOATING BUTTONS STEP ASIDE WHILE SCROLLING ─────── */
+    // The EN/ES pill and Back to Top fade out while the page moves so they
+    // never sit on top of what the visitor is reading; they return on pause.
+    let scrollIdle;
+    window.addEventListener('scroll', () => {
+        document.body.classList.add('is-scrolling');
+        clearTimeout(scrollIdle);
+        scrollIdle = setTimeout(() => document.body.classList.remove('is-scrolling'), 650);
+    }, { passive: true });
+
     /* ── DYNAMIC YEAR ────────────────────────────────────── */
     const yr = document.getElementById('year');
     if (yr) yr.textContent = new Date().getFullYear();
