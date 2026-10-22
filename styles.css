@@ -2323,3 +2323,12 @@ body.is-scrolling #back-to-top.visible {
     .term-snippet { white-space: pre-wrap; word-break: break-word; overflow-x: visible; }
     .official-head { flex-direction: column; gap: 0.75rem; }
 }
+
+/* Commissioned & Insured line (2026-10-21) */
+.footer-insured {
+    margin: 1.5rem 0 0;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--text-soft);
+    text-align: left;
+}

@@ -131,6 +131,9 @@ const translations = {
         trust_1:         "<strong>100% Bilingual:</strong> Native-level fluency in English and Spanish — no interpreter needed.",
         trust_2:         "<strong>Transparent Pricing:</strong> No hidden fees; every cost is disclosed and agreed in writing before your appointment.",
         trust_3:         "<strong>Community Focused:</strong> Discounted fees available at Community Hubs across Denver.",
+        trust_5:         "<strong>Commissioned &amp; Insured:</strong> I'm a Notary Public commissioned in Colorado (ID 20254044224). Servicios Quintana LLC is insured through The Hartford, with general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary, translation and web development work. Certificate of insurance available on request.",
+        pill_insured:    "Commissioned &amp; Insured",
+        footer_insured:  "<strong>Commissioned &amp; Insured.</strong> Colorado notary commission ID 20254044224 · Insured through The Hartford: general liability, data breach, and professional liability (errors &amp; omissions) for notary, translation and web work · Certificate of insurance on request.",
         trust_4:         "<strong>Locally Owned:</strong> Proudly serving the Denver Metro area since 2026.",
 
         // ── STATS ──
@@ -279,6 +282,9 @@ const translations = {
         trust_1:        "<strong>100% Bilingüe:</strong> Dominio nativo del inglés y español — sin intérprete necesario.",
         trust_2:        "<strong>Precios Transparentes:</strong> Sin cargos ocultos; todo se comunica y se acuerda por escrito antes de su cita.",
         trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en Hubs Comunitarios en Denver.",
+        trust_5:        "<strong>Comisionado y asegurado:</strong> Soy Notary Public comisionado en Colorado (ID 20254044224). Servicios Quintana LLC tiene seguro con The Hartford, con responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales, de traducción y de desarrollo web. Certificado de seguro disponible a petición.",
+        pill_insured:   "Comisionado y asegurado",
+        footer_insured: "<strong>Comisionado y asegurado.</strong> Comisión de Colorado ID 20254044224 · Asegurado con The Hartford: responsabilidad civil general, filtración de datos y responsabilidad profesional (errores y omisiones) para servicios notariales, de traducción y web · Certificado de seguro a petición.",
         trust_4:        "<strong>Propiedad Local:</strong> Sirviendo con orgullo al área metropolitana de Denver desde 2026.",
 
         // ── STATS ──
