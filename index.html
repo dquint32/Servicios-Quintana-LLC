@@ -51,7 +51,7 @@
         })();
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=2026-10-20c">
+    <link rel="stylesheet" href="styles.css?v=2026-10-21a">
 
     <!-- ══ SCHEMA — LocalBusiness (parent LLC) ══════════════════ -->
     <script type="application/ld+json">
@@ -338,11 +338,10 @@
                 </div>
             </div>
 
-            <!-- Personal card: drop a photo named david-quintana.jpg in the repo root and it shows here.
-                 Until then the DQ monogram is displayed. -->
+            <!-- Personal card: headshot is david-quintana.jpg (800×800, cropped square). -->
             <aside class="hero-profile" aria-label="About David Quintana">
                 <div class="profile-photo">
-                    <img src="david-quintana.jpg" alt="David Quintana, owner of Servicios Quintana LLC" width="320" height="320"
+                    <img src="david-quintana.jpg?v=2026-10-21" alt="David Quintana, owner of Servicios Quintana LLC" width="800" height="800" fetchpriority="high"
                          onerror="this.remove()">
                     <span class="profile-monogram" aria-hidden="true">DQ</span>
                 </div>
@@ -700,6 +699,16 @@
                     </div>
 
                     <div class="split-visual">
+                        <figure class="about-photo">
+                            <img src="david-quintana-about.jpg?v=2026-10-21"
+                                 alt="David Quintana, owner of Servicios Quintana LLC, seated in a navy suit"
+                                 width="960" height="1200" loading="lazy" decoding="async">
+                            <figcaption>
+                                <span class="about-photo-name">David Quintana</span>
+                                <span class="about-photo-role" data-i18n="about_photo_role">Notary · DMV · Web Development</span>
+                            </figcaption>
+                        </figure>
+
                         <div class="stats-grid" aria-label="Key facts about Servicios Quintana LLC">
                             <div class="stat-item">
                                 <h4>3</h4>
@@ -811,6 +820,6 @@
         <span data-i18n="back_to_top">Back to Top</span>
     </button>
 
-    <script src="main.js?v=2026-10-20c"></script>
+    <script src="main.js?v=2026-10-21a"></script>
 </body>
 </html>
