@@ -25,9 +25,9 @@ Portfolio Highlight: Digital strategy and development for Tienda SalvaDoreña.
 ⚖️ Statutory Disclosures & Compliance
 Non-Attorney Disclosure
 
-English: Important Notice: Servicios Quintana LLC and its representatives are not attorneys licensed to practice law in the State of Colorado. We may not give legal advice or accept fees for legal advice. We provide administrative, translation, and notary public services only.
+English: Important Notice: I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. Servicios Quintana LLC provides administrative, translation, and notarial services only.
 
-Español: Aviso Importante: Servicios Quintana LLC y sus representantes no son abogados licenciados para ejercer el derecho en el Estado de Colorado. No podemos dar asesoría legal ni aceptar honorarios por asesoría legal. Solo ofrecemos servicios administrativos, de traducción y notariales.
+Español: Aviso Importante: No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Servicios Quintana LLC solo ofrece servicios administrativos, de traducción y notariales.
 
 Entity Information
 
