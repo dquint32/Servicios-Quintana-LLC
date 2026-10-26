@@ -2388,3 +2388,10 @@ body.is-scrolling #back-to-top.visible {
     color: var(--text-soft);
     text-align: left;
 }
+
+/* B2B brand card: its own full-width row between DMV and Web Dev */
+.brands-grid--asym .brand-card--b2b { grid-column: 1 / -1; }
+.brand-card--b2b .service-list--cols li:last-child { grid-column: auto; }
+@media (max-width: 1024px) {
+    .brands-grid--asym .brand-card--b2b { grid-column: 1 / -1; }
+}

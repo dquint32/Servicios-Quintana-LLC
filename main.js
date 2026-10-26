@@ -39,7 +39,7 @@ const translations = {
 
         // ── BRANDS SECTION ──
         brands_h2:  "My Specialized Brands",
-        brands_sub: "I operate three distinct brands serving the Denver Metro area and beyond. Whether I come to you or you meet me at a Community Hub, I'm here to help.",
+        brands_sub: "I operate four distinct brands serving the Denver Metro area and beyond. Whether I come to you or you meet me at a Community Hub, I'm here to help.",
 
         // ── BADGES ──
         badge_auth:        "Document Authentication",
@@ -53,7 +53,7 @@ const translations = {
         notary_s1:           "<strong>Standard Notarizations:</strong> Acknowledgments, Oaths/Affirmations, and Copy Certifications.",
         notary_s2:           "<strong>Apostille Processing:</strong> Full-service handling for international documents via the CO Secretary of State.",
         notary_s3:           "<strong>Loan Signings:</strong> Professional packages for Refinances, Purchases, and HELOCs.",
-        notary_s4:           "<strong>Business &amp; Agent Services:</strong> I-9 Employment Verifications, loan signings for title companies, apostille runs for fellow notaries, and Aurora ICE facility visits for immigration attorneys ($150 per visit, travel included).",
+        notary_s4:           "<strong>Airport Notary (DIA):</strong> I meet you in the terminal — a flat $95 with parking included, plus $10 per signature.",
         notary_s5:           "<strong>U.S. Passport Concierge:</strong> Clerical prep for DS-11/DS-82 and bilingual chaperone at the post office or clerk's office. The forms are free from the government; I charge only for typing and my time.",
         notary_pricing_note: "Notarial acts from <strong class=\"mono\">$10–$15</strong> · Mobile fee quoted in writing before every appointment.",
         notary_cta:          "Explore Notary &amp; Passport Services",
@@ -66,6 +66,16 @@ const translations = {
         dmv_s3:      "<strong>Out-of-State Title Transfers:</strong> I coordinate with out-of-state owners, dealerships, and lienholders.",
         dmv_s4:      "<strong>Same-Day Rush Services:</strong> Available for urgent document prep and DMV submissions.",
         dmv_cta:     "Explore DMV Services",
+
+        // ── B2B ──
+        badge_b2b:   "Business &amp; Legal Support",
+        b2b_tagline: "Legal Proxy, ICE Detention Visits, Corporate &amp; Law Firm Subcontracting",
+        b2b_intro:   "Notary support for title companies, law firms, employers and fellow notaries &mdash; priced in writing, invoiced to your firm.",
+        b2b_s1:      "<strong>Aurora ICE Facility Visits:</strong> I visit detained clients as your cleared legal proxy. $150 per visit (travel, clearance, first hour on site), $25 per 30 min after; nothing paid before the visit.",
+        b2b_s2:      "<strong>Title &amp; Real Estate Signings:</strong> One package up to 30 pages for $125, with printing, encrypted scanbacks and the FedEx/UPS drop.",
+        b2b_s3:      "<strong>Apostille Runs for Notaries &amp; Firms:</strong> $85 mail-in or $115 pickup, up to 3 documents; State fees at cost.",
+        b2b_s4:      "<strong>Witnesses, Recordings &amp; I-9 Overflow:</strong> Independent witness $35&ndash;$50, county recording $35&ndash;$75, I-9 authorized representative $40&ndash;$55.",
+        b2b_cta:     "Explore Business Services",
 
         // ── WEB DEV ──
         dev_tagline:       "Digital Strategy &amp; Web Development",
@@ -191,7 +201,7 @@ const translations = {
 
         // ── BRANDS SECTION ──
         brands_h2:  "Mis Marcas Especializadas",
-        brands_sub: "Opero tres marcas distintas que sirven al área metropolitana de Denver y más allá. Ya sea que yo vaya a usted o que me visite en un Hub Comunitario, estoy aquí para ayudar.",
+        brands_sub: "Opero cuatro marcas distintas que sirven al área metropolitana de Denver y más allá. Ya sea que yo vaya a usted o que me visite en un Hub Comunitario, estoy aquí para ayudar.",
 
         // ── BADGES ──
         badge_auth:        "Autenticación de Documentos",
@@ -205,7 +215,7 @@ const translations = {
         notary_s1:           "<strong>Notarizaciones Estándar:</strong> Reconocimientos, Juramentos/Afirmaciones y Certificaciones de Copia.",
         notary_s2:           "<strong>Procesamiento de Apostilla:</strong> Servicio completo para documentos internacionales a través de la Secretaría de Estado de Colorado.",
         notary_s3:           "<strong>Firmas de Préstamos:</strong> Paquetes profesionales para Refinanciamientos, Compras y HELOCs.",
-        notary_s4:           "<strong>Servicios para Empresas y Agentes:</strong> Verificaciones de Empleo I-9, firmas de préstamos para compañías de títulos, trámites de apostilla para colegas y visitas al centro de ICE de Aurora para abogados de inmigración ($150 por visita, con el viaje incluido).",
+        notary_s4:           "<strong>Notarizaciones en el Aeropuerto (DIA):</strong> lo veo en la terminal — $95 fijos con el estacionamiento incluido, más $10 por firma.",
         notary_s5:           "<strong>Conserje de Pasaporte EE.UU.:</strong> Preparación de formularios DS-11/DS-82 y acompañamiento bilingüe en la oficina de correos o juzgado. Los formularios son gratuitos del gobierno; solo cobro por la mecanografía y mi tiempo.",
         notary_pricing_note: "Actos notariales desde <strong class=\"mono\">$10–$15</strong> · Tarifa de desplazamiento cotizada por escrito antes de cada cita.",
         notary_cta:          "Explorar Servicios Notariales y de Pasaporte",
@@ -218,6 +228,16 @@ const translations = {
         dmv_s3:      "<strong>Transferencias de Título de Otros Estados:</strong> Coordino con propietarios de otros estados, concesionarios y acreedores.",
         dmv_s4:      "<strong>Servicios Urgentes el Mismo Día:</strong> Disponibles para preparación urgente de documentos y entregas en el DMV.",
         dmv_cta:     "Explorar Servicios del DMV",
+
+        // ── B2B ──
+        badge_b2b:   "Apoyo para Empresas y Abogados",
+        b2b_tagline: "Representante Legal, Visitas a Centros de Detención de ICE y Subcontratación para Empresas y Bufetes",
+        b2b_intro:   "Apoyo notarial para compañías de títulos, bufetes, empleadores y colegas &mdash; con precio por escrito y factura a su empresa.",
+        b2b_s1:      "<strong>Visitas al Centro de ICE de Aurora:</strong> visito a sus clientes detenidos como su representante autorizado. $150 por visita (viaje, autorización y la primera hora), $25 por cada 30 min después; no se paga nada antes de la visita.",
+        b2b_s2:      "<strong>Firmas de Títulos y Bienes Raíces:</strong> un paquete de hasta 30 páginas por $125, con impresión, escaneos cifrados y entrega en FedEx/UPS.",
+        b2b_s3:      "<strong>Trámites de Apostilla para Colegas y Bufetes:</strong> $85 por correo o $115 con recogida, hasta 3 documentos; tarifas del Estado al costo.",
+        b2b_s4:      "<strong>Testigos, Registros e I-9:</strong> testigo independiente $35&ndash;$50, registro en el condado $35&ndash;$75, representante autorizado para I-9 $40&ndash;$55.",
+        b2b_cta:     "Explorar Servicios para Empresas",
 
         // ── WEB DEV ──
         dev_tagline:        "Estrategia Digital y Desarrollo Web",
