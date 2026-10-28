@@ -368,11 +368,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const applyTheme = (mode, save) => {
         document.documentElement.setAttribute('data-theme', mode);
-        if (themeMeta) themeMeta.setAttribute('content', mode === 'light' ? '#f5f6fa' : '#070b16');
+        if (themeMeta) themeMeta.setAttribute('content', mode === 'light' ? '#ffffff' : '#0b1120');
         if (themeBtn) { themeBtn.setAttribute('aria-label', themeLabel()); themeBtn.title = themeLabel(); }
         if (save) { try { localStorage.setItem('sqTheme', mode); } catch (e) {} }
     };
-    applyTheme(document.documentElement.getAttribute('data-theme') || 'dark', false);
+    applyTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
             applyTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light', true);

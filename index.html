@@ -38,20 +38,17 @@
     <!-- ══ FONTS & ICONS ══════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
-        /* Light/dark: saved choice, else the visitor's system setting (site is designed dark) */
+        /* Light/dark: the site is designed light; dark only when the visitor chose it with the toggle */
         (function () {
             var t = null;
             try { t = localStorage.getItem('sqTheme'); } catch (e) {}
-            if (t !== 'light' && t !== 'dark') {
-                t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
-            }
-            document.documentElement.setAttribute('data-theme', t);
+            document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
         })();
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=2026-10-21a">
+    <link rel="stylesheet" href="styles.css?v=2026-10-28a">
 
     <!-- ══ SCHEMA — LocalBusiness (parent LLC) ══════════════════ -->
     <script type="application/ld+json">
@@ -295,7 +292,7 @@
                 <li><a href="#about"           data-i18n="nav_about">About</a></li>
                 <li><a href="#contact" class="btn-nav" data-i18n="nav_contact">Contact HQ</a></li>
             </ul>
-            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light mode" title="Light / dark">
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Light / dark">
                 <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
                 <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
             </button>
@@ -846,6 +843,6 @@
         <span data-i18n="back_to_top">Back to Top</span>
     </button>
 
-    <script src="main.js?v=2026-10-21a"></script>
+    <script src="main.js?v=2026-10-28a"></script>
 </body>
 </html>
