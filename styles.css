@@ -243,6 +243,13 @@ main > .section + .section { border-top: 1px solid var(--border); }
     white-space: nowrap;
 }
 
+.logo-mark {
+    display: block;
+    height: 32px;
+    width: auto;
+    flex: none;
+}
+
 .llc {
     background: var(--accent);
     color: var(--accent-ink);
@@ -1382,12 +1389,9 @@ footer {
 
 .footer-logo {
     display: block;
-    height: 96px;
+    height: 120px;
     width: auto;
     margin-bottom: 1rem;
-    padding: 8px 14px;
-    background: #FFFFFF;
-    border-radius: var(--radius-sm);
 }
 
 .footer-info h5,
@@ -1587,6 +1591,7 @@ body.is-scrolling #back-to-top.visible {
     /* Nav: logo · theme · burger / language / links */
     .nav-container { flex-wrap: wrap; gap: 0; }
     .logo { font-size: 1.1rem; flex: 1; }
+    .logo-mark { height: 26px; }
     .theme-toggle { order: 1; margin-left: 0.25rem; }
     .mobile-toggle { display: block; order: 2; margin-left: 0.4rem; }
     #lang-toggle { order: 3; width: 100%; margin-top: 0.6rem; text-align: center; }
@@ -1645,7 +1650,7 @@ body.is-scrolling #back-to-top.visible {
     .faq-answer { padding: 1rem 1.15rem; }
 
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .footer-logo { height: 80px; }
+    .footer-logo { height: 100px; }
 
     .legal-banner p { flex-direction: column; gap: 0.3rem; font-size: 0.72rem; }
 
