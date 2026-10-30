@@ -134,7 +134,7 @@ const translations = {
         // ── ABOUT ──
         about_h2:        "Built on Integrity",
         about_p1:        "Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, native bilingual Spanish-English translator, and bilingual web developer.",
-        about_creds:     "I'm also a <strong>Health Informatics (B.S.) graduate</strong> of Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work.",
+        about_creds:     "I'm also a <strong>Health Informatics (B.S.) graduate</strong> of Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work. I also hold <a href=\"https://davidquintana.dev/#credentials\" target=\"_blank\" rel=\"noopener noreferrer\">CITI Program certifications</a> in HIPAA for Research, Good Clinical Practice, and human-subjects protection.",
         about_p2:        "Whether I'm notarizing a loan document in Denver, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>",
         about_p3:        "Language barriers and technical complexity should never prevent someone from achieving their goals.",
         about_trust_h3:  "Why Colorado Trusts Me",
@@ -296,7 +296,7 @@ const translations = {
         // ── ABOUT ──
         about_h2:       "Construido Sobre Integridad",
         about_p1:       "Servicios Quintana LLC es la práctica individual de <strong>David Quintana</strong> — Notary Public móvil comisionado en Colorado, especialista en DMV, traductor inglés-español (bilingüe nativo) y desarrollador web bilingüe.",
-        about_creds:    "También soy <strong>graduado en Informática de la Salud (Licenciatura)</strong> de Metropolitan State University of Denver — formación que fortalece mi trabajo seguro en tecnología de salud.",
+        about_creds:    "También soy <strong>graduado en Informática de la Salud (Licenciatura)</strong> de Metropolitan State University of Denver — formación que fortalece mi trabajo seguro en tecnología de salud. También tengo <a href=\"https://davidquintana.dev/#credentials\" target=\"_blank\" rel=\"noopener noreferrer\">certificaciones del CITI Program</a> en HIPAA para Investigación, Buenas Prácticas Clínicas y protección de sujetos humanos.",
         about_p2:       "Ya sea que esté notarizando un documento de préstamo en Denver, ayudando a una familia a registrar un vehículo de otro estado, o escribiendo código personalizado para un negocio local, mi valor fundamental sigue siendo el mismo: <strong>Accesibilidad.</strong>",
         about_p3:       "Las barreras del idioma y la complejidad técnica nunca deben impedir que alguien alcance sus objetivos.",
         about_trust_h3: "Por Qué Colorado Confía en Mí",
