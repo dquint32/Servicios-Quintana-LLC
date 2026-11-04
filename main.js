@@ -13,6 +13,7 @@ const translations = {
         // ── NAV ──
         skip_link:    "Skip to main content",
         nav_services: "Services",
+        nav_shipping: "Shipping",
         nav_hubs:     "Community Hubs",
         nav_business: "For Businesses",
         nav_about:    "About",
@@ -202,6 +203,7 @@ const translations = {
         // ── NAV ──
         skip_link:    "Saltar al contenido principal",
         nav_services: "Servicios",
+        nav_shipping: "Envíos",
         nav_hubs:     "Hubs Comunitarios",
         nav_business: "Para Empresas",
         nav_about:    "Sobre mí",

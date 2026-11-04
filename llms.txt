@@ -1,0 +1,42 @@
+# Servicios Quintana LLC
+
+> Owner-operated, bilingual (English/Spanish) services practice of David Quintana in Denver, Colorado. Mobile notary, Colorado DMV help, certified Spanish–English translation, international shipping help, plus notary support for businesses and bilingual web development. By appointment only. Every price is given in writing before the appointment.
+
+- Owner and sole operator: David Quintana (commissioned Colorado Notary Public, ID 20254044224; B.S. Health Informatics, Metropolitan State University of Denver)
+- Phone (call or text): 303-500-4122
+- Email: admin@serviciosquintana.com
+- Office: 5128 E Colfax Ave, Denver, CO 80220 (by appointment)
+- Languages: English and Spanish (native-level in both)
+- Area served: Denver Metro area, Colorado. Mobile service beyond this area for an additional travel fee.
+- Insurance: The Hartford — general liability, data breach, and professional liability (errors & omissions). Certificate of insurance on request.
+- Not an attorney and not an immigration consultant. Provides administrative, notarial, translation, and clerical services only (C.R.S. § 24-21-525). Not affiliated with any government agency.
+
+## Services for individuals and families
+
+- [Quintana Notary & Signing](https://quintananotarysigning.com/): mobile notary (acknowledgments, oaths and affirmations, copy certifications), apostilles through the Colorado Secretary of State, loan signings (refinances, purchases, HELOCs), airport notary at DIA ($95 flat with parking included, plus $10 per signature), U.S. passport help (DS-11/DS-82 form preparation and bilingual accompaniment). Notarizations $10–$15 per act; any travel fee quoted in writing before the appointment.
+- [Ayuda DMV](https://ayudadmv.com/): Colorado DMV form preparation (address changes, private-party title transfers, bills of sale), in-person DMV proxy, out-of-state title transfers, same-day rush. Government forms are free; charges are only for typing and time.
+- [Certified Translation](https://quintananotarysigning.com/translate.html): word-for-word Spanish ↔ English translations with a signed Certificate of Accuracy, for USCIS (translation only), the Colorado DMV, schools, and state agencies. Rush turnaround available.
+- [International Shipping Help / Ayuda con Envíos Internacionales](https://serviciosquintana.com/#shipping): ship clothes, gifts, and care packages to El Salvador, Guatemala, Honduras, Venezuela, and more at discounted commercial rates. Postage is charged at exact cost, with the receipt shown.
+  - Free quote: $0
+  - DIY with the free guide: $0
+  - Label printing: $0.25/page black and white, $1.00/page color
+  - Assisted label (help buying your own label on your account): $10
+  - Label service (label bought and printed for you): $12 + postage
+  - Drop-off to USPS, UPS, or FedEx: $15 per package
+  - Full service (everything done and dropped off): $25 + postage
+  - Free guide (English, PDF): https://serviciosquintana.com/International-Shipping-Guide-Servicios-Quintana-EN.pdf
+  - Free guide (Spanish, PDF): https://serviciosquintana.com/Guia-Envios-Internacionales-Servicios-Quintana-ES.pdf
+  - Recipient customs taxes are set by each country and may be paid by the recipient on delivery.
+
+## Community Hubs (discounted)
+
+Notarizations are $10 per act with no travel fee when meeting by appointment at: Tienda Salvadoreña (East Colfax, Denver), MSU Denver's Auraria Library, or any Denver Public Library branch. These are public meeting places; not affiliated with or endorsed by them.
+
+## For businesses and professionals
+
+- [Quintana Notary Support (B2B)](https://quintananotarysigning.com/b2b-real-estate.html): subcontracted notary work for title companies, law firms, employers, and fellow notaries, priced in writing and invoiced to the firm. Aurora ICE facility legal proxy visits ($150 per visit including travel, clearance, and first hour on site; $25 per 30 min after; paid after the visit). Title and real estate signings ($125 per package up to 30 pages, with printing, encrypted scanbacks, and FedEx/UPS drop). Apostille runs ($85 mail-in or $115 pickup, up to 3 documents; State fees at cost). Independent witness $35–$50, county recording $35–$75, I-9 authorized representative $40–$55.
+- [David Quintana Dev](https://davidquintana.dev/): bilingual (English/Spanish) websites for local businesses, built from scratch; secure patient intake forms and FHIR-ready data for clinics; hosting, domains, security updates, and SEO basics.
+
+## Payment
+
+Cash, Venmo, Zelle, bank transfer (ACH), and credit/debit card. Credit cards carry a 2% processing surcharge; no surcharge for debit, cash, Venmo, Zelle, or bank transfer. Payment is required upfront to confirm appointments (ICE facility visits are paid after the visit).

@@ -211,6 +211,7 @@ main > .section + .section { border-top: 1px solid var(--border); }
     align-items: center;
     gap: 0.4rem;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 .logo-mark { display: block; height: 30px; width: auto; flex: none; }
 .llc {
@@ -233,8 +234,8 @@ main > .section + .section { border-top: 1px solid var(--border); }
     color: var(--text);
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.9rem;
-    padding: 0.5rem 0.7rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.55rem;
     border-radius: var(--radius-sm);
     display: inline-block;
     white-space: nowrap;
@@ -1030,9 +1031,9 @@ footer {
 }
 .footer-brand p { color: var(--band-muted); font-size: 0.875rem; }
 .footer-logo { display: block; height: 110px; width: auto; margin-bottom: 1rem; }
-.footer-info h5,
-.footer-contact h5,
-.footer-brands-nav h5 {
+.footer-h {
+    font-family: var(--font);
+    line-height: 1.4;
     margin-bottom: 1rem;
     font-size: 0.8rem;
     font-weight: 600;
@@ -1159,7 +1160,6 @@ body.is-scrolling #back-to-top.visible {
    RESPONSIVE
    ============================================ */
 @media (max-width: 1080px) {
-    .nav-links a { padding: 0.5rem 0.55rem; font-size: 0.875rem; }
     .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .service-grid > :last-child { grid-column: 1 / -1; }
     .hero-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 2.5rem; }
@@ -1167,8 +1167,8 @@ body.is-scrolling #back-to-top.visible {
     .hub-rate { border-right: 0; border-bottom: 1px solid var(--border); }
 }
 
-/* Collapse the menu before it gets cramped */
-@media (max-width: 960px) {
+/* Collapse the menu before it gets cramped (7 links + Spanish labels) */
+@media (max-width: 1200px) {
     .nav-container { flex-wrap: wrap; gap: 0; }
     .logo { flex: 1; }
     .theme-toggle { order: 1; margin-left: 0.25rem; }
@@ -1188,6 +1188,9 @@ body.is-scrolling #back-to-top.visible {
     .nav-links li { width: 100%; }
     .nav-links a { width: 100%; text-align: center; padding: 0.75rem 1rem; font-size: 0.95rem; }
     .nav-links a.btn-nav { margin-left: 0; }
+}
+
+@media (max-width: 960px) {
 
     .hero-layout { grid-template-columns: 1fr; }
     .hero-profile {
