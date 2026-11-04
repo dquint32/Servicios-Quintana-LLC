@@ -115,6 +115,30 @@ const translations = {
         trans_cta:          "Get a Translation Quote",
         trans_accent_label: "Certified &amp; Accurate",
 
+        // ── INTERNATIONAL SHIPPING HELP ──
+        ship_h2:             "International Shipping Help",
+        ship_sub:            "Ship clothes, gifts, and care packages to El Salvador, Guatemala, Honduras, Venezuela, and more at discounted commercial rates.",
+        ship_body:           "Do it yourself with our free guide, or let us do it for you.",
+        ship_guide_cta:      "Download the free guide (PDF)",
+        ship_guide_alt:      "Guía en español (PDF)",
+        ship_contact_call:   "Call or text",
+        ship_contact_office: "Office:",
+        ship_prices_h3:      "Prices",
+        ship_col_service:    "Service",
+        ship_col_price:      "Price",
+        ship_p1:             "Free quote",
+        ship_p2:             "DIY with our free guide",
+        ship_p3:             "Label printing",
+        ship_p3_price:       "$0.25/page B&amp;W, $1.00/page color",
+        ship_p4:             "Assisted label (we help you buy your own label on your account)",
+        ship_p5:             "Label service (we buy and print the label for you)",
+        ship_p5_price:       "$12 + postage",
+        ship_p6:             "Drop-off to USPS, UPS, or FedEx",
+        ship_p6_price:       "$15 per package",
+        ship_p7:             "Full service (we do everything and drop it off)",
+        ship_p7_price:       "$25 + postage",
+        ship_postage_note:   "Postage is charged at our exact cost. We show you the receipt.",
+
         // ── FAQ ──
         faq_h2: "Frequently Asked Questions",
         faq_sub: "Quick answers to the most common questions about my services.",
@@ -130,6 +154,12 @@ const translations = {
         faq_a5: "No. I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. I provide administrative, notarial, translation, and clerical services only. (C.R.S. § 24-21-525)",
         faq_q6: "What payment methods do you accept?",
         faq_a6: "I accept Cash, Venmo, Zelle, bank transfer (ACH), and Credit/Debit Card. Credit card payments have a 2% processing surcharge; debit cards have none; there is no surcharge for cash, Venmo, Zelle, or bank transfer. Notice required by Colorado: To cover the cost of processing a credit or charge card transaction, and pursuant to section 5-2-212, Colorado Revised Statutes, a seller or lessor may impose a processing surcharge in an amount not to exceed 2% of the total payment made for goods or services purchased or leased by use of a credit or charge card. A seller or lessor shall not impose a processing surcharge on payments made by use of cash, a check, or a debit card or redemption of a gift card. Payment is required upfront to confirm appointments (ICE facility visits are paid after the visit). Cancel or reschedule with 24+ hours' notice and what you paid stays as credit on your account (it doesn't expire); with less notice or a no-show, I keep the deposit shown on your invoice and the rest is credit; if I cancel, you get a full refund. You will always receive an exact quote in writing before your appointment is confirmed.",
+        faq_q7: "Can you ship my package for me?",
+        faq_a7: "Yes. With Full Service ($25 + postage) we compare rates, fill out customs, buy and print the label, and drop it off. Postage is charged at our exact cost.",
+        faq_q8: "What do I need to bring?",
+        faq_a8: "Your items (we need to see what goes in the box), the recipient's full name, phone number, full address with a landmark, and their ID number (for example, DUI in El Salvador, DPI in Guatemala, DNI in Honduras, Cédula in Venezuela).",
+        faq_q9: "Do you pay customs taxes?",
+        faq_a9: "No. Each country sets its own taxes, and the recipient may pay them on delivery. We are not responsible for customs holds, taxes, or delivery times set by the carrier and the destination country.",
 
         // ── ABOUT ──
         about_h2:        "Built on Integrity",
@@ -277,6 +307,30 @@ const translations = {
         trans_cta:          "Solicitar Cotización de Traducción",
         trans_accent_label: "Certificada y Precisa",
 
+        // ── AYUDA CON ENVÍOS INTERNACIONALES ──
+        ship_h2:             "Ayuda con Envíos Internacionales",
+        ship_sub:            "Envíe ropa, regalos y encomiendas a El Salvador, Guatemala, Honduras, Venezuela y más, con tarifas comerciales con descuento.",
+        ship_body:           "Hágalo usted mismo con nuestra guía gratis, o déjenos hacerlo por usted.",
+        ship_guide_cta:      "Descargar la guía gratis (PDF)",
+        ship_guide_alt:      "English guide (PDF)",
+        ship_contact_call:   "Llame o escriba al",
+        ship_contact_office: "Oficina:",
+        ship_prices_h3:      "Precios",
+        ship_col_service:    "Servicio",
+        ship_col_price:      "Precio",
+        ship_p1:             "Cotización gratis",
+        ship_p2:             "Hágalo usted mismo con la guía",
+        ship_p3:             "Impresión de etiqueta",
+        ship_p3_price:       "$0.25/página B/N, $1.00/página a color",
+        ship_p4:             "Asistencia de etiqueta (le ayudamos a comprar su propia etiqueta)",
+        ship_p5:             "Servicio de etiqueta (nosotros compramos e imprimimos la etiqueta)",
+        ship_p5_price:       "$12 + envío",
+        ship_p6:             "Entrega en USPS, UPS o FedEx",
+        ship_p6_price:       "$15 por paquete",
+        ship_p7:             "Servicio completo (nosotros hacemos todo y lo entregamos)",
+        ship_p7_price:       "$25 + envío",
+        ship_postage_note:   "El envío se cobra a costo exacto. Le mostramos el recibo.",
+
         // ── FAQ ──
         faq_h2:  "Preguntas Frecuentes",
         faq_sub: "Respuestas rápidas a las preguntas más comunes sobre mis servicios.",
@@ -292,6 +346,12 @@ const translations = {
         faq_a5:  "No. No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Solo ofrezco servicios administrativos, notariales, de traducción y de trámites. (C.R.S. § 24-21-525)",
         faq_q6:  "¿Qué métodos de pago acepta?",
         faq_a6:  "Acepto Efectivo, Venmo, Zelle, transferencia bancaria (ACH) y Tarjeta de Crédito/Débito. Los pagos con tarjeta de crédito tienen un recargo de procesamiento de 2%; las tarjetas de débito no tienen recargo; no hay recargo por efectivo, Venmo, Zelle ni transferencia bancaria. Aviso requerido por Colorado: Para cubrir el costo de procesar una transacción con tarjeta de crédito o de cargo, y conforme a la sección 5-2-212 de los Estatutos Revisados de Colorado, un vendedor o arrendador puede imponer un recargo de procesamiento por un monto que no exceda el 2% del pago total realizado por bienes o servicios comprados o arrendados con tarjeta de crédito o de cargo. Un vendedor o arrendador no impondrá un recargo de procesamiento a los pagos realizados en efectivo, con cheque o con tarjeta de débito, ni al canje de una tarjeta de regalo. Se requiere pago por adelantado para confirmar citas (las visitas al centro de ICE se pagan después de la visita). Si cancela o cambia su cita con 24 horas o más de aviso, lo que pagó queda como saldo a favor en su cuenta (no vence); con menos aviso o si no se presenta, me quedo con el depósito que aparece en su factura y el resto es saldo a favor; si yo cancelo, le devuelvo todo. Siempre recibirá una cotización exacta por escrito antes de que su cita sea confirmada.",
+        faq_q7:  "¿Pueden enviar mi paquete por mí?",
+        faq_a7:  "Sí. Con el Servicio completo ($25 + envío) comparamos tarifas, llenamos los formularios de aduana, compramos e imprimimos la etiqueta y entregamos el paquete. El envío se cobra a costo exacto.",
+        faq_q8:  "¿Qué necesito traer?",
+        faq_a8:  "Sus artículos (necesitamos ver lo que va en la caja) y los datos del destinatario: nombre completo, número de teléfono, dirección completa con un punto de referencia y su número de identificación (por ejemplo, DUI en El Salvador, DPI en Guatemala, DNI en Honduras, Cédula en Venezuela).",
+        faq_q9:  "¿Ustedes pagan los impuestos de aduana?",
+        faq_a9:  "No. Cada país fija sus propios impuestos, y es posible que el destinatario tenga que pagarlos al recibir el paquete. No somos responsables de retenciones en aduana, impuestos ni tiempos de entrega fijados por la empresa de transporte y el país de destino.",
 
         // ── ABOUT ──
         about_h2:       "Construido Sobre Integridad",
@@ -579,6 +639,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.hub-pill').forEach((pill, i) => {
         pill.addEventListener('click', () => { if (hubTabs[i]) selectHub(hubTabs[i], false); });
     });
+
+    /* ── SHIPPING GUIDE: link the PDF in the current language ── */
+    // Main button = guide in the page's language; small link = the other language.
+    const shipGuides = [document.getElementById('ship-guide-link'), document.getElementById('ship-guide-alt-link')].filter(Boolean);
+    if (shipGuides.length) {
+        document.addEventListener('sq:lang', (e) => {
+            shipGuides.forEach(link => {
+                const href = link.getAttribute(e.detail === 'es' ? 'data-href-es' : 'data-href-en');
+                if (href) {
+                    link.setAttribute('href', href);
+                    link.setAttribute('hreflang', /-ES\.pdf$/.test(href) ? 'es' : 'en');
+                }
+            });
+        });
+    }
 
     // Apply saved/default language on load
     updateContent(currentLang);

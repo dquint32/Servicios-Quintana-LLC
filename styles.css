@@ -1165,6 +1165,54 @@ main > .section + .section { border-top: 1px solid var(--border); }
 }
 
 /* ============================================
+   INTERNATIONAL SHIPPING HELP — two equal panels
+   (reuses the translation panel; adds a price menu)
+   ============================================ */
+.shipping-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.shipping-layout h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--heading);
+}
+.shipping-layout .card-link { align-self: flex-start; }
+.shipping-layout .card-link .fas { color: var(--accent); }
+.ship-contact a { color: var(--heading); font-weight: 600; text-decoration: none; }
+.ship-contact a:hover { color: var(--accent-text); }
+
+.price-menu {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+.price-menu th,
+.price-menu td {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+.price-menu thead th {
+    padding-top: 0;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.price-menu tbody th { font-weight: 500; color: var(--text-2); padding-right: 1rem; }
+.price-menu td,
+.price-menu thead th:last-child {
+    text-align: right;
+    width: 38%;
+}
+.price-menu td { color: var(--heading); font-weight: 700; }
+.price-menu tbody tr:last-child th,
+.price-menu tbody tr:last-child td { border-bottom: 0; }
+.shipping-layout .hub-note { font-size: 0.875rem; line-height: 1.55; color: var(--muted); }
+
+/* ============================================
    FAQ — 2-column card grid
    ============================================ */
 .faq-grid {
@@ -1644,6 +1692,9 @@ body.is-scrolling #back-to-top.visible {
     .trans-accent-box { flex-direction: row; flex-wrap: wrap; padding: 1.25rem; gap: 1rem; }
     .trans-lang { font-size: 2rem; }
     .trans-accent-label { flex-basis: 100%; }
+    .shipping-layout { grid-template-columns: minmax(0, 1fr); }
+    .shipping-layout .card-link { align-self: center; }
+    .price-menu { font-size: 0.875rem; }
 
     .faq-grid { grid-template-columns: 1fr; }
     .faq-question { padding: 1rem 1.15rem; font-size: 0.9375rem; }
