@@ -1,7 +1,8 @@
 /**
  * SERVICIOS QUINTANA LLC — main.js
- * Full bilingual toggle, scroll, ripple, cursor, mobile nav, FAQ, and all interactions.
- * Version: 2026-10 — Personal hero, stats banner, asymmetric brand cards, hub locator.
+ * Bilingual toggle, light/dark, mobile nav, hub picker, FAQ and small interactions.
+ * Version: 2026-11 — Warm, human-first layout: how it works, everyday services,
+ * shipping help, Community Hubs, business section kept separate.
  */
 
 /* ══════════════════════════════════════════════════════════
@@ -10,110 +11,72 @@
 const translations = {
     en: {
         // ── NAV ──
-        nav_brands:   "My Brands",
+        skip_link:    "Skip to main content",
         nav_services: "Services",
-        nav_faq:      "FAQ",
+        nav_hubs:     "Community Hubs",
+        nav_business: "For Businesses",
         nav_about:    "About",
-        nav_contact:  "Contact HQ",
+        nav_faq:      "FAQ",
+        nav_contact:  "Contact",
 
         // ── HERO ──
-        hero_eyebrow: "Est. 2026 · Denver Metro, Colorado",
-        hero_h1:      "Hi, I'm David.<br><span class=\"hero-h1-sub\">Bilingual notary, DMV help &amp; web development — one person, start to finish.</span>",
-        hero_sub:     "Servicios Quintana isn't a call center or a franchise — it's me. When you book, I'm the notary who shows up, the one who stands in line at the DMV for you, and the developer who builds your website. Same person from first message to final signature, in English or Spanish.",
-        pill_bilingual: "100% Bilingual EN / ES",
-        pill_area:      "Denver Metro Area",
-        pill_pricing:   "Transparent Pricing",
-        profile_role:   "Owner &amp; sole operator",
-        profile_edu:    "B.S. Health Informatics, MSU Denver",
-        profile_status: "Call or text me directly",
+        hero_eyebrow:      "Denver Metro · By appointment · English &amp; Español",
+        hero_h1:           "Notary, DMV paperwork and certified translations, handled by one person you can call directly.",
+        hero_sub:          "I'm David Quintana, a commissioned Colorado Notary Public. I help families and local businesses get their paperwork done right. I come to you, or we meet at a Community Hub, and you get the full price in writing before we meet.",
+        hero_cta_call:     "Call or text 303-500-4122",
+        hero_cta_services: "See services &amp; prices",
+        btn_hablamos:      "¿Prefiere español? Cambiar idioma",
+        promise_1:         "Full price in writing first",
+        promise_2:         "Commissioned &amp; insured",
+        promise_3:         "Fully bilingual",
+        promise_4:         "$10 notarizations at Community Hubs",
+        profile_role:      "Owner &amp; sole operator",
+        profile_quote:     "“The person you message is the person who shows up. No call center, no hand-offs.”",
+        profile_status:    "Call or text me directly",
 
-        // ── STATS BANNER ──
-        bs_rate_label:   "Hub notarial act",
-        bs_travel_label: "Travel fee at hubs",
-        bs_brands_label: "Brands · one owner",
-        bs_lang_label:   "Languages",
-        bs_hubs_label:   "Meet me at",
-        pill_dpl:        "Denver Public Libraries",
-        btn_view_services: "View My Services",
-        btn_hablamos:      "Hablamos Español",
+        // ── HOW IT WORKS ──
+        how_h2:  "How it works",
+        how_sub: "Three simple steps, and no surprises along the way.",
+        how_1_h: "Tell me what you need",
+        how_1_p: "Call or text 303-500-4122, or email admin@serviciosquintana.com. English or Spanish, whichever is easier for you.",
+        how_2_h: "Get your price in writing",
+        how_2_p: "Before anything is booked, you get an exact quote in writing. No hidden fees.",
+        how_3_h: "Meet where it's easy",
+        how_3_p: "I come to your home or office, or we meet at a Community Hub. Appointments only, so I'm ready when you arrive.",
 
-        // ── BRANDS SECTION ──
-        brands_h2:  "My Specialized Brands",
-        brands_sub: "I operate four distinct brands serving the Denver Metro area and beyond. Whether I come to you or you meet me at a Community Hub, I'm here to help.",
+        // ── EVERYDAY SERVICES ──
+        services_h2:   "Help for individuals and families",
+        services_sub:  "Everyday paperwork, explained clearly and done right. Each service has its own page with full details.",
+        services_also: "Sending a package to family abroad? See International Shipping Help",
 
-        // ── BADGES ──
-        badge_auth:        "Document Authentication",
-        badge_admin:       "Administrative Support",
-        badge_digital:     "Digital Strategy &amp; Web Development",
-        badge_translation: "Translation Services",
+        notary_h3:    "Mobile notary &amp; signings",
+        notary_intro: "I come to your home or office, or meet you at a Community Hub, to notarize your documents in English or Spanish.",
+        notary_s1:    "Standard notarizations: acknowledgments, oaths and affirmations, copy certifications",
+        notary_s2:    "Apostilles through the Colorado Secretary of State",
+        notary_s3:    "Loan signings for refinances, purchases and HELOCs",
+        notary_s4:    "Airport notary at DIA: $95 flat with parking included, plus $10 per signature",
+        notary_s5:    "U.S. passport help: I prepare DS-11/DS-82 forms and go with you to the post office or clerk's office",
+        notary_price: "Notarizations <strong>$10–$15</strong> per act. Any travel fee is quoted in writing before we meet.",
+        notary_cta:   "Notary &amp; passport services",
 
-        // ── NOTARY ──
-        notary_tagline:      "Professional, Mobile &amp; Bilingual Document Authentication",
-        notary_intro:        "I bring the notary office to your doorstep or meet you at discounted Community Hubs (MSU Denver &amp; Tienda Salvadoreña).",
-        notary_s1:           "<strong>Standard Notarizations:</strong> Acknowledgments, Oaths/Affirmations, and Copy Certifications.",
-        notary_s2:           "<strong>Apostille Processing:</strong> Full-service handling for international documents via the CO Secretary of State.",
-        notary_s3:           "<strong>Loan Signings:</strong> Professional packages for Refinances, Purchases, and HELOCs.",
-        notary_s4:           "<strong>Airport Notary (DIA):</strong> I meet you in the terminal — a flat $95 with parking included, plus $10 per signature.",
-        notary_s5:           "<strong>U.S. Passport Concierge:</strong> Clerical prep for DS-11/DS-82 and bilingual chaperone at the post office or clerk's office. The forms are free from the government; I charge only for typing and my time.",
-        notary_pricing_note: "Notarial acts from <strong class=\"mono\">$10–$15</strong> · Mobile fee quoted in writing before every appointment.",
-        notary_cta:          "Explore Notary &amp; Passport Services",
+        dmv_h3:    "Colorado DMV help",
+        dmv_intro: "If the DMV feels confusing, I'll prepare the paperwork and, when needed, go in person for you.",
+        dmv_s1:    "Forms for address changes, private-party title transfers and bills of sale",
+        dmv_s2:    "In-person DMV visits as your authorized proxy",
+        dmv_s3:    "Out-of-state title transfers: I coordinate with owners, dealerships and lienholders",
+        dmv_s4:    "Same-day rush for urgent paperwork and DMV submissions",
+        dmv_price: "Government forms are free. I charge only for typing and my time, quoted in writing.",
+        dmv_cta:   "DMV services",
 
-        // ── DMV ──
-        dmv_tagline: "Administrative Support &amp; DMV Proxy Services",
-        dmv_intro:   "Specialized assistance for residents navigating complex Colorado DMV requirements. I simplify state processes so families can move forward without stress.",
-        dmv_s1:      "<strong>DMV Document Preparation:</strong> I type the forms you choose for address changes, private-party title transfers, and bills of sale. The forms are free from the government; I charge only for typing and my time.",
-        dmv_s2:      "<strong>In-Person Proxy Services:</strong> Can't go to the DMV? I act as your authorized proxy to submit documents in person.",
-        dmv_s3:      "<strong>Out-of-State Title Transfers:</strong> I coordinate with out-of-state owners, dealerships, and lienholders.",
-        dmv_s4:      "<strong>Same-Day Rush Services:</strong> Available for urgent document prep and DMV submissions.",
-        dmv_cta:     "Explore DMV Services",
-
-        // ── B2B ──
-        badge_b2b:   "Business &amp; Legal Support",
-        b2b_tagline: "Legal Proxy, ICE Detention Visits, Corporate &amp; Law Firm Subcontracting",
-        b2b_intro:   "Notary support for title companies, law firms, employers and fellow notaries &mdash; priced in writing, invoiced to your firm.",
-        b2b_s1:      "<strong>Aurora ICE Facility Visits:</strong> I visit detained clients as your cleared legal proxy. $150 per visit (travel, clearance, first hour on site), $25 per 30 min after; nothing paid before the visit.",
-        b2b_s2:      "<strong>Title &amp; Real Estate Signings:</strong> One package up to 30 pages for $125, with printing, encrypted scanbacks and the FedEx/UPS drop.",
-        b2b_s3:      "<strong>Apostille Runs for Notaries &amp; Firms:</strong> $85 mail-in or $115 pickup, up to 3 documents; State fees at cost.",
-        b2b_s4:      "<strong>Witnesses, Recordings &amp; I-9 Overflow:</strong> Independent witness $35&ndash;$50, county recording $35&ndash;$75, I-9 authorized representative $40&ndash;$55.",
-        b2b_cta:     "Explore Business Services",
-
-        // ── WEB DEV ──
-        dev_tagline:       "Digital Strategy &amp; Web Development",
-        dev_intro:         "High-performance, fully bilingual (EN/ES) web architecture for local businesses. I build accessible, modern websites from scratch — no cheap templates.",
-        dev_s1:            "<strong>Custom Websites:</strong> From basic landing pages to full Business and E-Commerce builds.",
-        dev_s2:            "<strong>Bilingual Integration:</strong> Reach more customers with seamless English and Spanish user experiences.",
-        dev_s3:            "<strong>Healthcare-Aligned Tools:</strong> As an MSU Denver Health Informatics graduate, I build secure patient intake forms, validation workflows, and FHIR-ready JSON output for clinics.",
-        dev_s4:            "<strong>Ongoing Maintenance:</strong> Hosting setup, domain management, security patches, and SEO fundamentals.",
-        dev_portfolio_note:"Includes portfolio work for Tienda Salvadoreña",
-        dev_cta:           "View Web Portfolio &amp; Pricing",
-
-        // ── HUBS CALLOUT ──
-        hubs_callout_h3:   "Save More at a Community Hub",
-        hubs_callout_body: "Meet me at a Community Hub and pay <strong>$10 per notarial act</strong> (vs. the standard $15 maximum) with <strong>no travel fee</strong>. These are real discounts — voluntarily offered below the Colorado statutory maximum.",
-        hub_tienda_sub:    "Community Hub — East Colfax, Denver",
-        hub_crrec_sub:     "Community Hub — any branch in Denver",
-        hub_msu_sub:       "Auraria Library — Denver, CO",
-        hub_rate_tag:      "Community-first rate",
-        hub_rate_unit:     "/ notarial act",
-        hub_cmp_max:       "CO max",
-        hub_cmp_travel:    "Travel",
-        hub_panel_label:   "// selected hub",
-        hub_book:          "Book a hub visit",
-        hub_directions:    "Directions",
-        hub_desc_tienda:   "Neighborhood market on East Colfax. Tell me a time and I'll meet you there — just bring your unsigned document and a valid photo ID.",
-        hub_desc_msu:      "Auraria Library on the downtown Auraria Campus — convenient for students, faculty, and anyone working near downtown.",
-        hub_desc_dpl:      "Any Denver Public Library branch. Pick the one closest to you and I'll meet you there by appointment.",
-
-        // ── TRANSLATION ──
-        trans_h2:           "Certified Translation Services",
-        trans_sub:          "Professional Spanish ↔ English Translations — USCIS, DMV, Schools &amp; State Agencies",
-        trans_body:         "I provide word-for-word certified translations for families, students, and businesses. Every translation includes a signed <strong>Certificate of Accuracy</strong> compliant with USCIS, the Colorado DMV, schools, and state agencies. Rush turnaround available.",
-        trans_s1:           "Documents for USCIS (translation only)",
-        trans_s2:           "Colorado DMV title &amp; registration documents",
-        trans_s3:           "School &amp; university enrollment records",
-        trans_s4:           "State agency &amp; government paperwork",
-        trans_cta:          "Get a Translation Quote",
-        trans_accent_label: "Certified &amp; Accurate",
+        trans_brand: "Certified Translation",
+        trans_h3:    "Spanish ↔ English translation",
+        trans_intro: "Word-for-word translations with a signed Certificate of Accuracy, prepared for USCIS, the Colorado DMV, schools and state agencies.",
+        trans_s1:    "Documents for USCIS (translation only)",
+        trans_s2:    "Colorado DMV title and registration documents",
+        trans_s3:    "School and university records",
+        trans_s4:    "State agency and government paperwork",
+        trans_price: "Rush turnaround available. Your quote comes in writing first.",
+        trans_cta:   "Get a translation quote",
 
         // ── INTERNATIONAL SHIPPING HELP ──
         ship_h2:             "International Shipping Help",
@@ -139,9 +102,64 @@ const translations = {
         ship_p7_price:       "$25 + postage",
         ship_postage_note:   "Postage is charged at our exact cost. We show you the receipt.",
 
+        // ── COMMUNITY HUBS ──
+        hubs_h2:           "Save at a Community Hub",
+        hubs_sub:          "Meet me at a public place in your neighborhood, by appointment, and pay less.",
+        hub_rate_tag:      "Community rate",
+        hub_rate_unit:     "per notarial act",
+        hub_cmp_max:       "Colorado maximum",
+        hub_cmp_travel:    "Travel fee",
+        hubs_callout_body: "A real discount, offered voluntarily below the Colorado maximum, with <strong>no travel fee</strong>.",
+        hub_tienda_sub:    "East Colfax, Denver",
+        hub_msu_sub:       "Auraria Library, downtown",
+        hub_dpl:           "Denver Public Library",
+        hub_dpl_sub:       "Any branch in Denver",
+        hub_panel_label:   "Selected location",
+        hub_book:          "Book a hub visit",
+        hub_directions:    "Directions",
+        hub_desc_tienda:   "Neighborhood market on East Colfax. Tell me a time and I'll meet you there — just bring your unsigned document and a valid photo ID.",
+        hub_desc_msu:      "Auraria Library on the downtown Auraria Campus — convenient for students, faculty, and anyone working near downtown.",
+        hub_desc_dpl:      "Any Denver Public Library branch. Pick the one closest to you and I'll meet you there by appointment.",
+        hub_note:          "These are public places where I meet clients by appointment; I am not affiliated with or endorsed by them.",
+
+        // ── FOR BUSINESSES ──
+        biz_kicker: "For businesses &amp; professionals",
+        biz_h2:     "Support for firms and local businesses",
+        biz_sub:    "Separate from my everyday client work. Each service has its own site with full details and pricing.",
+
+        b2b_h3:    "Notary support for law firms, title companies &amp; employers",
+        b2b_intro: "Subcontracted notary work for title companies, law firms, employers and fellow notaries, priced in writing and invoiced to your firm.",
+        b2b_s1:    "<strong>Aurora ICE facility visits:</strong> I visit detained clients as your cleared legal proxy. $150 per visit (travel, clearance, first hour on site), $25 per 30 min after; nothing paid before the visit.",
+        b2b_s2:    "<strong>Title &amp; real estate signings:</strong> one package up to 30 pages for $125, with printing, encrypted scanbacks and the FedEx/UPS drop.",
+        b2b_s3:    "<strong>Apostille runs:</strong> $85 mail-in or $115 pickup, up to 3 documents; State fees at cost.",
+        b2b_s4:    "<strong>Witnesses, recordings &amp; I-9:</strong> independent witness $35&ndash;$50, county recording $35&ndash;$75, I-9 authorized representative $40&ndash;$55.",
+        b2b_cta:   "Business services",
+
+        dev_h3:             "Bilingual websites for local businesses",
+        dev_intro:          "I design and build fast, accessible websites in English and Spanish, from scratch. No templates.",
+        dev_s1:             "<strong>Custom websites:</strong> from simple landing pages to full business and online-store sites.",
+        dev_s2:             "<strong>Bilingual by design:</strong> reach more customers with a site that works just as well in Spanish as in English.",
+        dev_s3:             "<strong>Tools for clinics:</strong> secure patient intake forms and FHIR-ready data, backed by my Health Informatics degree.",
+        dev_s4:             "<strong>Ongoing care:</strong> hosting setup, domains, security updates and SEO basics.",
+        dev_portfolio_note: "Portfolio includes work for Tienda Salvadoreña.",
+        dev_cta:            "Portfolio &amp; pricing",
+
+        // ── ABOUT ──
+        about_h2:         "Who you'll be working with",
+        about_p1:         "Servicios Quintana LLC is just me, David Quintana. There's no call center and no team passing you along. The person you message is the person who shows up, prepares your forms, or builds your site.",
+        about_p2:         "I'm a commissioned Colorado Notary Public, a native bilingual Spanish–English translator, and a Health Informatics (B.S.) graduate of Metropolitan State University of Denver.",
+        about_p3:         "What guides my work is simple: language barriers and complicated paperwork should never keep someone from moving forward.",
+        about_trust_h3:   "What you can count on",
+        about_photo_role: "Notary · DMV · Translation · Web",
+        trust_1:          "<strong>Fully bilingual:</strong> native-level English and Spanish, so no interpreter is needed.",
+        trust_2:          "<strong>Transparent pricing:</strong> no hidden fees. Every cost is disclosed and agreed in writing before your appointment.",
+        trust_3:          "<strong>Community first:</strong> discounted notarizations at Community Hubs across Denver.",
+        trust_5:          "<strong>Commissioned &amp; insured:</strong> I'm a Notary Public commissioned in Colorado (ID 20254044224). Servicios Quintana LLC is insured through The Hartford, with general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary, translation and web development work. Certificate of insurance available on request.",
+        trust_4:          "<strong>Locally owned:</strong> serving the Denver Metro area since 2026.",
+
         // ── FAQ ──
-        faq_h2: "Frequently Asked Questions",
-        faq_sub: "Quick answers to the most common questions about my services.",
+        faq_h2: "Common questions",
+        faq_sub: "Straight answers about areas, languages, pricing and what I can and can't do.",
         faq_q1: "What areas do you serve?",
         faq_a1: "I primarily serve the Denver Metro area of Colorado. Mobile notary services extend beyond this area for an additional travel fee. I also meet clients by appointment at Community Hubs (Tienda Salvadoreña, MSU Denver's Auraria Library, and any Denver Public Library branch), where notarization is $10 per act with no travel charge. These are public places where I meet clients; I am not affiliated with or endorsed by them.",
         faq_q2: "Do you offer services in Spanish?",
@@ -161,37 +179,17 @@ const translations = {
         faq_q9: "Do you pay customs taxes?",
         faq_a9: "No. Each country sets its own taxes, and the recipient may pay them on delivery. We are not responsible for customs holds, taxes, or delivery times set by the carrier and the destination country.",
 
-        // ── ABOUT ──
-        about_h2:        "Built on Integrity",
-        about_p1:        "Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, native bilingual Spanish-English translator, and bilingual web developer.",
-        about_creds:     "I'm also a <strong>Health Informatics (B.S.) graduate</strong> of Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work.",
-        about_p2:        "Whether I'm notarizing a loan document in Denver, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>",
-        about_p3:        "Language barriers and technical complexity should never prevent someone from achieving their goals.",
-        about_trust_h3:  "Why Colorado Trusts Me",
-        about_photo_role: "Notary · DMV · Web Development",
-        trust_1:         "<strong>100% Bilingual:</strong> Native-level fluency in English and Spanish — no interpreter needed.",
-        trust_2:         "<strong>Transparent Pricing:</strong> No hidden fees; every cost is disclosed and agreed in writing before your appointment.",
-        trust_3:         "<strong>Community Focused:</strong> Discounted fees available at Community Hubs across Denver.",
-        trust_5:         "<strong>Commissioned &amp; Insured:</strong> I'm a Notary Public commissioned in Colorado (ID 20254044224). Servicios Quintana LLC is insured through The Hartford, with general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary, translation and web development work. Certificate of insurance available on request.",
-        pill_insured:    "Commissioned &amp; Insured",
-        footer_insured:  "<strong>Commissioned &amp; Insured.</strong> Colorado notary commission ID 20254044224 · Insured through The Hartford: general liability, data breach, and professional liability (errors &amp; omissions) for notary, translation and web work · Certificate of insurance on request.",
-        trust_4:         "<strong>Locally Owned:</strong> Proudly serving the Denver Metro area since 2026.",
-
-        // ── STATS ──
-        stat_brands:    "Active Brands",
-        stat_bilingual: "Bilingual",
-        stat_local:     "Locally Owned",
-
-        // ── COMMUNITY HUBS (about section) ──
-        hubs_h4:    "Community Hubs",
-        hub_msu:    "MSU Denver — Denver, CO",
-        hub_tienda: "Tienda Salvadoreña",
-        hub_crrec:  "Denver Public Library (all branches)",
-        hub_dpl:    "Denver Public Library (all branches)",
-        hub_note:   "$10 per notarial act &amp; no travel fee at these locations. These are public places where I meet clients by appointment; I am not affiliated with or endorsed by them.",
+        // ── CONTACT ──
+        contact_h2:     "Tell me what you need",
+        contact_p:      "Call, text or email, in English or Spanish. Appointments only, and you'll have your full price in writing before we meet.",
+        contact_office: "Office: 5128 E Colfax Ave, Denver, CO 80220 (by appointment)",
 
         // ── FOOTER ──
+        footer_tagline:       "Bilingual services · Community focused · Colorado owned",
+        footer_hq_h5:         "Corporate HQ &amp; Registered Agent",
+        footer_contact_h5:    "Contact",
         footer_brands_nav_h5: "My Brands",
+        footer_insured:       "<strong>Commissioned &amp; Insured.</strong> Colorado notary commission ID 20254044224 · Insured through The Hartford: general liability, data breach, and professional liability (errors &amp; omissions) for notary, translation and web work · Certificate of insurance on request.",
         footer_statutory_en:  "<strong>Important Notice:</strong> I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. I provide administrative, translation, and notarial services only. (C.R.S. § 24-21-525)",
         footer_statutory_es:  "<strong>Aviso Importante:</strong> No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Solo ofrezco servicios administrativos, de traducción y notariales. (C.R.S. § 24-21-525)",
 
@@ -202,110 +200,72 @@ const translations = {
 
     es: {
         // ── NAV ──
-        nav_brands:   "Mis Marcas",
+        skip_link:    "Saltar al contenido principal",
         nav_services: "Servicios",
+        nav_hubs:     "Hubs Comunitarios",
+        nav_business: "Para Empresas",
+        nav_about:    "Sobre mí",
         nav_faq:      "Preguntas",
-        nav_about:    "Nosotros",
         nav_contact:  "Contacto",
 
         // ── HERO ──
-        hero_eyebrow: "Est. 2026 · Área Metropolitana de Denver, Colorado",
-        hero_h1:      "Hola, soy David.<br><span class=\"hero-h1-sub\">Servicios notariales, ayuda con el DMV y desarrollo web — una sola persona, de principio a fin.</span>",
-        hero_sub:     "Servicios Quintana no es un centro de llamadas ni una franquicia — soy yo. Cuando hace una cita, yo soy quien llega a notarizar, quien hace la fila en el DMV por usted y quien construye su sitio web. La misma persona desde el primer mensaje hasta la firma final, en español o en inglés.",
-        pill_bilingual: "100% Bilingüe ES / EN",
-        pill_area:      "Área Metropolitana de Denver",
-        pill_pricing:   "Precios Transparentes",
-        profile_role:   "Dueño y único operador",
-        profile_edu:    "B.S. Informática de la Salud, MSU Denver",
-        profile_status: "Llámeme o escríbame directo",
+        hero_eyebrow:      "Área de Denver · Con cita previa · Español &amp; English",
+        hero_h1:           "Servicios notariales, trámites del DMV y traducciones certificadas, con una sola persona a quien puede llamar directamente.",
+        hero_sub:          "Soy David Quintana, Notary Public comisionado en Colorado. Ayudo a familias y negocios locales a resolver sus trámites correctamente. Yo voy a usted, o nos vemos en un Hub Comunitario, y usted recibe el precio completo por escrito antes de la cita.",
+        hero_cta_call:     "Llame o escriba al 303-500-4122",
+        hero_cta_services: "Ver servicios y precios",
+        btn_hablamos:      "Prefer English? Switch language",
+        promise_1:         "Precio completo por escrito primero",
+        promise_2:         "Comisionado y asegurado",
+        promise_3:         "Totalmente bilingüe",
+        promise_4:         "Notarizaciones de $10 en Hubs Comunitarios",
+        profile_role:      "Dueño y único operador",
+        profile_quote:     "“La persona a quien le escribe es la misma que llega. Sin centro de llamadas, sin intermediarios.”",
+        profile_status:    "Llámeme o escríbame directo",
 
-        // ── STATS BANNER ──
-        bs_rate_label:   "Acto notarial en hub",
-        bs_travel_label: "Desplazamiento en hubs",
-        bs_brands_label: "Marcas · un dueño",
-        bs_lang_label:   "Idiomas",
-        bs_hubs_label:   "Encuéntreme en",
-        pill_dpl:        "Bibliotecas Públicas de Denver",
-        btn_view_services: "Ver Mis Servicios",
-        btn_hablamos:      "We Speak English",
+        // ── HOW IT WORKS ──
+        how_h2:  "Cómo funciona",
+        how_sub: "Tres pasos sencillos y sin sorpresas en el camino.",
+        how_1_h: "Dígame qué necesita",
+        how_1_p: "Llame o escriba al 303-500-4122, o mande un correo a admin@serviciosquintana.com. En español o en inglés, como le sea más fácil.",
+        how_2_h: "Reciba su precio por escrito",
+        how_2_p: "Antes de agendar, recibe una cotización exacta por escrito. Sin cargos ocultos.",
+        how_3_h: "Nos vemos donde le quede mejor",
+        how_3_p: "Voy a su casa u oficina, o nos vemos en un Hub Comunitario. Solo con cita previa, así estoy listo cuando usted llegue.",
 
-        // ── BRANDS SECTION ──
-        brands_h2:  "Mis Marcas Especializadas",
-        brands_sub: "Opero cuatro marcas distintas que sirven al área metropolitana de Denver y más allá. Ya sea que yo vaya a usted o que me visite en un Hub Comunitario, estoy aquí para ayudar.",
+        // ── EVERYDAY SERVICES ──
+        services_h2:   "Ayuda para personas y familias",
+        services_sub:  "Trámites de todos los días, explicados con claridad y hechos correctamente. Cada servicio tiene su propia página con todos los detalles.",
+        services_also: "¿Va a enviar un paquete a su familia en otro país? Vea Ayuda con Envíos Internacionales",
 
-        // ── BADGES ──
-        badge_auth:        "Autenticación de Documentos",
-        badge_admin:       "Apoyo Administrativo",
-        badge_digital:     "Estrategia Digital y Desarrollo Web",
-        badge_translation: "Servicios de Traducción",
+        notary_h3:    "Servicios notariales móviles y firmas",
+        notary_intro: "Voy a su casa u oficina, o me reúno con usted en un Hub Comunitario, para notarizar sus documentos en español o en inglés.",
+        notary_s1:    "Notarizaciones estándar: reconocimientos, juramentos y afirmaciones, certificaciones de copia",
+        notary_s2:    "Apostillas a través de la Secretaría de Estado de Colorado",
+        notary_s3:    "Firmas de préstamos para refinanciamientos, compras y HELOCs",
+        notary_s4:    "Notarizaciones en el aeropuerto (DIA): $95 fijos con el estacionamiento incluido, más $10 por firma",
+        notary_s5:    "Ayuda con pasaportes de EE.UU.: preparo los formularios DS-11/DS-82 y lo acompaño a la oficina de correos o del condado",
+        notary_price: "Notarizaciones de <strong>$10–$15</strong> por acto. Cualquier tarifa de desplazamiento se cotiza por escrito antes de la cita.",
+        notary_cta:   "Servicios notariales y de pasaporte",
 
-        // ── NOTARY ──
-        notary_tagline:      "Autenticación de Documentos Profesional, Móvil y Bilingüe",
-        notary_intro:        "Llevo la oficina notarial a su puerta o me reúno con usted en Hubs Comunitarios con descuento (MSU Denver y Tienda Salvadoreña).",
-        notary_s1:           "<strong>Notarizaciones Estándar:</strong> Reconocimientos, Juramentos/Afirmaciones y Certificaciones de Copia.",
-        notary_s2:           "<strong>Procesamiento de Apostilla:</strong> Servicio completo para documentos internacionales a través de la Secretaría de Estado de Colorado.",
-        notary_s3:           "<strong>Firmas de Préstamos:</strong> Paquetes profesionales para Refinanciamientos, Compras y HELOCs.",
-        notary_s4:           "<strong>Notarizaciones en el Aeropuerto (DIA):</strong> lo veo en la terminal — $95 fijos con el estacionamiento incluido, más $10 por firma.",
-        notary_s5:           "<strong>Conserje de Pasaporte EE.UU.:</strong> Preparación de formularios DS-11/DS-82 y acompañamiento bilingüe en la oficina de correos o juzgado. Los formularios son gratuitos del gobierno; solo cobro por la mecanografía y mi tiempo.",
-        notary_pricing_note: "Actos notariales desde <strong class=\"mono\">$10–$15</strong> · Tarifa de desplazamiento cotizada por escrito antes de cada cita.",
-        notary_cta:          "Explorar Servicios Notariales y de Pasaporte",
+        dmv_h3:    "Ayuda con el DMV de Colorado",
+        dmv_intro: "Si el DMV le parece complicado, yo preparo los documentos y, cuando hace falta, voy en persona por usted.",
+        dmv_s1:    "Formularios para cambios de dirección, transferencias privadas de título y facturas de venta",
+        dmv_s2:    "Visitas en persona al DMV como su representante autorizado",
+        dmv_s3:    "Transferencias de título de otros estados: coordino con propietarios, concesionarios y acreedores",
+        dmv_s4:    "Servicio urgente el mismo día para documentos y entregas en el DMV",
+        dmv_price: "Los formularios del gobierno son gratuitos. Solo cobro por la mecanografía y mi tiempo, cotizado por escrito.",
+        dmv_cta:   "Servicios del DMV",
 
-        // ── DMV ──
-        dmv_tagline: "Apoyo Administrativo y Servicios de Representación en el DMV",
-        dmv_intro:   "Asistencia especializada para residentes que navegan los complejos requisitos del DMV de Colorado. Simplifico los procesos estatales para que las familias puedan avanzar sin estrés.",
-        dmv_s1:      "<strong>Preparación de Documentos DMV:</strong> Escribo los formularios que usted elige para cambios de dirección, transferencias privadas de título y facturas de venta. Los formularios son gratuitos del gobierno; solo cobro por la mecanografía y mi tiempo.",
-        dmv_s2:      "<strong>Servicios de Representación en Persona:</strong> ¿No puede ir al DMV? Actúo como su representante autorizado para entregar sus documentos en persona.",
-        dmv_s3:      "<strong>Transferencias de Título de Otros Estados:</strong> Coordino con propietarios de otros estados, concesionarios y acreedores.",
-        dmv_s4:      "<strong>Servicios Urgentes el Mismo Día:</strong> Disponibles para preparación urgente de documentos y entregas en el DMV.",
-        dmv_cta:     "Explorar Servicios del DMV",
-
-        // ── B2B ──
-        badge_b2b:   "Apoyo para Empresas y Abogados",
-        b2b_tagline: "Representante Legal, Visitas a Centros de Detención de ICE y Subcontratación para Empresas y Bufetes",
-        b2b_intro:   "Apoyo notarial para compañías de títulos, bufetes, empleadores y colegas &mdash; con precio por escrito y factura a su empresa.",
-        b2b_s1:      "<strong>Visitas al Centro de ICE de Aurora:</strong> visito a sus clientes detenidos como su representante autorizado. $150 por visita (viaje, autorización y la primera hora), $25 por cada 30 min después; no se paga nada antes de la visita.",
-        b2b_s2:      "<strong>Firmas de Títulos y Bienes Raíces:</strong> un paquete de hasta 30 páginas por $125, con impresión, escaneos cifrados y entrega en FedEx/UPS.",
-        b2b_s3:      "<strong>Trámites de Apostilla para Colegas y Bufetes:</strong> $85 por correo o $115 con recogida, hasta 3 documentos; tarifas del Estado al costo.",
-        b2b_s4:      "<strong>Testigos, Registros e I-9:</strong> testigo independiente $35&ndash;$50, registro en el condado $35&ndash;$75, representante autorizado para I-9 $40&ndash;$55.",
-        b2b_cta:     "Explorar Servicios para Empresas",
-
-        // ── WEB DEV ──
-        dev_tagline:        "Estrategia Digital y Desarrollo Web",
-        dev_intro:          "Arquitectura web de alto rendimiento, completamente bilingüe (EN/ES) para negocios locales. Construyo sitios web accesibles y modernos desde cero — sin plantillas baratas.",
-        dev_s1:             "<strong>Sitios Web Personalizados:</strong> Desde páginas de destino básicas hasta sitios completos de negocios y comercio electrónico.",
-        dev_s2:             "<strong>Integración Bilingüe:</strong> Llegue a más clientes con experiencias fluidas en inglés y español.",
-        dev_s3:             "<strong>Herramientas para Salud:</strong> Como graduado en Informática de la Salud de MSU Denver, creo formularios seguros de ingreso de pacientes, flujos de validación y salida JSON compatible con FHIR para clínicas.",
-        dev_s4:             "<strong>Mantenimiento Continuo:</strong> Configuración de hosting, gestión de dominio, parches de seguridad y fundamentos de SEO.",
-        dev_portfolio_note: "Incluye trabajo de portafolio para Tienda Salvadoreña",
-        dev_cta:            "Ver Portafolio Web y Precios",
-
-        // ── HUBS CALLOUT ──
-        hubs_callout_h3:   "Ahorre Más en un Hub Comunitario",
-        hubs_callout_body: "Visíteme en un Hub Comunitario y pague <strong>$10 por acto notarial</strong> (en lugar del máximo estándar de $15) <strong>sin tarifa de desplazamiento</strong>. Son descuentos reales — ofrecidos voluntariamente por debajo del máximo legal de Colorado.",
-        hub_tienda_sub:    "Hub Comunitario — East Colfax, Denver",
-        hub_crrec_sub:     "Hub Comunitario — cualquier sucursal en Denver",
-        hub_msu_sub:       "Biblioteca Auraria — Denver, CO",
-        hub_rate_tag:      "Tarifa comunitaria",
-        hub_rate_unit:     "/ acto notarial",
-        hub_cmp_max:       "Máx. CO",
-        hub_cmp_travel:    "Viaje",
-        hub_panel_label:   "// hub seleccionado",
-        hub_book:          "Agendar en un hub",
-        hub_directions:    "Cómo llegar",
-        hub_desc_tienda:   "Mercado del barrio en East Colfax. Dígame a qué hora y nos vemos ahí — solo traiga su documento sin firmar y una identificación vigente con foto.",
-        hub_desc_msu:      "Biblioteca Auraria en el campus Auraria del centro — práctico para estudiantes, profesores y quien trabaje cerca del centro.",
-        hub_desc_dpl:      "Cualquier sucursal de la Biblioteca Pública de Denver. Elija la más cercana y nos vemos ahí con cita previa.",
-
-        // ── TRANSLATION ──
-        trans_h2:           "Servicios de Traducción Certificada",
-        trans_sub:          "Traducciones Profesionales Español ↔ Inglés — USCIS, DMV, Escuelas y Agencias Estatales",
-        trans_body:         "Proporciono traducciones certificadas palabra por palabra para familias, estudiantes y empresas. Cada traducción incluye un <strong>Certificado de Exactitud</strong> firmado, cumpliendo con los requisitos de USCIS, el DMV de Colorado, escuelas y agencias estatales. Entrega urgente disponible.",
-        trans_s1:           "Documentos para USCIS (solo traducción)",
-        trans_s2:           "Documentos de título y registro del DMV de Colorado",
-        trans_s3:           "Registros de inscripción escolar y universitaria",
-        trans_s4:           "Trámites de agencias estatales y gubernamentales",
-        trans_cta:          "Solicitar Cotización de Traducción",
-        trans_accent_label: "Certificada y Precisa",
+        trans_brand: "Traducción Certificada",
+        trans_h3:    "Traducción español ↔ inglés",
+        trans_intro: "Traducciones palabra por palabra con un Certificado de Exactitud firmado, preparadas para USCIS, el DMV de Colorado, escuelas y agencias estatales.",
+        trans_s1:    "Documentos para USCIS (solo traducción)",
+        trans_s2:    "Documentos de título y registro del DMV de Colorado",
+        trans_s3:    "Registros escolares y universitarios",
+        trans_s4:    "Trámites de agencias estatales y del gobierno",
+        trans_price: "Entrega urgente disponible. Primero recibe su cotización por escrito.",
+        trans_cta:   "Pedir cotización de traducción",
 
         // ── AYUDA CON ENVÍOS INTERNACIONALES ──
         ship_h2:             "Ayuda con Envíos Internacionales",
@@ -331,9 +291,64 @@ const translations = {
         ship_p7_price:       "$25 + envío",
         ship_postage_note:   "El envío se cobra a costo exacto. Le mostramos el recibo.",
 
+        // ── COMMUNITY HUBS ──
+        hubs_h2:           "Ahorre en un Hub Comunitario",
+        hubs_sub:          "Nos vemos en un lugar público de su comunidad, con cita previa, y paga menos.",
+        hub_rate_tag:      "Tarifa comunitaria",
+        hub_rate_unit:     "por acto notarial",
+        hub_cmp_max:       "Máximo de Colorado",
+        hub_cmp_travel:    "Desplazamiento",
+        hubs_callout_body: "Un descuento real, ofrecido voluntariamente por debajo del máximo de Colorado, <strong>sin tarifa de desplazamiento</strong>.",
+        hub_tienda_sub:    "East Colfax, Denver",
+        hub_msu_sub:       "Biblioteca Auraria, en el centro",
+        hub_dpl:           "Biblioteca Pública de Denver",
+        hub_dpl_sub:       "Cualquier sucursal en Denver",
+        hub_panel_label:   "Lugar seleccionado",
+        hub_book:          "Agendar en un hub",
+        hub_directions:    "Cómo llegar",
+        hub_desc_tienda:   "Mercado del barrio en East Colfax. Dígame a qué hora y nos vemos ahí — solo traiga su documento sin firmar y una identificación vigente con foto.",
+        hub_desc_msu:      "Biblioteca Auraria en el campus Auraria del centro — práctico para estudiantes, profesores y quien trabaje cerca del centro.",
+        hub_desc_dpl:      "Cualquier sucursal de la Biblioteca Pública de Denver. Elija la más cercana y nos vemos ahí con cita previa.",
+        hub_note:          "Son lugares públicos donde me reúno con clientes con cita previa; no estoy afiliado ni respaldado por ellos.",
+
+        // ── FOR BUSINESSES ──
+        biz_kicker: "Para empresas y profesionales",
+        biz_h2:     "Apoyo para bufetes y negocios locales",
+        biz_sub:    "Separado de mis servicios para clientes particulares. Cada servicio tiene su propio sitio con todos los detalles y precios.",
+
+        b2b_h3:    "Apoyo notarial para bufetes, compañías de títulos y empleadores",
+        b2b_intro: "Trabajo notarial subcontratado para compañías de títulos, bufetes, empleadores y colegas, con precio por escrito y factura a su empresa.",
+        b2b_s1:    "<strong>Visitas al centro de ICE de Aurora:</strong> visito a sus clientes detenidos como su representante autorizado. $150 por visita (viaje, autorización y la primera hora), $25 por cada 30 min después; no se paga nada antes de la visita.",
+        b2b_s2:    "<strong>Firmas de títulos y bienes raíces:</strong> un paquete de hasta 30 páginas por $125, con impresión, escaneos cifrados y entrega en FedEx/UPS.",
+        b2b_s3:    "<strong>Trámites de apostilla:</strong> $85 por correo o $115 con recogida, hasta 3 documentos; tarifas del Estado al costo.",
+        b2b_s4:    "<strong>Testigos, registros e I-9:</strong> testigo independiente $35&ndash;$50, registro en el condado $35&ndash;$75, representante autorizado para I-9 $40&ndash;$55.",
+        b2b_cta:   "Servicios para empresas",
+
+        dev_h3:             "Sitios web bilingües para negocios locales",
+        dev_intro:          "Diseño y construyo sitios web rápidos y accesibles en español y en inglés, desde cero. Sin plantillas.",
+        dev_s1:             "<strong>Sitios a la medida:</strong> desde páginas sencillas hasta sitios completos de negocio y tiendas en línea.",
+        dev_s2:             "<strong>Bilingües desde el inicio:</strong> llegue a más clientes con un sitio que funciona igual de bien en español que en inglés.",
+        dev_s3:             "<strong>Herramientas para clínicas:</strong> formularios seguros de ingreso de pacientes y datos compatibles con FHIR, respaldados por mi título en Informática de la Salud.",
+        dev_s4:             "<strong>Mantenimiento:</strong> configuración de hosting, dominios, actualizaciones de seguridad y fundamentos de SEO.",
+        dev_portfolio_note: "El portafolio incluye trabajo para Tienda Salvadoreña.",
+        dev_cta:            "Portafolio y precios",
+
+        // ── ABOUT ──
+        about_h2:         "Con quién va a trabajar",
+        about_p1:         "Servicios Quintana LLC soy yo, David Quintana. No hay centro de llamadas ni un equipo que lo pase de una persona a otra. La persona a quien le escribe es la misma que llega, prepara sus formularios o construye su sitio.",
+        about_p2:         "Soy Notary Public comisionado en Colorado, traductor bilingüe nativo de español e inglés, y graduado en Informática de la Salud (B.S.) de Metropolitan State University of Denver.",
+        about_p3:         "Lo que guía mi trabajo es sencillo: el idioma y los trámites complicados nunca deben impedir que alguien salga adelante.",
+        about_trust_h3:   "Con lo que puede contar",
+        about_photo_role: "Servicios Notariales · DMV · Traducción · Web",
+        trust_1:          "<strong>Totalmente bilingüe:</strong> español e inglés a nivel nativo, sin necesidad de intérprete.",
+        trust_2:          "<strong>Precios transparentes:</strong> sin cargos ocultos. Todo costo se informa y se acuerda por escrito antes de su cita.",
+        trust_3:          "<strong>La comunidad primero:</strong> notarizaciones con descuento en Hubs Comunitarios de Denver.",
+        trust_5:          "<strong>Comisionado y asegurado:</strong> Soy Notary Public comisionado en Colorado (ID 20254044224). Servicios Quintana LLC tiene seguro con The Hartford, con responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales, de traducción y de desarrollo web. Certificado de seguro disponible a petición.",
+        trust_4:          "<strong>Negocio local:</strong> sirviendo al área metropolitana de Denver desde 2026.",
+
         // ── FAQ ──
-        faq_h2:  "Preguntas Frecuentes",
-        faq_sub: "Respuestas rápidas a las preguntas más comunes sobre mis servicios.",
+        faq_h2:  "Preguntas frecuentes",
+        faq_sub: "Respuestas claras sobre áreas, idiomas, precios y lo que puedo y no puedo hacer.",
         faq_q1:  "¿A qué áreas sirve?",
         faq_a1:  "Principalmente sirvo el área metropolitana de Denver, Colorado. Los servicios notariales móviles se extienden más allá de esta área con una tarifa de desplazamiento adicional. También me reúno con clientes, con cita previa, en Hubs Comunitarios (Tienda Salvadoreña, la Biblioteca Auraria de MSU Denver y cualquier sucursal de la Biblioteca Pública de Denver), donde la notarización cuesta $10 por acto sin cargo de viaje. Son lugares públicos donde me reúno con clientes; no estoy afiliado ni respaldado por ellos.",
         faq_q2:  "¿Ofrece servicios en español?",
@@ -353,37 +368,17 @@ const translations = {
         faq_q9:  "¿Ustedes pagan los impuestos de aduana?",
         faq_a9:  "No. Cada país fija sus propios impuestos, y es posible que el destinatario tenga que pagarlos al recibir el paquete. No somos responsables de retenciones en aduana, impuestos ni tiempos de entrega fijados por la empresa de transporte y el país de destino.",
 
-        // ── ABOUT ──
-        about_h2:       "Construido Sobre Integridad",
-        about_p1:       "Servicios Quintana LLC es la práctica individual de <strong>David Quintana</strong> — Notary Public móvil comisionado en Colorado, especialista en DMV, traductor inglés-español (bilingüe nativo) y desarrollador web bilingüe.",
-        about_creds:    "También soy <strong>graduado en Informática de la Salud (Licenciatura)</strong> de Metropolitan State University of Denver — formación que fortalece mi trabajo seguro en tecnología de salud.",
-        about_p2:       "Ya sea que esté notarizando un documento de préstamo en Denver, ayudando a una familia a registrar un vehículo de otro estado, o escribiendo código personalizado para un negocio local, mi valor fundamental sigue siendo el mismo: <strong>Accesibilidad.</strong>",
-        about_p3:       "Las barreras del idioma y la complejidad técnica nunca deben impedir que alguien alcance sus objetivos.",
-        about_trust_h3: "Por Qué Colorado Confía en Mí",
-        about_photo_role: "Servicios Notariales · DMV · Desarrollo Web",
-        trust_1:        "<strong>100% Bilingüe:</strong> Dominio nativo del inglés y español — sin intérprete necesario.",
-        trust_2:        "<strong>Precios Transparentes:</strong> Sin cargos ocultos; todo se comunica y se acuerda por escrito antes de su cita.",
-        trust_3:        "<strong>Enfocado en la Comunidad:</strong> Tarifas con descuento disponibles en Hubs Comunitarios en Denver.",
-        trust_5:        "<strong>Comisionado y asegurado:</strong> Soy Notary Public comisionado en Colorado (ID 20254044224). Servicios Quintana LLC tiene seguro con The Hartford, con responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales, de traducción y de desarrollo web. Certificado de seguro disponible a petición.",
-        pill_insured:   "Comisionado y asegurado",
-        footer_insured: "<strong>Comisionado y asegurado.</strong> Comisión de Colorado ID 20254044224 · Asegurado con The Hartford: responsabilidad civil general, filtración de datos y responsabilidad profesional (errores y omisiones) para servicios notariales, de traducción y web · Certificado de seguro a petición.",
-        trust_4:        "<strong>Propiedad Local:</strong> Sirviendo con orgullo al área metropolitana de Denver desde 2026.",
-
-        // ── STATS ──
-        stat_brands:    "Marcas Activas",
-        stat_bilingual: "Bilingüe",
-        stat_local:     "Propiedad Local",
-
-        // ── COMMUNITY HUBS (about section) ──
-        hubs_h4:    "Hubs Comunitarios",
-        hub_msu:    "MSU Denver — Denver, CO",
-        hub_tienda: "Tienda Salvadoreña",
-        hub_crrec:  "Biblioteca Pública de Denver (todas las sucursales)",
-        hub_dpl:    "Biblioteca Pública de Denver (todas las sucursales)",
-        hub_note:   "$10 por acto notarial y sin tarifa de desplazamiento en estas ubicaciones. Son lugares públicos donde me reúno con clientes con cita previa; no estoy afiliado ni respaldado por ellos.",
+        // ── CONTACT ──
+        contact_h2:     "Dígame qué necesita",
+        contact_p:      "Llame, escriba o mande un correo, en español o en inglés. Solo con cita previa, y tendrá su precio completo por escrito antes de la cita.",
+        contact_office: "Oficina: 5128 E Colfax Ave, Denver, CO 80220 (con cita previa)",
 
         // ── FOOTER ──
+        footer_tagline:       "Servicios bilingües · Enfocados en la comunidad · Negocio de Colorado",
+        footer_hq_h5:         "Sede y Agente Registrado",
+        footer_contact_h5:    "Contacto",
         footer_brands_nav_h5: "Mis Marcas",
+        footer_insured:       "<strong>Comisionado y asegurado.</strong> Comisión de Colorado ID 20254044224 · Asegurado con The Hartford: responsabilidad civil general, filtración de datos y responsabilidad profesional (errores y omisiones) para servicios notariales, de traducción y web · Certificado de seguro a petición.",
         footer_statutory_en:  "<strong>Important Notice:</strong> I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general’s office or the Colorado supreme court. I provide administrative, translation, and notarial services only. (C.R.S. § 24-21-525)",
         footer_statutory_es:  "<strong>Aviso Importante:</strong> No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar asesoría legal ni aceptar honorarios por asesoría legal. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado. Solo ofrezco servicios administrativos, de traducción y notariales. (C.R.S. § 24-21-525)",
 
@@ -569,20 +564,9 @@ document.addEventListener('DOMContentLoaded', () => {
     langBtn.addEventListener('click', toggleLang);
     floatLang.addEventListener('click', toggleLang);
 
-    // Hero "Hablamos Español" button — switch lang AND smooth-scroll to brands
+    // Hero "¿Prefiere español? / Prefer English?" link — switches language in place
     const heroEsBtn = document.getElementById('hero-es-btn');
-    if (heroEsBtn) {
-        heroEsBtn.addEventListener('click', () => {
-            if (currentLang === 'en') {
-                currentLang = 'es';
-                updateContent(currentLang);
-            }
-            const brandsSection = document.getElementById('brands');
-            if (brandsSection) {
-                window.scrollTo({ top: brandsSection.offsetTop - 80, behavior: 'smooth' });
-            }
-        });
-    }
+    if (heroEsBtn) heroEsBtn.addEventListener('click', toggleLang);
 
     /* ── COMMUNITY HUB LOCATOR ───────────────────────────── */
     const hubData = {
@@ -658,69 +642,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply saved/default language on load
     updateContent(currentLang);
 
-    /* ── CUSTOM CURSOR ───────────────────────────────────── */
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    let cursor;
-    if (!isMobile) {
-        cursor = document.createElement('div');
-        cursor.id = 'custom-cursor';
-        document.body.appendChild(cursor);
-
-        let mouseX = -100, mouseY = -100, cursorX = -100, cursorY = -100;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            cursor.style.opacity = '1';
-        });
-
-        const animateCursor = () => {
-            cursorX += (mouseX - cursorX) * 0.15;
-            cursorY += (mouseY - cursorY) * 0.15;
-            cursor.style.left = `${cursorX - 20}px`;
-            cursor.style.top  = `${cursorY - 20}px`;
-            requestAnimationFrame(animateCursor);
-        };
-        animateCursor();
-
-        document.addEventListener('mousedown', () => cursor.classList.add('click'));
-        document.addEventListener('mouseup',   () => cursor.classList.remove('click'));
-    }
-
-    /* ── CARD 3D TILT ────────────────────────────────────── */
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect    = card.getBoundingClientRect();
-            // normalised to the card size so wide cards don't over-rotate (max ~3deg)
-            const rotateX = (((e.clientY - rect.top)  / rect.height) - 0.5) * 6;
-            const rotateY = (0.5 - ((e.clientX - rect.left) / rect.width)) * 6;
-            card.style.transform = `translateY(-6px) perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
-        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-    });
-
-    /* ── BUTTON RIPPLE ───────────────────────────────────── */
-    document.querySelectorAll('.btn, .btn-gold, .btn-nav').forEach(btn => {
-        btn.addEventListener('click', function (e) {
-            const ripple = document.createElement('span');
-            const rect   = this.getBoundingClientRect();
-            const size   = Math.max(rect.width, rect.height);
-            ripple.style.cssText = `
-                position:absolute; border-radius:50%;
-                background:rgba(255,255,255,0.5);
-                width:${size}px; height:${size}px;
-                left:${e.clientX - rect.left - size / 2}px;
-                top:${e.clientY - rect.top  - size / 2}px;
-                pointer-events:none;
-                animation:ripple-effect 0.6s ease-out;
-            `;
-            this.style.position = 'relative';
-            this.style.overflow = 'hidden';
-            this.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 600);
-        });
-    });
-
     /* ── SMOOTH SCROLL ───────────────────────────────────── */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -731,25 +652,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    /* ── HERO PARALLAX ───────────────────────────────────── */
-    // Only the decorative grid drifts — moving the whole hero made it slide
-    // over the stats/hub banner (and the profile card on phones).
-    const heroGrid = document.querySelector('.hero-blueprint');
-    const heroEl   = document.querySelector('.hero');
-    const calmMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (heroGrid && heroEl && !calmMotion) {
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (ticking) return;
-            ticking = true;
-            requestAnimationFrame(() => {
-                const y = Math.min(window.scrollY, heroEl.offsetHeight);
-                heroGrid.style.transform = `translateY(${y * 0.25}px)`;
-                ticking = false;
-            });
-        }, { passive: true });
-    }
 
     /* ── BACK TO TOP ─────────────────────────────────────── */
     const backToTop = document.getElementById('back-to-top');
@@ -812,11 +714,10 @@ document.addEventListener('DOMContentLoaded', () => {
             c.style.transition = 'none';
             c.style.animation  = 'none';
         });
-        if (cursor) cursor.style.display = 'none';
     }
 
     /* ── CONSOLE BRANDING ────────────────────────────────── */
     console.log('%c🟠 SERVICIOS QUINTANA LLC', 'font-size:18px;font-weight:bold;color:#f97316;');
-    console.log('%c Colorado Notary · DMV · Translation · Web', 'font-size:12px;color:#fbbf24;');
+    console.log('%c Colorado Notary · DMV · Translation · Shipping · Web', 'font-size:12px;color:#fbbf24;');
     console.log('%c Bilingual · Community Focused · Locally Owned', 'font-size:11px;color:#94a3b8;');
 });

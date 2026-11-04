@@ -38,7 +38,7 @@
     <!-- ══ FONTS & ICONS ══════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
     <script>
         /* Light/dark: the site is designed light; dark only when the visitor chose it with the toggle */
         (function () {
@@ -48,7 +48,7 @@
         })();
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=2026-11-03a">
+    <link rel="stylesheet" href="styles.css?v=2026-11-03b">
 
     <!-- ══ SCHEMA — LocalBusiness (parent LLC) ══════════════════ -->
     <script type="application/ld+json">
@@ -285,10 +285,10 @@
     <!-- ══════════════════════════════════════════════════════
          SKIP LINK (Accessibility)
     ══════════════════════════════════════════════════════ -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">Skip to main content</a>
 
     <!-- ══════════════════════════════════════════════════════
-         LEGAL DISCLOSURE BANNER
+         LEGAL DISCLOSURE BANNER (C.R.S. § 24-21-525 — keep visible)
     ══════════════════════════════════════════════════════ -->
     <div class="legal-banner" role="note" aria-label="Legal disclosure">
         <div class="container">
@@ -312,11 +312,12 @@
                 Servicios Quintana <span class="llc">LLC</span>
             </a>
             <ul class="nav-links" role="list" id="nav-links">
-                <li><a href="#brands"          data-i18n="nav_brands">My Brands</a></li>
-                <li><a href="#shared-services" data-i18n="nav_services">Services</a></li>
-                <li><a href="#faq"             data-i18n="nav_faq">FAQ</a></li>
-                <li><a href="#about"           data-i18n="nav_about">About</a></li>
-                <li><a href="#contact" class="btn-nav" data-i18n="nav_contact">Contact HQ</a></li>
+                <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                <li><a href="#hubs"     data-i18n="nav_hubs">Community Hubs</a></li>
+                <li><a href="#business" data-i18n="nav_business">For Businesses</a></li>
+                <li><a href="#about"    data-i18n="nav_about">About</a></li>
+                <li><a href="#faq"      data-i18n="nav_faq">FAQ</a></li>
+                <li><a href="#contact" class="btn-nav" data-i18n="nav_contact">Contact</a></li>
             </ul>
             <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Light / dark">
                 <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
@@ -331,39 +332,25 @@
     <!-- ══════════════════════════════════════════════════════
          HERO
     ══════════════════════════════════════════════════════ -->
-    <header class="hero" id="top" role="banner">
-        <!-- Architectural backdrop: faint blueprint grid + code-gutter lines (decorative) -->
-        <div class="hero-blueprint" aria-hidden="true">
-            <div class="hero-gutter">
-                <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span>
-            </div>
-            <pre class="hero-code">&lt;practice owner="David Quintana" lang="en|es"&gt;
-  &lt;notary  mobile hubs="3" /&gt;
-  &lt;dmv     proxy titles="out-of-state" /&gt;
-  &lt;dev     bilingual fhir="ready" /&gt;
-&lt;/practice&gt;</pre>
-        </div>
-
+    <header class="hero" id="top">
         <div class="container hero-layout">
             <div class="hero-content">
-                <span class="eyebrow" data-i18n="hero_eyebrow">Est. 2026 · Denver Metro, Colorado</span>
-                <h1 data-i18n="hero_h1">Hi, I'm David.<br><span class="hero-h1-sub">Bilingual notary, DMV help &amp; web development — one person, start to finish.</span></h1>
-                <p class="hero-sub" data-i18n="hero_sub">
-                    Servicios Quintana isn't a call center or a franchise — it's me. When you book, I'm the notary who shows up, the one who stands in line at the DMV for you, and the developer who builds your website. Same person from first message to final signature, in English or Spanish.
-                </p>
-                <div class="hero-trust-pills" aria-label="Trust indicators">
-                    <span class="trust-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="pill_bilingual">100% Bilingual EN / ES</span></span>
-                    <span class="trust-pill"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="pill_area">Denver Metro Area</span></span>
-                    <span class="trust-pill"><i class="fas fa-shield-alt" aria-hidden="true"></i> <span data-i18n="pill_pricing">Transparent Pricing</span></span>
-                    <span class="trust-pill"><i class="fas fa-user-shield" aria-hidden="true"></i> <span data-i18n="pill_insured">Commissioned &amp; Insured</span></span>
-                </div>
+                <p class="eyebrow" data-i18n="hero_eyebrow">Denver Metro · By appointment · English &amp; Español</p>
+                <h1 data-i18n="hero_h1">Notary, DMV paperwork and certified translations, handled by one person you can call directly.</h1>
+                <p class="hero-sub" data-i18n="hero_sub">I'm David Quintana, a commissioned Colorado Notary Public. I help families and local businesses get their paperwork done right. I come to you, or we meet at a Community Hub, and you get the full price in writing before we meet.</p>
                 <div class="hero-buttons">
-                    <a href="#brands" class="btn btn-primary" data-i18n="btn_view_services" aria-label="View my three specialized service brands">View My Services</a>
-                    <button class="btn btn-secondary" id="hero-es-btn" data-i18n="btn_hablamos" aria-label="Switch to Spanish — Hablamos Español">Hablamos Español</button>
+                    <a href="tel:+13035004122" class="btn btn-primary"><i class="fas fa-phone" aria-hidden="true"></i> <span data-i18n="hero_cta_call">Call or text 303-500-4122</span></a>
+                    <a href="#services" class="btn btn-secondary"><span data-i18n="hero_cta_services">See services &amp; prices</span></a>
                 </div>
+                <button type="button" class="hero-lang" id="hero-es-btn" data-i18n="btn_hablamos" aria-label="Switch to Spanish / Cambiar a Español">¿Prefiere español? Cambiar idioma</button>
+                <ul class="hero-promises" aria-label="What you can count on">
+                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="promise_1">Full price in writing first</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="promise_2">Commissioned &amp; insured</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="promise_3">Fully bilingual</span></li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="promise_4">$10 notarizations at Community Hubs</span></li>
+                </ul>
             </div>
 
-            <!-- Personal card: headshot is david-quintana.jpg (800×800, cropped square). -->
             <aside class="hero-profile" aria-label="About David Quintana">
                 <div class="profile-photo">
                     <img src="david-quintana.jpg?v=2026-10-21" alt="David Quintana, owner of Servicios Quintana LLC" width="800" height="800" fetchpriority="high"
@@ -374,293 +361,134 @@
                     <p class="profile-name">David Quintana</p>
                     <p class="profile-role" data-i18n="profile_role">Owner &amp; sole operator</p>
                 </div>
-                <ul class="profile-facts" aria-label="Quick facts">
-                    <li><span class="mono-key">lang</span><span class="mono-val">en · es</span></li>
-                    <li><span class="mono-key">edu</span><span class="mono-val" data-i18n="profile_edu">B.S. Health Informatics, MSU Denver</span></li>
-                    <li><span class="mono-key">base</span><span class="mono-val">Denver, CO</span></li>
-                    <li><span class="mono-key">hub_rate</span><span class="mono-val mono-accent">$10/act</span></li>
-                </ul>
-                <a class="profile-status" href="tel:+13035004122" aria-label="Call or text David at 303-500-4122"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="profile_status">Call or text me directly</span> <span class="mono">303&#8209;500&#8209;4122</span></a>
+                <p class="profile-quote" data-i18n="profile_quote">“The person you message is the person who shows up. No call center, no hand-offs.”</p>
+                <a class="profile-status" href="tel:+13035004122" aria-label="Call or text David at 303-500-4122"><i class="fas fa-phone" aria-hidden="true"></i> <span data-i18n="profile_status">Call or text me directly</span> <span class="profile-phone">303&#8209;500&#8209;4122</span></a>
             </aside>
         </div>
     </header>
 
-    <!-- ══════════════════════════════════════════════════════
-         STATS + HUB BANNER (replaces the old scrolling ticker)
-    ══════════════════════════════════════════════════════ -->
-    <section class="stats-banner" aria-label="At a glance">
-        <div class="container stats-banner-inner">
-            <dl class="banner-stats">
-                <div class="banner-stat">
-                    <dt data-i18n="bs_rate_label">Hub notarial act</dt>
-                    <dd class="mono">$10</dd>
-                </div>
-                <div class="banner-stat">
-                    <dt data-i18n="bs_travel_label">Travel fee at hubs</dt>
-                    <dd class="mono">$0</dd>
-                </div>
-                <div class="banner-stat">
-                    <dt data-i18n="bs_brands_label">Brands · one owner</dt>
-                    <dd class="mono">3·1</dd>
-                </div>
-                <div class="banner-stat">
-                    <dt data-i18n="bs_lang_label">Languages</dt>
-                    <dd class="mono">EN⇄ES</dd>
-                </div>
-            </dl>
-            <div class="banner-hubs">
-                <span class="banner-hubs-label" data-i18n="bs_hubs_label">Meet me at</span>
-                <a href="#hubs" class="hub-pill"><i class="fas fa-store" aria-hidden="true"></i> Tienda Salvadoreña</a>
-                <a href="#hubs" class="hub-pill"><i class="fas fa-graduation-cap" aria-hidden="true"></i> MSU Denver</a>
-                <a href="#hubs" class="hub-pill"><i class="fas fa-book" aria-hidden="true"></i> <span data-i18n="pill_dpl">Denver Public Libraries</span></a>
-            </div>
-        </div>
-    </section>
-
     <main id="main-content">
 
         <!-- ══════════════════════════════════════════════════════
-             SECTION 1 — MY SPECIALIZED BRANDS
+             HOW IT WORKS
         ══════════════════════════════════════════════════════ -->
-        <section id="brands" class="section bg-light" aria-labelledby="brands-heading">
+        <section id="how" class="section section--steps" aria-labelledby="how-heading">
             <div class="container">
                 <header class="section-header">
-                    <h2 id="brands-heading" data-i18n="brands_h2">My Specialized Brands</h2>
-                    <p data-i18n="brands_sub">I operate four distinct brands serving the Denver Metro area and beyond. Whether I come to you or you meet me at a Community Hub, I'm here to help.</p>
+                    <h2 id="how-heading" data-i18n="how_h2">How it works</h2>
+                    <p data-i18n="how_sub">Three simple steps, and no surprises along the way.</p>
                 </header>
-
-                <div class="brands-grid brands-grid--asym">
-
-                    <!-- ── Notary Brand Card (clean & official) ── -->
-                    <article class="card brand-card brand-card--official" id="notary" aria-labelledby="notary-heading">
-                        <div class="official-rule" aria-hidden="true">
-                            <span>Quintana Notary &amp; Signing</span>
-                            <span class="mono">CO · EN/ES</span>
-                        </div>
-                        <div class="official-head">
-                            <div class="official-seal" aria-hidden="true"><i class="fas fa-stamp"></i></div>
-                            <div>
-                                <div class="badge-row">
-                                    <span class="badge" data-i18n="badge_auth">Document Authentication</span>
-                                </div>
-                                <h3 id="notary-heading">Quintana Notary &amp; Signing</h3>
-                                <p class="card-tagline" data-i18n="notary_tagline">Professional, Mobile &amp; Bilingual Document Authentication</p>
-                            </div>
-                        </div>
-                        <p data-i18n="notary_intro">I bring the notary office to your doorstep or meet you at discounted Community Hubs (MSU Denver &amp; Tienda Salvadoreña).</p>
-                        <ul class="service-list service-list--cols" aria-label="Notary services offered">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s1"><strong>Standard Notarizations:</strong> Acknowledgments, Oaths/Affirmations, and Copy Certifications.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s2"><strong>Apostille Processing:</strong> Full-service handling for international documents via the CO Secretary of State.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s3"><strong>Loan Signings:</strong> Professional packages for Refinances, Purchases, and HELOCs.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s4"><strong>Airport Notary (DIA):</strong> I meet you in the terminal — a flat $95 with parking included, plus $10 per signature.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s5"><strong>U.S. Passport Concierge:</strong> Clerical prep for DS-11/DS-82 and bilingual chaperone at the post office or clerk's office. The forms are free from the government; I charge only for typing and my time.</span></li>
-                        </ul>
-                        <div class="card-pricing-note" aria-label="Pricing summary">
-                            <i class="fas fa-tag" aria-hidden="true"></i>
-                            <span data-i18n="notary_pricing_note">Notarial acts from <strong class="mono">$10–$15</strong> · Mobile fee quoted in writing before every appointment.</span>
-                        </div>
-                        <a href="https://quintananotarysigning.com/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-primary btn-card"
-                           data-i18n="notary_cta"
-                           aria-label="Visit Quintana Notary and Signing — Colorado mobile notary services">
-                            Explore Notary &amp; Passport Services <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
-
-                    <!-- ── DMV Brand Card (compact) ── -->
-                    <article class="card brand-card brand-card--compact" id="dmv" aria-labelledby="dmv-heading">
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-car"></i></div>
-                        <div class="badge-row">
-                            <span class="badge" data-i18n="badge_admin">Administrative Support</span>
-                        </div>
-                        <h3 id="dmv-heading">Ayuda DMV</h3>
-                        <p class="card-tagline" data-i18n="dmv_tagline">Administrative Support &amp; DMV Proxy Services</p>
-                        <p data-i18n="dmv_intro">Specialized assistance for residents navigating complex Colorado DMV requirements. I simplify state processes so families can move forward without stress.</p>
-                        <ul class="service-list" aria-label="DMV services offered">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dmv_s1"><strong>DMV Document Preparation:</strong> I type the forms you choose for address changes, private-party title transfers, and bills of sale. The forms are free from the government; I charge only for typing and my time.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dmv_s2"><strong>In-Person Proxy Services:</strong> Can't go to the DMV? I act as your authorized proxy to submit documents in person.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dmv_s3"><strong>Out-of-State Title Transfers:</strong> I coordinate with out-of-state owners, dealerships, and lienholders.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dmv_s4"><strong>Same-Day Rush Services:</strong> Available for urgent document prep and DMV submissions.</span></li>
-                        </ul>
-                        <a href="https://ayudadmv.com/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-primary btn-card"
-                           data-i18n="dmv_cta"
-                           aria-label="Visit Ayuda DMV — Colorado DMV proxy and title transfer services">
-                            Explore DMV Services <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
-
-                    <!-- ── B2B Brand Card ── -->
-                    <article class="card brand-card brand-card--compact brand-card--b2b" id="b2b" aria-labelledby="b2b-heading">
-                        <div class="card-icon" aria-hidden="true"><i class="fas fa-briefcase"></i></div>
-                        <div class="badge-row">
-                            <span class="badge" data-i18n="badge_b2b">Business &amp; Legal Support</span>
-                        </div>
-                        <h3 id="b2b-heading">Quintana Notary Support (B2B)</h3>
-                        <p class="card-tagline" data-i18n="b2b_tagline">Legal Proxy, ICE Detention Visits, Corporate &amp; Law Firm Subcontracting</p>
-                        <p data-i18n="b2b_intro">Notary support for title companies, law firms, employers and fellow notaries &mdash; priced in writing, invoiced to your firm.</p>
-                        <ul class="service-list service-list--cols" aria-label="Business services offered">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="b2b_s1"><strong>Aurora ICE Facility Visits:</strong> I visit detained clients as your cleared legal proxy. $150 per visit (travel, clearance, first hour on site), $25 per 30 min after; nothing paid before the visit.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="b2b_s2"><strong>Title &amp; Real Estate Signings:</strong> One package up to 30 pages for $125, with printing, encrypted scanbacks and the FedEx/UPS drop.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="b2b_s3"><strong>Apostille Runs for Notaries &amp; Firms:</strong> $85 mail-in or $115 pickup, up to 3 documents; State fees at cost.</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="b2b_s4"><strong>Witnesses, Recordings &amp; I-9 Overflow:</strong> Independent witness $35&ndash;$50, county recording $35&ndash;$75, I-9 authorized representative $40&ndash;$55.</span></li>
-                        </ul>
-                        <a href="https://quintananotarysigning.com/b2b-real-estate.html"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-primary btn-card"
-                           data-i18n="b2b_cta"
-                           aria-label="Visit Quintana Notary Support — business, law firm and ICE visit services">
-                            Explore Business Services <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
-
-                    <!-- ── Web Dev Brand Card (terminal window) ── -->
-                    <article class="card brand-card brand-card--terminal" id="webdev" aria-labelledby="webdev-heading">
-                        <div class="term-bar" aria-hidden="true">
-                            <span class="term-dots"><i></i><i></i><i></i></span>
-                            <span class="term-path mono">david@quintana: ~/dev</span>
-                            <span class="term-tab mono">index.html</span>
-                        </div>
-                        <div class="term-body">
-                            <div class="term-main">
-                                <div class="badge-row">
-                                    <span class="badge badge--mono" data-i18n="badge_digital">Digital Strategy &amp; Web Development</span>
-                                </div>
-                                <h3 id="webdev-heading"><span class="term-prompt mono" aria-hidden="true">$</span> David Quintana Dev</h3>
-                                <p class="card-tagline" data-i18n="dev_tagline">Digital Strategy &amp; Web Development</p>
-                                <p data-i18n="dev_intro">High-performance, fully bilingual (EN/ES) web architecture for local businesses. I build accessible, modern websites from scratch — no cheap templates.</p>
-                                <ul class="service-list service-list--term" aria-label="Web development services offered">
-                                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s1"><strong>Custom Websites:</strong> From basic landing pages to full Business and E-Commerce builds.</span></li>
-                                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s2"><strong>Bilingual Integration:</strong> Reach more customers with seamless English and Spanish user experiences.</span></li>
-                                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s3"><strong>Healthcare-Aligned Tools:</strong> As an MSU Denver Health Informatics graduate, I build secure patient intake forms, validation workflows, and FHIR-ready JSON output for clinics.</span></li>
-                                    <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s4"><strong>Ongoing Maintenance:</strong> Hosting setup, domain management, security patches, and SEO fundamentals.</span></li>
-                                </ul>
-                                <p class="term-comment mono"><span aria-hidden="true">// </span><span data-i18n="dev_portfolio_note">Includes portfolio work for Tienda Salvadoreña</span></p>
-                                <a href="https://davidquintana.dev/"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="btn btn-primary btn-card"
-                                   data-i18n="dev_cta"
-                                   aria-label="Visit David Quintana Dev — bilingual web development portfolio and pricing">
-                                    View Web Portfolio &amp; Pricing <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <pre class="term-snippet mono" aria-hidden="true"><span class="c">// patient-intake.json — FHIR R4</span>
-{
-  <span class="k">"resourceType"</span>: <span class="s">"Patient"</span>,
-  <span class="k">"communication"</span>: [
-    { <span class="k">"language"</span>: <span class="s">"es"</span>, <span class="k">"preferred"</span>: <span class="n">true</span> },
-    { <span class="k">"language"</span>: <span class="s">"en"</span> }
-  ],
-  <span class="k">"validated"</span>: <span class="n">true</span>
-}
-<span class="c">&gt; build ✓  a11y ✓  i18n en|es ✓</span><span class="term-cursor"></span></pre>
-                        </div>
-                    </article>
-
-                </div><!-- /.brands-grid -->
-
-                <!-- ── Interactive Community Hub Locator ── -->
-                <section class="hub-locator" id="hubs" aria-labelledby="hubs-callout-heading">
-                    <div class="hub-rate">
-                        <span class="hub-rate-tag" data-i18n="hub_rate_tag">Community-first rate</span>
-                        <p class="hub-rate-price mono"><span class="hub-rate-num">$10</span><span class="hub-rate-unit" data-i18n="hub_rate_unit">/ notarial act</span></p>
-                        <ul class="hub-rate-compare mono" aria-label="Rate comparison">
-                            <li><span data-i18n="hub_cmp_max">CO max</span><s>$15</s></li>
-                            <li><span data-i18n="hub_cmp_travel">Travel</span><b>$0</b></li>
-                        </ul>
-                        <h3 id="hubs-callout-heading" data-i18n="hubs_callout_h3">Save More at a Community Hub</h3>
-                        <p data-i18n="hubs_callout_body">Meet me at a Community Hub and pay <strong>$10 per notarial act</strong> (vs. the standard $15 maximum) with <strong>no travel fee</strong>. These are real discounts — voluntarily offered below the Colorado statutory maximum.</p>
-                    </div>
-
-                    <div class="hub-picker">
-                        <div class="hub-tabs" role="tablist" aria-label="Choose a Community Hub">
-                            <button type="button" class="hub-tab" role="tab" id="hubtab-tienda" aria-controls="hubpanel" aria-selected="true" data-hub="tienda">
-                                <i class="fas fa-store" aria-hidden="true"></i>
-                                <span class="hub-tab-name">Tienda Salvadoreña</span>
-                                <span class="hub-tab-sub" data-i18n="hub_tienda_sub">Community Hub — East Colfax, Denver</span>
-                            </button>
-                            <button type="button" class="hub-tab" role="tab" id="hubtab-msu" aria-controls="hubpanel" aria-selected="false" tabindex="-1" data-hub="msu">
-                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                                <span class="hub-tab-name">MSU Denver</span>
-                                <span class="hub-tab-sub" data-i18n="hub_msu_sub">Auraria Library — Denver, CO</span>
-                            </button>
-                            <button type="button" class="hub-tab" role="tab" id="hubtab-dpl" aria-controls="hubpanel" aria-selected="false" tabindex="-1" data-hub="dpl">
-                                <i class="fas fa-book" aria-hidden="true"></i>
-                                <span class="hub-tab-name" data-i18n="hub_dpl">Denver Public Library (all branches)</span>
-                                <span class="hub-tab-sub" data-i18n="hub_crrec_sub">Community Hub — any branch in Denver</span>
-                            </button>
-                        </div>
-
-                        <div class="hub-panel" id="hubpanel" role="tabpanel" aria-labelledby="hubtab-tienda" aria-live="polite">
-                            <p class="hub-panel-label mono" data-i18n="hub_panel_label">// selected hub</p>
-                            <p class="hub-panel-title" id="hub-panel-title">Tienda Salvadoreña</p>
-                            <p class="hub-panel-desc" id="hub-panel-desc">Neighborhood market on East Colfax. Tell me a time and I'll meet you there — just bring your unsigned document and a valid photo ID.</p>
-                            <div class="hub-panel-actions">
-                                <a class="btn btn-primary hub-book" href="tel:+13035004122"><i class="fas fa-phone" aria-hidden="true"></i> <span data-i18n="hub_book">Book a hub visit</span></a>
-                                <a class="btn btn-secondary hub-map" id="hub-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tienda+Salvadore%C3%B1a+East+Colfax+Denver" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="hub_directions">Directions</span></a>
-                            </div>
-                            <p class="hub-note" data-i18n="hub_note">$10 per notarial act &amp; no travel fee at these locations. These are public places where I meet clients by appointment; I am not affiliated with or endorsed by them.</p>
-                        </div>
-                    </div>
-                </section>
-
+                <ol class="steps">
+                    <li class="step">
+                        <span class="step-num" aria-hidden="true">1</span>
+                        <h3 data-i18n="how_1_h">Tell me what you need</h3>
+                        <p data-i18n="how_1_p">Call or text 303-500-4122, or email admin@serviciosquintana.com. English or Spanish, whichever is easier for you.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num" aria-hidden="true">2</span>
+                        <h3 data-i18n="how_2_h">Get your price in writing</h3>
+                        <p data-i18n="how_2_p">Before anything is booked, you get an exact quote in writing. No hidden fees.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num" aria-hidden="true">3</span>
+                        <h3 data-i18n="how_3_h">Meet where it's easy</h3>
+                        <p data-i18n="how_3_p">I come to your home or office, or we meet at a Community Hub. Appointments only, so I'm ready when you arrive.</p>
+                    </li>
+                </ol>
             </div>
         </section>
 
         <!-- ══════════════════════════════════════════════════════
-             SECTION 2 — CERTIFIED TRANSLATION SERVICES
+             EVERYDAY SERVICES (individuals & families)
         ══════════════════════════════════════════════════════ -->
-        <section id="shared-services" class="section bg-dark" aria-labelledby="translation-heading">
+        <section id="services" class="section" aria-labelledby="services-heading">
             <div class="container">
                 <header class="section-header">
-                    <h2 id="translation-heading" data-i18n="trans_h2">Certified Translation Services</h2>
-                    <p data-i18n="trans_sub">Professional Spanish ↔ English Translations — USCIS, DMV, Schools &amp; State Agencies</p>
+                    <h2 id="services-heading" data-i18n="services_h2">Help for individuals and families</h2>
+                    <p data-i18n="services_sub">Everyday paperwork, explained clearly and done right. Each service has its own page with full details.</p>
                 </header>
 
-                <div class="translation-layout">
-                    <div class="translation-text">
-                        <div class="card-icon" style="color:var(--gold);" aria-hidden="true"><i class="fas fa-language"></i></div>
-                        <p data-i18n="trans_body">
-                            I provide word-for-word certified translations for families, students, and businesses.
-                            Every translation includes a signed <strong>Certificate of Accuracy</strong> compliant with USCIS, the Colorado DMV, schools, and state agencies.
-                            Rush turnaround available.
-                        </p>
-                        <ul class="service-list service-list--light" aria-label="Translation document types accepted">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="trans_s1">Documents for USCIS (translation only)</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="trans_s2">Colorado DMV title &amp; registration documents</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="trans_s3">School &amp; university enrollment records</span></li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="trans_s4">State agency &amp; government paperwork</span></li>
-                        </ul>
-                        <a href="https://quintananotarysigning.com/translate.html"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-gold"
-                           data-i18n="trans_cta"
-                           aria-label="Get a certified Spanish to English or English to Spanish translation quote">
-                            Get a Translation Quote <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="translation-badge-col" aria-hidden="true">
-                        <div class="trans-accent-box">
-                            <span class="trans-lang">EN</span>
-                            <i class="fas fa-exchange-alt"></i>
-                            <span class="trans-lang">ES</span>
-                            <p class="trans-accent-label" data-i18n="trans_accent_label">Certified &amp; Accurate</p>
+                <div class="service-grid">
+
+                    <!-- Quintana Notary & Signing -->
+                    <article class="card service-card" id="notary" aria-labelledby="notary-heading">
+                        <div class="service-card-head">
+                            <span class="service-icon" aria-hidden="true"><i class="fas fa-stamp"></i></span>
+                            <div>
+                                <p class="service-brand">Quintana Notary &amp; Signing</p>
+                                <h3 id="notary-heading" data-i18n="notary_h3">Mobile notary &amp; signings</h3>
+                            </div>
                         </div>
-                    </div>
+                        <p data-i18n="notary_intro">I come to your home or office, or meet you at a Community Hub, to notarize your documents in English or Spanish.</p>
+                        <ul class="service-list" aria-label="Notary services">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s1">Standard notarizations: acknowledgments, oaths and affirmations, copy certifications</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s2">Apostilles through the Colorado Secretary of State</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s3">Loan signings for refinances, purchases and HELOCs</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s4">Airport notary at DIA: $95 flat with parking included, plus $10 per signature</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="notary_s5">U.S. passport help: I prepare DS-11/DS-82 forms and go with you to the post office or clerk's office</span></li>
+                        </ul>
+                        <p class="price-line"><i class="fas fa-tag" aria-hidden="true"></i> <span data-i18n="notary_price">Notarizations <strong>$10–$15</strong> per act. Any travel fee is quoted in writing before we meet.</span></p>
+                        <a href="https://quintananotarysigning.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-card" aria-label="Notary and passport services — Quintana Notary & Signing website">
+                            <span data-i18n="notary_cta">Notary &amp; passport services</span> <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <!-- Ayuda DMV -->
+                    <article class="card service-card" id="dmv" aria-labelledby="dmv-heading">
+                        <div class="service-card-head">
+                            <span class="service-icon" aria-hidden="true"><i class="fas fa-car"></i></span>
+                            <div>
+                                <p class="service-brand">Ayuda DMV</p>
+                                <h3 id="dmv-heading" data-i18n="dmv_h3">Colorado DMV help</h3>
+                            </div>
+                        </div>
+                        <p data-i18n="dmv_intro">If the DMV feels confusing, I'll prepare the paperwork and, when needed, go in person for you.</p>
+                        <ul class="service-list" aria-label="DMV services">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dmv_s1">Forms for address changes, private-party title transfers and bills of sale</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dmv_s2">In-person DMV visits as your authorized proxy</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dmv_s3">Out-of-state title transfers: I coordinate with owners, dealerships and lienholders</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dmv_s4">Same-day rush for urgent paperwork and DMV submissions</span></li>
+                        </ul>
+                        <p class="price-line"><i class="fas fa-tag" aria-hidden="true"></i> <span data-i18n="dmv_price">Government forms are free. I charge only for typing and my time, quoted in writing.</span></p>
+                        <a href="https://ayudadmv.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-card" aria-label="DMV services — Ayuda DMV website">
+                            <span data-i18n="dmv_cta">DMV services</span> <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <!-- Certified Translation -->
+                    <article class="card service-card" id="translation" aria-labelledby="translation-heading">
+                        <div class="service-card-head">
+                            <span class="service-icon" aria-hidden="true"><i class="fas fa-language"></i></span>
+                            <div>
+                                <p class="service-brand" data-i18n="trans_brand">Certified Translation</p>
+                                <h3 id="translation-heading" data-i18n="trans_h3">Spanish ↔ English translation</h3>
+                            </div>
+                        </div>
+                        <p data-i18n="trans_intro">Word-for-word translations with a signed Certificate of Accuracy, prepared for USCIS, the Colorado DMV, schools and state agencies.</p>
+                        <ul class="service-list" aria-label="Documents I translate">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="trans_s1">Documents for USCIS (translation only)</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="trans_s2">Colorado DMV title and registration documents</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="trans_s3">School and university records</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="trans_s4">State agency and government paperwork</span></li>
+                        </ul>
+                        <p class="price-line"><i class="fas fa-clock" aria-hidden="true"></i> <span data-i18n="trans_price">Rush turnaround available. Your quote comes in writing first.</span></p>
+                        <a href="https://quintananotarysigning.com/translate.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-card" aria-label="Get a certified translation quote">
+                            <span data-i18n="trans_cta">Get a translation quote</span> <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
                 </div>
 
+                <a href="#shipping" class="service-also">
+                    <i class="fas fa-box-open" aria-hidden="true"></i>
+                    <span data-i18n="services_also">Sending a package to family abroad? See International Shipping Help</span>
+                    <i class="fas fa-arrow-down" aria-hidden="true"></i>
+                </a>
             </div>
         </section>
 
         <!-- ══════════════════════════════════════════════════════
-             SECTION 2b — INTERNATIONAL SHIPPING HELP (Servicios Quintana)
+             INTERNATIONAL SHIPPING HELP (Servicios Quintana LLC)
         ══════════════════════════════════════════════════════ -->
         <section id="shipping" class="section" aria-labelledby="shipping-heading">
             <div class="container">
@@ -729,13 +557,165 @@
         </section>
 
         <!-- ══════════════════════════════════════════════════════
-             SECTION 3 — FAQ
+             COMMUNITY HUBS
         ══════════════════════════════════════════════════════ -->
-        <section id="faq" class="section bg-light" aria-labelledby="faq-heading">
+        <section id="hubs" class="section" aria-labelledby="hubs-heading">
             <div class="container">
                 <header class="section-header">
-                    <h2 id="faq-heading" data-i18n="faq_h2">Frequently Asked Questions</h2>
-                    <p data-i18n="faq_sub">Quick answers to the most common questions about my services.</p>
+                    <h2 id="hubs-heading" data-i18n="hubs_h2">Save at a Community Hub</h2>
+                    <p data-i18n="hubs_sub">Meet me at a public place in your neighborhood, by appointment, and pay less.</p>
+                </header>
+
+                <div class="hub-locator">
+                    <div class="hub-rate">
+                        <span class="hub-rate-tag" data-i18n="hub_rate_tag">Community rate</span>
+                        <p class="hub-rate-price"><span class="hub-rate-num">$10</span><span class="hub-rate-unit" data-i18n="hub_rate_unit">per notarial act</span></p>
+                        <ul class="hub-rate-compare" aria-label="Rate comparison">
+                            <li><span data-i18n="hub_cmp_max">Colorado maximum</span> <s>$15</s></li>
+                            <li><span data-i18n="hub_cmp_travel">Travel fee</span> <b>$0</b></li>
+                        </ul>
+                        <p data-i18n="hubs_callout_body">A real discount, offered voluntarily below the Colorado maximum, with <strong>no travel fee</strong>.</p>
+                    </div>
+
+                    <div class="hub-picker">
+                        <div class="hub-tabs" role="tablist" aria-label="Choose a Community Hub">
+                            <button type="button" class="hub-tab" role="tab" id="hubtab-tienda" aria-controls="hubpanel" aria-selected="true" data-hub="tienda">
+                                <i class="fas fa-store" aria-hidden="true"></i>
+                                <span class="hub-tab-name">Tienda Salvadoreña</span>
+                                <span class="hub-tab-sub" data-i18n="hub_tienda_sub">East Colfax, Denver</span>
+                            </button>
+                            <button type="button" class="hub-tab" role="tab" id="hubtab-msu" aria-controls="hubpanel" aria-selected="false" tabindex="-1" data-hub="msu">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                <span class="hub-tab-name">MSU Denver</span>
+                                <span class="hub-tab-sub" data-i18n="hub_msu_sub">Auraria Library, downtown</span>
+                            </button>
+                            <button type="button" class="hub-tab" role="tab" id="hubtab-dpl" aria-controls="hubpanel" aria-selected="false" tabindex="-1" data-hub="dpl">
+                                <i class="fas fa-book" aria-hidden="true"></i>
+                                <span class="hub-tab-name" data-i18n="hub_dpl">Denver Public Library</span>
+                                <span class="hub-tab-sub" data-i18n="hub_dpl_sub">Any branch in Denver</span>
+                            </button>
+                        </div>
+
+                        <div class="hub-panel" id="hubpanel" role="tabpanel" aria-labelledby="hubtab-tienda" aria-live="polite">
+                            <p class="hub-panel-label" data-i18n="hub_panel_label">Selected location</p>
+                            <p class="hub-panel-title" id="hub-panel-title">Tienda Salvadoreña</p>
+                            <p class="hub-panel-desc" id="hub-panel-desc">Neighborhood market on East Colfax. Tell me a time and I'll meet you there — just bring your unsigned document and a valid photo ID.</p>
+                            <div class="hub-panel-actions">
+                                <a class="btn btn-primary hub-book" href="tel:+13035004122"><i class="fas fa-phone" aria-hidden="true"></i> <span data-i18n="hub_book">Book a hub visit</span></a>
+                                <a class="btn btn-secondary hub-map" id="hub-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tienda+Salvadore%C3%B1a+East+Colfax+Denver" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="hub_directions">Directions</span></a>
+                            </div>
+                            <p class="hub-note" data-i18n="hub_note">These are public places where I meet clients by appointment; I am not affiliated with or endorsed by them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════════
+             FOR BUSINESSES & PROFESSIONALS (kept apart from everyday services)
+        ══════════════════════════════════════════════════════ -->
+        <section id="business" class="section section--business" aria-labelledby="business-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-kicker" data-i18n="biz_kicker">For businesses &amp; professionals</p>
+                    <h2 id="business-heading" data-i18n="biz_h2">Support for firms and local businesses</h2>
+                    <p data-i18n="biz_sub">Separate from my everyday client work. Each service has its own site with full details and pricing.</p>
+                </header>
+
+                <div class="biz-grid">
+
+                    <!-- Quintana Notary Support (B2B) -->
+                    <article class="card biz-card" id="b2b" aria-labelledby="b2b-heading">
+                        <div class="service-card-head">
+                            <span class="service-icon" aria-hidden="true"><i class="fas fa-briefcase"></i></span>
+                            <div>
+                                <p class="service-brand">Quintana Notary Support (B2B)</p>
+                                <h3 id="b2b-heading" data-i18n="b2b_h3">Notary support for law firms, title companies &amp; employers</h3>
+                            </div>
+                        </div>
+                        <p data-i18n="b2b_intro">Subcontracted notary work for title companies, law firms, employers and fellow notaries, priced in writing and invoiced to your firm.</p>
+                        <ul class="service-list" aria-label="Business services">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="b2b_s1"><strong>Aurora ICE facility visits:</strong> I visit detained clients as your cleared legal proxy. $150 per visit (travel, clearance, first hour on site), $25 per 30 min after; nothing paid before the visit.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="b2b_s2"><strong>Title &amp; real estate signings:</strong> one package up to 30 pages for $125, with printing, encrypted scanbacks and the FedEx/UPS drop.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="b2b_s3"><strong>Apostille runs:</strong> $85 mail-in or $115 pickup, up to 3 documents; State fees at cost.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="b2b_s4"><strong>Witnesses, recordings &amp; I-9:</strong> independent witness $35&ndash;$50, county recording $35&ndash;$75, I-9 authorized representative $40&ndash;$55.</span></li>
+                        </ul>
+                        <a href="https://quintananotarysigning.com/b2b-real-estate.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-card" aria-label="Business services — Quintana Notary Support website">
+                            <span data-i18n="b2b_cta">Business services</span> <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <!-- David Quintana Dev -->
+                    <article class="card biz-card" id="webdev" aria-labelledby="webdev-heading">
+                        <div class="service-card-head">
+                            <span class="service-icon" aria-hidden="true"><i class="fas fa-laptop"></i></span>
+                            <div>
+                                <p class="service-brand">David Quintana Dev</p>
+                                <h3 id="webdev-heading" data-i18n="dev_h3">Bilingual websites for local businesses</h3>
+                            </div>
+                        </div>
+                        <p data-i18n="dev_intro">I design and build fast, accessible websites in English and Spanish, from scratch. No templates.</p>
+                        <ul class="service-list" aria-label="Web development services">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s1"><strong>Custom websites:</strong> from simple landing pages to full business and online-store sites.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s2"><strong>Bilingual by design:</strong> reach more customers with a site that works just as well in Spanish as in English.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s3"><strong>Tools for clinics:</strong> secure patient intake forms and FHIR-ready data, backed by my Health Informatics degree.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> <span data-i18n="dev_s4"><strong>Ongoing care:</strong> hosting setup, domains, security updates and SEO basics.</span></li>
+                        </ul>
+                        <p class="biz-note" data-i18n="dev_portfolio_note">Portfolio includes work for Tienda Salvadoreña.</p>
+                        <a href="https://davidquintana.dev/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-card" aria-label="Web portfolio and pricing — David Quintana Dev website">
+                            <span data-i18n="dev_cta">Portfolio &amp; pricing</span> <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════════
+             ABOUT
+        ══════════════════════════════════════════════════════ -->
+        <section id="about" class="section about-section" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="split-text">
+                        <h2 id="about-heading" data-i18n="about_h2">Who you'll be working with</h2>
+                        <p class="large-text" data-i18n="about_p1">Servicios Quintana LLC is just me, David Quintana. There's no call center and no team passing you along. The person you message is the person who shows up, prepares your forms, or builds your site.</p>
+                        <p data-i18n="about_p2">I'm a commissioned Colorado Notary Public, a native bilingual Spanish–English translator, and a Health Informatics (B.S.) graduate of Metropolitan State University of Denver.</p>
+                        <p data-i18n="about_p3">What guides my work is simple: language barriers and complicated paperwork should never keep someone from moving forward.</p>
+
+                        <h3 class="about-trust-heading" data-i18n="about_trust_h3">What you can count on</h3>
+                        <ul class="trust-list" aria-label="What you can count on">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_1"><strong>Fully bilingual:</strong> native-level English and Spanish, so no interpreter is needed.</span></li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_2"><strong>Transparent pricing:</strong> no hidden fees. Every cost is disclosed and agreed in writing before your appointment.</span></li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_3"><strong>Community first:</strong> discounted notarizations at Community Hubs across Denver.</span></li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_5"><strong>Commissioned &amp; insured:</strong> I'm a Notary Public commissioned in Colorado (ID 20254044224). Servicios Quintana LLC is insured through The Hartford, with general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary, translation and web development work. Certificate of insurance available on request.</span></li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_4"><strong>Locally owned:</strong> serving the Denver Metro area since 2026.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="split-visual">
+                        <figure class="about-photo">
+                            <img src="david-quintana-about.jpg?v=2026-10-21"
+                                 alt="David Quintana, owner of Servicios Quintana LLC, seated in a navy suit"
+                                 width="960" height="1200" loading="lazy" decoding="async">
+                            <figcaption>
+                                <span class="about-photo-name">David Quintana</span>
+                                <span class="about-photo-role" data-i18n="about_photo_role">Notary · DMV · Translation · Web</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════════════
+             FAQ
+        ══════════════════════════════════════════════════════ -->
+        <section id="faq" class="section" aria-labelledby="faq-heading">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="faq-heading" data-i18n="faq_h2">Common questions</h2>
+                    <p data-i18n="faq_sub">Straight answers about areas, languages, pricing and what I can and can't do.</p>
                 </header>
 
                 <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
@@ -808,71 +788,19 @@
         </section>
 
         <!-- ══════════════════════════════════════════════════════
-             SECTION 4 — ABOUT / BUILT ON INTEGRITY
+             CONTACT
         ══════════════════════════════════════════════════════ -->
-        <section id="about" class="section bg-light about-section" aria-labelledby="about-heading">
+        <section id="contact" class="section section--contact" aria-labelledby="contact-heading">
             <div class="container">
-                <div class="split-layout">
-                    <div class="split-text">
-                        <h2 id="about-heading" data-i18n="about_h2">Built on Integrity</h2>
-                        <p class="large-text" data-i18n="about_p1">
-                            Servicios Quintana LLC is the solo, owner-operated practice of <strong>David Quintana</strong> — a Colorado mobile notary, DMV specialist, native bilingual Spanish-English translator, and bilingual web developer.
-                        </p>
-                        <p data-i18n="about_creds">
-                            I'm also a <strong>Health Informatics (B.S.) graduate</strong> of Metropolitan State University of Denver — training that sharpens my secure healthcare-technology work.
-                        </p>
-                        <p data-i18n="about_p2">
-                            Whether I'm notarizing a loan document in Denver, helping a family register an out-of-state vehicle, or writing custom code for a local business, my core value remains the same: <strong>Accessibility.</strong>
-                        </p>
-                        <p data-i18n="about_p3">
-                            Language barriers and technical complexity should never prevent someone from achieving their goals.
-                        </p>
-
-                        <h3 class="about-trust-heading" data-i18n="about_trust_h3">Why Colorado Trusts Me</h3>
-                        <ul class="trust-list" aria-label="Reasons to trust Servicios Quintana LLC">
-                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_1"><strong>100% Bilingual:</strong> Native-level fluency in English and Spanish — no interpreter needed.</span></li>
-                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_2"><strong>Transparent Pricing:</strong> No hidden fees; every cost is disclosed and agreed in writing before your appointment.</span></li>
-                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_3"><strong>Community Focused:</strong> Discounted fees available at Community Hubs across Denver.</span></li>
-                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_4"><strong>Locally Owned:</strong> Proudly serving the Denver Metro area since 2026.</span></li>
-                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="trust_5"><strong>Commissioned &amp; Insured:</strong> I'm a Notary Public commissioned in Colorado (ID 20254044224). Servicios Quintana LLC is insured through The Hartford, with general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary, translation and web development work. Certificate of insurance available on request.</span></li>
-                        </ul>
+                <div class="contact-card">
+                    <div class="contact-text">
+                        <h2 id="contact-heading" data-i18n="contact_h2">Tell me what you need</h2>
+                        <p data-i18n="contact_p">Call, text or email, in English or Spanish. Appointments only, and you'll have your full price in writing before we meet.</p>
                     </div>
-
-                    <div class="split-visual">
-                        <figure class="about-photo">
-                            <img src="david-quintana-about.jpg?v=2026-10-21"
-                                 alt="David Quintana, owner of Servicios Quintana LLC, seated in a navy suit"
-                                 width="960" height="1200" loading="lazy" decoding="async">
-                            <figcaption>
-                                <span class="about-photo-name">David Quintana</span>
-                                <span class="about-photo-role" data-i18n="about_photo_role">Notary · DMV · Web Development</span>
-                            </figcaption>
-                        </figure>
-
-                        <div class="stats-grid" aria-label="Key facts about Servicios Quintana LLC">
-                            <div class="stat-item">
-                                <h4>4</h4>
-                                <p data-i18n="stat_brands">Active Brands</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>100%</h4>
-                                <p data-i18n="stat_bilingual">Bilingual</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>CO</h4>
-                                <p data-i18n="stat_local">Locally Owned</p>
-                            </div>
-                        </div>
-
-                        <div class="community-hubs">
-                            <h4 data-i18n="hubs_h4">Community Hubs</h4>
-                            <ul aria-label="Community hub locations">
-                                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="hub_msu">MSU Denver — Denver, CO</span></li>
-                                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="hub_tienda">Tienda Salvadoreña</span></li>
-                                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="hub_crrec">Denver Public Library (all branches)</span></li>
-                            </ul>
-                            <p class="hub-note" data-i18n="hub_note">$10 per notarial act &amp; no travel fee at these locations. These are public places where I meet clients by appointment; I am not affiliated with or endorsed by them.</p>
-                        </div>
+                    <div class="contact-actions">
+                        <a href="tel:+13035004122" class="btn btn-primary" aria-label="Call or text Servicios Quintana LLC at 303-500-4122"><i class="fas fa-phone" aria-hidden="true"></i> <span>303&#8209;500&#8209;4122</span></a>
+                        <a href="mailto:admin@serviciosquintana.com" class="btn btn-secondary"><i class="fas fa-envelope" aria-hidden="true"></i> <span>admin@serviciosquintana.com</span></a>
+                        <p class="contact-office"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="contact_office">Office: 5128 E Colfax Ave, Denver, CO 80220 (by appointment)</span></p>
                     </div>
                 </div>
             </div>
@@ -881,9 +809,9 @@
     </main>
 
     <!-- ══════════════════════════════════════════════════════
-         FOOTER / CONTACT
+         FOOTER
     ══════════════════════════════════════════════════════ -->
-    <footer id="contact" aria-label="Servicios Quintana LLC — Contact and Legal Information">
+    <footer aria-label="Servicios Quintana LLC — Contact and Legal Information">
         <div class="container">
             <div class="footer-grid">
 
@@ -896,11 +824,11 @@
                         height="120"
                         loading="lazy"
                     >
-                    <p>Bilingual Services · Community Focused · Colorado Owned</p>
+                    <p data-i18n="footer_tagline">Bilingual services · Community focused · Colorado owned</p>
                 </div>
 
                 <div class="footer-info">
-                    <h5>Corporate HQ &amp; Registered Agent</h5>
+                    <h5 data-i18n="footer_hq_h5">Corporate HQ &amp; Registered Agent</h5>
                     <address>
                         <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         5128 E Colfax Ave<br>
@@ -909,7 +837,7 @@
                 </div>
 
                 <div class="footer-contact">
-                    <h5>Contact</h5>
+                    <h5 data-i18n="footer_contact_h5">Contact</h5>
                     <p>
                         <i class="fas fa-phone" aria-hidden="true"></i>
                         <a href="tel:+13035004122" aria-label="Call Servicios Quintana LLC at 303-500-4122">303&#8209;500&#8209;4122</a>
@@ -959,6 +887,6 @@
         <span data-i18n="back_to_top">Back to Top</span>
     </button>
 
-    <script src="main.js?v=2026-11-03a"></script>
+    <script src="main.js?v=2026-11-03b"></script>
 </body>
 </html>
