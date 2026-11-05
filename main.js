@@ -57,6 +57,7 @@ const translations = {
         notary_s3:    "Loan signings for refinances, purchases and HELOCs",
         notary_s4:    "Airport notary at DIA: $95 flat with parking included, plus $10 per signature",
         notary_s5:    "U.S. passport help: I prepare DS-11/DS-82 forms and go with you to the post office or clerk's office",
+        notary_s6: "Notarized or apostilled documents shipped worldwide: flat rates from $25, tracking included. <a href=\"#document-shipping\">See shipping prices</a>",
         notary_price: "Notarizations <strong>$10–$15</strong> per act. Any travel fee is quoted in writing before we meet.",
         notary_cta:   "Notary &amp; passport services",
 
@@ -119,11 +120,12 @@ const translations = {
         dship_a3:             "Declared value coverage",
         dship_a3_price:       "Quoted per shipment",
         dship_courier_h4:     "Courier service (Denver Metro)",
-        dship_c1:             "Standard courier (document pickup, delivery, or Secretary of State drop-off)",
+        dship_c1:             "Standard courier (document pickup or delivery, errands only)",
         dship_c2:             "Same-day rush courier",
         dship_c3:             "After-hours or weekend",
         dship_c4:             "Outside Denver Metro",
         dship_c4_price:       "Quoted by distance",
+        dship_apostille_note: "Apostille processing at the Colorado Secretary of State is a separate service, from $85: I review your documents and certificates, submit the request, and bring the apostille back.",
         dship_fine:           "Rates apply to standard document packets. Delivery times are carrier estimates and not guaranteed. Customs duties or fees charged by the destination country, if any, are the recipient's responsibility. Shipping and courier fees are separate from notarial fees.",
 
         // ── COMMUNITY HUBS ──
@@ -203,7 +205,7 @@ const translations = {
         faq_q9: "Do you pay customs taxes?",
         faq_a9: "No. Each country sets its own taxes, and the recipient may pay them on delivery. We are not responsible for customs holds, taxes, or delivery times set by the carrier and the destination country.",
         faq_q10: "Can you ship my notarized or apostilled documents abroad?",
-        faq_a10: "Yes. Document shipping is one flat rate per packet: $25 domestic, or $85 to $150 international depending on the destination, with packaging, customs forms, and tracking included. Express service and Denver Metro courier runs, including Secretary of State drop-offs, are also available. See the Document Shipping prices in the Shipping section.",
+        faq_a10: "Yes. Document shipping is one flat rate per packet: $25 domestic, or $85 to $150 international depending on the destination, with packaging, customs forms, and tracking included. Express service and Denver Metro courier errands are also available. Apostille processing is priced separately, from $85. See the Document Shipping prices in the Shipping section.",
 
         // ── CONTACT ──
         contact_h2:     "Tell me what you need",
@@ -272,6 +274,7 @@ const translations = {
         notary_s3:    "Firmas de préstamos para refinanciamientos, compras y HELOCs",
         notary_s4:    "Notarizaciones en el aeropuerto (DIA): $95 fijos con el estacionamiento incluido, más $10 por firma",
         notary_s5:    "Ayuda con pasaportes de EE.UU.: preparo los formularios DS-11/DS-82 y lo acompaño a la oficina de correos o del condado",
+        notary_s6: "Envío de documentos notariados o apostillados a todo el mundo: tarifas fijas desde $25, con rastreo. <a href=\"#document-shipping\">Ver precios de envío</a>",
         notary_price: "Notarizaciones de <strong>$10–$15</strong> por acto. Cualquier tarifa de desplazamiento se cotiza por escrito antes de la cita.",
         notary_cta:   "Servicios notariales y de pasaporte",
 
@@ -334,11 +337,12 @@ const translations = {
         dship_a3:             "Cobertura de valor declarado",
         dship_a3_price:       "Se cotiza por envío",
         dship_courier_h4:     "Mensajería (área metropolitana de Denver)",
-        dship_c1:             "Mensajería estándar (recogida, entrega o entrega en la Secretaría de Estado)",
+        dship_c1:             "Mensajería estándar (recogida o entrega de documentos, solo mandados)",
         dship_c2:             "Mensajería urgente el mismo día",
         dship_c3:             "Fuera de horario o fin de semana",
         dship_c4:             "Fuera del área metropolitana de Denver",
         dship_c4_price:       "Se cotiza según distancia",
+        dship_apostille_note: "El trámite de apostilla en la Secretaría de Estado de Colorado es un servicio aparte, desde $85: reviso sus documentos y certificados, presento la solicitud y le traigo la apostilla.",
         dship_fine:           "Las tarifas aplican a paquetes de documentos estándar. Los tiempos de entrega son estimados de la empresa de transporte y no están garantizados. Cualquier impuesto o cargo de aduana del país de destino es responsabilidad del destinatario. Las tarifas de envío y mensajería son aparte de los honorarios notariales.",
 
         // ── COMMUNITY HUBS ──
@@ -418,7 +422,7 @@ const translations = {
         faq_q9:  "¿Ustedes pagan los impuestos de aduana?",
         faq_a9:  "No. Cada país fija sus propios impuestos, y es posible que el destinatario tenga que pagarlos al recibir el paquete. No somos responsables de retenciones en aduana, impuestos ni tiempos de entrega fijados por la empresa de transporte y el país de destino.",
         faq_q10: "¿Pueden enviar mis documentos notariados o apostillados al extranjero?",
-        faq_a10: "Sí. El envío de documentos es una tarifa fija por paquete: $25 nacional, o de $85 a $150 internacional según el destino, con empaque, formularios de aduana y rastreo incluidos. También ofrecemos servicio express y mensajería en el área metropolitana de Denver, incluyendo entregas en la Secretaría de Estado. Vea los precios de Envío de Documentos en la sección de Envíos.",
+        faq_a10: "Sí. El envío de documentos es una tarifa fija por paquete: $25 nacional, o de $85 a $150 internacional según el destino, con empaque, formularios de aduana y rastreo incluidos. También ofrecemos servicio express y mensajería en el área metropolitana de Denver. El trámite de apostilla se cotiza aparte, desde $85. Vea los precios de Envío de Documentos en la sección de Envíos.",
 
         // ── CONTACT ──
         contact_h2:     "Dígame qué necesita",

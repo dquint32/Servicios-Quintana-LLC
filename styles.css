@@ -770,6 +770,7 @@ main > .section + .section { border-top: 1px solid var(--border); }
 .doc-ship .translation-text .price-menu + h4 { margin-top: 0.6rem; }
 .doc-ship-why { font-size: 0.95rem !important; padding: 0.9rem 1rem; border-radius: var(--radius); background: var(--bg-alt, var(--surface)); border: 1px solid var(--border); }
 .doc-ship-fine { margin-top: 1.25rem; }
+.doc-ship-apostille { margin-top: 1.25rem; font-size: 0.95rem; line-height: 1.6; color: var(--text-2); border-left: 3px solid var(--accent); padding-left: 0.9rem; }
 
 /* ============================================
    COMMUNITY HUBS
