@@ -114,6 +114,20 @@
               {"@type": "Offer", "name": "Label service (we buy and print the label for you)", "price": "12", "priceCurrency": "USD", "description": "$12 plus postage at exact cost"},
               {"@type": "Offer", "name": "Drop-off to USPS, UPS, or FedEx", "price": "15", "priceCurrency": "USD", "description": "Per package"},
               {"@type": "Offer", "name": "Full service (we do everything and drop it off)", "price": "25", "priceCurrency": "USD", "description": "$25 plus postage at exact cost"}
+            ]}}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Document Shipping for Notarized & Apostilled Papers", "alternateName": "Envío de Documentos Notariados y Apostillados", "description": "Flat-rate domestic and international shipping of notarized and apostilled documents via DHL, FedEx, or UPS, with packaging, customs paperwork, and tracking included. Denver Metro courier service available.", "areaServed": "Denver Metro, Colorado",
+            "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Document Shipping — Prices", "itemListElement": [
+              {"@type":  "Offer", "name":  "Domestic Priority (2-3 business days)", "price":  "25", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "Domestic Overnight", "price":  "55", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "International: Canada & Mexico", "price":  "85", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "International: UK & Europe", "price":  "115", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "International: Latin America, Asia & Pacific", "price":  "130", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "International: Middle East, Africa & remote destinations", "price":  "150", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "Express Priority upgrade", "price":  "40", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "Heavy or bound packet", "price":  "25", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "Standard courier, Denver Metro (pickup, delivery, or Secretary of State drop-off)", "price":  "45", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "Same-day rush courier, Denver Metro", "price":  "65", "priceCurrency":  "USD"},
+              {"@type":  "Offer", "name":  "After-hours or weekend courier", "price":  "25", "priceCurrency":  "USD"}
             ]}}}
         ]
       },
@@ -285,6 +299,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "No. Each country sets its own taxes, and the recipient may pay them on delivery. We are not responsible for customs holds, taxes, or delivery times set by the carrier and the destination country."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you ship my notarized or apostilled documents abroad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Document shipping is one flat rate per packet: $25 domestic, or $85 to $150 international depending on the destination, with packaging, customs forms, and tracking included. Express service and Denver Metro courier runs, including Secretary of State drop-offs, are also available."
           }
         }
       ]
@@ -576,6 +598,70 @@
                     </div>
                 </div>
 
+                <!-- Document shipping (notarized & apostilled papers): flat rates, handling included -->
+                <div class="doc-ship" id="document-shipping">
+                    <header class="doc-ship-header">
+                        <h3 id="dship-heading" data-i18n="dship_h3">Document Shipping for Notarized &amp; Apostilled Papers</h3>
+                        <p data-i18n="dship_sub">Powers of attorney, apostilles, and other signed originals, shipped anywhere in the world through DHL, FedEx, or UPS with full tracking. One flat rate per packet, quoted up front. Packaging, customs paperwork, and tracking are always included, so there are no surprise fees.</p>
+                    </header>
+                    <div class="shipping-layout">
+                    <div class="translation-text">
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-envelope-open-text"></i></div>
+                        <h4 id="dship-rates-heading" data-i18n="dship_rates_h4">Flat shipping rates</h4>
+                        <table class="price-menu" aria-labelledby="dship-rates-heading">
+                            <thead>
+                                <tr>
+                                    <th scope="col" data-i18n="ship_col_service">Service</th>
+                                    <th scope="col" data-i18n="ship_col_price">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row" data-i18n="dship_r1">Domestic Priority (2–3 business days)</th><td class="mono">$25</td></tr>
+                                <tr><th scope="row" data-i18n="dship_r2">Domestic Overnight</th><td class="mono">$55</td></tr>
+                                <tr><th scope="row" data-i18n="dship_r3">International: Canada &amp; Mexico</th><td class="mono">$85</td></tr>
+                                <tr><th scope="row" data-i18n="dship_r4">International: UK &amp; Europe</th><td class="mono">$115</td></tr>
+                                <tr><th scope="row" data-i18n="dship_r5">International: Latin America, Asia &amp; Pacific</th><td class="mono">$130</td></tr>
+                                <tr><th scope="row" data-i18n="dship_r6">International: Middle East, Africa &amp; remote destinations</th><td class="mono">$150</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="hub-note" data-i18n="dship_rates_note">Per packet, handling included. This flat rate is separate from the care-package service above, where postage is charged at cost.</p>
+                        <p class="doc-ship-why" data-i18n="dship_why"><strong>Why not ship it yourself?</strong> Walk-in international courier rates often run $150 or more for a single envelope. My business shipping rates, document-safe packaging, and correctly completed customs forms save you money, a trip, and the risk of delays.</p>
+                    </div>
+                    <div class="translation-text">
+                        <h4 id="dship-addons-heading" data-i18n="dship_addons_h4">Shipping add-ons</h4>
+                        <table class="price-menu" aria-labelledby="dship-addons-heading">
+                            <thead>
+                                <tr>
+                                    <th scope="col" data-i18n="ship_col_service">Service</th>
+                                    <th scope="col" data-i18n="ship_col_price">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row" data-i18n="dship_a1">Express Priority (fastest available international service)</th><td class="mono">+$40</td></tr>
+                                <tr><th scope="row" data-i18n="dship_a2">Heavy or bound packet (over ~60 pages, bound originals, or multiple apostilles)</th><td class="mono">+$25</td></tr>
+                                <tr><th scope="row" data-i18n="dship_a3">Declared value coverage</th><td class="mono" data-i18n="dship_a3_price">Quoted per shipment</td></tr>
+                            </tbody>
+                        </table>
+                        <h4 id="dship-courier-heading" data-i18n="dship_courier_h4">Courier service (Denver Metro)</h4>
+                        <table class="price-menu" aria-labelledby="dship-courier-heading">
+                            <thead>
+                                <tr>
+                                    <th scope="col" data-i18n="ship_col_service">Service</th>
+                                    <th scope="col" data-i18n="ship_col_price">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row" data-i18n="dship_c1">Standard courier (document pickup, delivery, or Secretary of State drop-off)</th><td class="mono">$45</td></tr>
+                                <tr><th scope="row" data-i18n="dship_c2">Same-day rush courier</th><td class="mono">$65</td></tr>
+                                <tr><th scope="row" data-i18n="dship_c3">After-hours or weekend</th><td class="mono">+$25</td></tr>
+                                <tr><th scope="row" data-i18n="dship_c4">Outside Denver Metro</th><td class="mono" data-i18n="dship_c4_price">Quoted by distance</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    <p class="hub-note doc-ship-fine" data-i18n="dship_fine">Rates apply to standard document packets. Delivery times are carrier estimates and not guaranteed. Customs duties or fees charged by the destination country, if any, are the recipient&#39;s responsibility. Shipping and courier fees are separate from notarial fees.</p>
+                </div>
+
             </div>
         </section>
 
@@ -803,6 +889,13 @@
                         <summary class="faq-question" data-i18n="faq_q9">Do you pay customs taxes?</summary>
                         <div class="faq-answer">
                             <p data-i18n="faq_a9">No. Each country sets its own taxes, and the recipient may pay them on delivery. We are not responsible for customs holds, taxes, or delivery times set by the carrier and the destination country.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question" data-i18n="faq_q10">Can you ship my notarized or apostilled documents abroad?</summary>
+                        <div class="faq-answer">
+                            <p data-i18n="faq_a10">Yes. Document shipping is one flat rate per packet: $25 domestic, or $85 to $150 international depending on the destination, with packaging, customs forms, and tracking included. Express service and Denver Metro courier runs, including Secretary of State drop-offs, are also available. See the Document Shipping prices in the Shipping section.</p>
                         </div>
                     </details>
 

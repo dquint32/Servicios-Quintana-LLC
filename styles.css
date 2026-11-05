@@ -760,6 +760,17 @@ main > .section + .section { border-top: 1px solid var(--border); }
 
 .hub-note { font-size: 0.875rem !important; line-height: 1.55; color: var(--muted) !important; font-style: italic; }
 
+/* Document shipping (notarized & apostilled papers) */
+.doc-ship { margin-top: 3rem; }
+.doc-ship-header { max-width: 760px; margin: 0 0 1.5rem; }
+.doc-ship-header h3 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.doc-ship-header p { font-size: 1.05rem; line-height: 1.65; color: var(--text-2); }
+.doc-ship h4 { font-size: 1.15rem; color: var(--heading); margin: 0; }
+.doc-ship .translation-text h4 + .price-menu { margin-top: -0.4rem; }
+.doc-ship .translation-text .price-menu + h4 { margin-top: 0.6rem; }
+.doc-ship-why { font-size: 0.95rem !important; padding: 0.9rem 1rem; border-radius: var(--radius); background: var(--bg-alt, var(--surface)); border: 1px solid var(--border); }
+.doc-ship-fine { margin-top: 1.25rem; }
+
 /* ============================================
    COMMUNITY HUBS
    ============================================ */
