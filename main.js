@@ -173,7 +173,7 @@ const translations = {
         // ── ABOUT ──
         about_h2:         "Who you'll be working with",
         about_p1:         "Servicios Quintana LLC is just me, David Quintana. There's no call center and no team passing you along. The person you message is the person who shows up, prepares your forms, or builds your site.",
-        about_p2:         "I'm a commissioned Colorado Notary Public, a native bilingual Spanish–English translator, and a Health Informatics (B.S.) graduate of Metropolitan State University of Denver.",
+        about_p2:         "I'm a commissioned Colorado Notary Public, a native bilingual Spanish–English translator, and a Health Informatics (B.S.) graduate of Metropolitan State University of Denver. Starting November 2026, I'm also a graduate certificate candidate in Information Systems Auditing at Colorado State University Global, with expected completion in late 2027.",
         about_p3:         "What guides my work is simple: language barriers and complicated paperwork should never keep someone from moving forward.",
         about_trust_h3:   "What you can count on",
         about_photo_role: "Notary · DMV · Translation · Web",
@@ -390,7 +390,7 @@ const translations = {
         // ── ABOUT ──
         about_h2:         "Con quién va a trabajar",
         about_p1:         "Servicios Quintana LLC soy yo, David Quintana. No hay centro de llamadas ni un equipo que lo pase de una persona a otra. La persona a quien le escribe es la misma que llega, prepara sus formularios o construye su sitio.",
-        about_p2:         "Soy Notary Public comisionado en Colorado, traductor bilingüe nativo de español e inglés, y graduado en Informática de la Salud (B.S.) de Metropolitan State University of Denver.",
+        about_p2:         "Soy Notary Public comisionado en Colorado, traductor bilingüe nativo de español e inglés, y graduado en Informática de la Salud (B.S.) de Metropolitan State University of Denver. Desde noviembre de 2026 también soy candidato al Certificado de Posgrado en Auditoría de Sistemas de Información de Colorado State University Global, con finalización prevista a fines de 2027.",
         about_p3:         "Lo que guía mi trabajo es sencillo: el idioma y los trámites complicados nunca deben impedir que alguien salga adelante.",
         about_trust_h3:   "Con lo que puede contar",
         about_photo_role: "Servicios Notariales · DMV · Traducción · Web",
