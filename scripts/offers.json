@@ -1,0 +1,205 @@
+{
+  "@type": "OfferCatalog",
+  "name": "Servicios Quintana LLC — Services",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Mobile Notary Public",
+        "areaServed": "Denver Metro, Colorado"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Apostille Processing"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Loan Signings"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "I-9 Employment Verification"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "U.S. Passport Concierge"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "DMV Proxy & Out-of-State Title Transfers"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Certified Spanish-English Translation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Bilingual Web Development"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "International Shipping Help",
+        "alternateName": "Ayuda con Envíos Internacionales",
+        "description": "Help shipping clothes, gifts, and care packages to El Salvador, Guatemala, Honduras, Venezuela, and more at discounted commercial rates. Free do-it-yourself guide in English and Spanish, or we do it for you. Postage is charged at exact cost.",
+        "areaServed": "Denver Metro, Colorado",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "International Shipping Help — Prices",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Free quote",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "DIY with our free guide",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Label printing",
+              "description": "$0.25 per page black and white, $1.00 per page color"
+            },
+            {
+              "@type": "Offer",
+              "name": "Assisted label (we help you buy your own label on your account)",
+              "price": "10",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Label service (we buy and print the label for you)",
+              "price": "12",
+              "priceCurrency": "USD",
+              "description": "$12 plus postage at exact cost"
+            },
+            {
+              "@type": "Offer",
+              "name": "Drop-off to USPS, UPS, or FedEx",
+              "price": "15",
+              "priceCurrency": "USD",
+              "description": "Per package"
+            },
+            {
+              "@type": "Offer",
+              "name": "Full service (we do everything and drop it off)",
+              "price": "25",
+              "priceCurrency": "USD",
+              "description": "$25 plus postage at exact cost"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Document Shipping for Notarized & Apostilled Papers",
+        "alternateName": "Envío de Documentos Notariados y Apostillados",
+        "description": "Flat-rate domestic and international shipping of notarized and apostilled documents via DHL, FedEx, or UPS, with packaging, customs paperwork, and tracking included. Denver Metro courier service available.",
+        "areaServed": "Denver Metro, Colorado",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Document Shipping — Prices",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Domestic Priority (2-3 business days)",
+              "price": "25",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Domestic Overnight",
+              "price": "55",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "International: Canada & Mexico",
+              "price": "85",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "International: UK & Europe",
+              "price": "115",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "International: Latin America, Asia & Pacific",
+              "price": "130",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "International: Middle East, Africa & remote destinations",
+              "price": "150",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Express Priority upgrade",
+              "price": "40",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Heavy or bound packet",
+              "price": "25",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Standard courier, Denver Metro (document pickup or delivery, errands only)",
+              "price": "45",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Same-day rush courier, Denver Metro",
+              "price": "65",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "After-hours or weekend courier",
+              "price": "25",
+              "priceCurrency": "USD"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

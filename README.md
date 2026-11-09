@@ -52,3 +52,19 @@ Email: placasfirmas.david@gmail.com
 Headquarters: 5128 E Colfax Ave, Denver, CO 80220
 
 © 2026 Servicios Quintana LLC. All Rights Reserved.
+
+---
+
+## Maintaining the site (English + Spanish pages)
+
+The site has two real pages: English at `/` (`index.html`) and Spanish at `/es/` (`es/index.html`).
+
+- Edit text in `main.js` (the `translations` object, `en` and `es`) and layout in `index.html`.
+- `es/index.html` and the schema block in `index.html` are **generated**. After any change, run:
+
+```
+pip install beautifulsoup4        # one time
+python scripts/build_pages.py
+```
+
+- Business facts for the schema (service areas, hours, profile links for `sameAs`) are at the top of `scripts/build_pages.py`; prices for the schema are in `scripts/offers.json`.

@@ -10,6 +10,10 @@
 ══════════════════════════════════════════════════════════ */
 const translations = {
     en: {
+        // ── PAGE (title + description; the /es/ page has these baked in) ──
+        meta_title: "Bilingual Notary, DMV Help &amp; Translation in Denver | Servicios Quintana",
+        meta_desc:  "Bilingual mobile notary, DMV help, certified translation and shipping help in Denver. English or Spanish. Your price in writing first.",
+
         // ── NAV ──
         skip_link:    "Skip to main content",
         nav_services: "Services",
@@ -22,7 +26,7 @@ const translations = {
 
         // ── HERO ──
         hero_eyebrow:      "Denver Metro · By appointment · English &amp; Español",
-        hero_h1:           "Notary, DMV paperwork and certified translations, handled by one person you can call directly.",
+        hero_h1:           "Notary, DMV paperwork and certified translations in Denver, handled by one person you can call directly.",
         hero_sub:          "I'm David Quintana, a commissioned Colorado Notary Public. I help families and local businesses get their paperwork done right. I come to you, or we meet at a Community Hub, and you get the full price in writing before we meet.",
         hero_cta_call:     "Call or text 303-500-4122",
         hero_cta_services: "See services &amp; prices",
@@ -187,7 +191,7 @@ const translations = {
         faq_h2: "Common questions",
         faq_sub: "Straight answers about areas, languages, pricing and what I can and can't do.",
         faq_q1: "What areas do you serve?",
-        faq_a1: "I primarily serve the Denver Metro area of Colorado. Mobile notary services extend beyond this area for an additional travel fee. I also meet clients by appointment at Community Hubs (Tienda Salvadoreña, MSU Denver's Auraria Library, and any Denver Public Library branch), where notarization is $10 per act with no travel charge. These are public places where I meet clients; I am not affiliated with or endorsed by them.",
+        faq_a1: "I primarily serve the Denver Metro area of Colorado: Denver, Aurora, Lakewood, Englewood, Commerce City, Westminster and nearby areas. Mobile notary services extend beyond this area for an additional travel fee. I also meet clients by appointment at Community Hubs (Tienda Salvadoreña, MSU Denver's Auraria Library, and any Denver Public Library branch), where notarization is $10 per act with no travel charge. These are public places where I meet clients; I am not affiliated with or endorsed by them.",
         faq_q2: "Do you offer services in Spanish?",
         faq_a2: "Yes — all services are fully bilingual in English and Spanish. I have native-level fluency in both languages and can assist with bilingual consultations, certified translations, and bilingual accompaniment to government appointments.",
         faq_q3: "What notary services are available?",
@@ -266,6 +270,10 @@ const translations = {
     },
 
     es: {
+        // ── PAGE ──
+        meta_title: "Servicios Notariales Bilingües, DMV y Traducciones en Denver | Servicios Quintana",
+        meta_desc:  "Servicios notariales móviles, ayuda con el DMV, traducciones certificadas y envíos internacionales en Denver. En español o inglés. Precio por escrito antes de la cita.",
+
         // ── NAV ──
         skip_link:    "Saltar al contenido principal",
         nav_services: "Servicios",
@@ -278,7 +286,7 @@ const translations = {
 
         // ── HERO ──
         hero_eyebrow:      "Área de Denver · Con cita previa · Español &amp; English",
-        hero_h1:           "Servicios notariales, trámites del DMV y traducciones certificadas, con una sola persona a quien puede llamar directamente.",
+        hero_h1:           "Servicios notariales, trámites del DMV y traducciones certificadas en Denver, con una sola persona a quien puede llamar directamente.",
         hero_sub:          "Soy David Quintana, Notary Public comisionado en Colorado. Ayudo a familias y negocios locales a hacer sus trámites correctamente. Voy a donde usted esté, o nos vemos en un Punto de Encuentro Comunitario, y recibe el precio completo por escrito antes de la cita.",
         hero_cta_call:     "Llame o escriba al 303-500-4122",
         hero_cta_services: "Ver servicios y precios",
@@ -443,7 +451,7 @@ const translations = {
         faq_h2:  "Preguntas frecuentes",
         faq_sub: "Respuestas claras sobre áreas, idiomas, precios y lo que puedo y no puedo hacer.",
         faq_q1:  "¿En qué áreas ofrece servicio?",
-        faq_a1:  "Atiendo principalmente el área metropolitana de Denver, Colorado. Los servicios notariales móviles llegan más allá de esta área con una tarifa de desplazamiento adicional. También me reúno con clientes, con cita previa, en Puntos de Encuentro Comunitarios (Tienda Salvadoreña, la Biblioteca Auraria de MSU Denver y cualquier sucursal de la Biblioteca Pública de Denver), donde la notarización cuesta $10 por acto sin tarifa de desplazamiento. Son lugares públicos donde me reúno con clientes; no tengo ninguna afiliación con ellos ni cuento con su respaldo.",
+        faq_a1:  "Atiendo principalmente el área metropolitana de Denver, Colorado: Denver, Aurora, Lakewood, Englewood, Commerce City, Westminster y áreas cercanas. Los servicios notariales móviles llegan más allá de esta área con una tarifa de desplazamiento adicional. También me reúno con clientes, con cita previa, en Puntos de Encuentro Comunitarios (Tienda Salvadoreña, la Biblioteca Auraria de MSU Denver y cualquier sucursal de la Biblioteca Pública de Denver), donde la notarización cuesta $10 por acto sin tarifa de desplazamiento. Son lugares públicos donde me reúno con clientes; no tengo ninguna afiliación con ellos ni cuento con su respaldo.",
         faq_q2:  "¿Ofrece servicios en español?",
         faq_a2:  "Sí, todos los servicios son completamente bilingües en inglés y español. Hablo ambos idiomas a nivel nativo y puedo ayudarle con consultas bilingües, traducciones certificadas y acompañamiento bilingüe a citas en oficinas de gobierno.",
         faq_q3:  "¿Qué servicios notariales ofrece?",
@@ -571,12 +579,44 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ── LANGUAGE TOGGLE ─────────────────────────────────── */
     // Language: a choice made with the button wins; otherwise follow the
     // visitor's device (Spanish phone or browser -> Spanish, anything else -> English).
+    // The Spanish page lives at /es/ (a real, indexable URL); English at /.
+    const onEsPage = document.documentElement.getAttribute('lang') === 'es';
     let currentLang = '';
     try { currentLang = localStorage.getItem('sqLang') || ''; } catch (e) {}
     if (currentLang !== 'en' && currentLang !== 'es') {
-        const deviceLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-        currentLang = /^es\b/i.test(deviceLang) ? 'es' : 'en';
+        if (onEsPage) {
+            currentLang = 'es';
+        } else {
+            const deviceLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+            currentLang = /^es\b/i.test(deviceLang) ? 'es' : 'en';
+        }
     }
+
+    // Keep the address bar on the URL that matches the language on screen,
+    // so a shared link opens in the same language. Text swaps in place; no redirect.
+    // Before the address changes, pin relative file links (PDFs, lazy images) to
+    // full URLs; otherwise they would resolve against the new folder (/es/) and break.
+    let linksPinned = false;
+    const pinRelativeLinks = () => {
+        if (linksPinned) return;
+        linksPinned = true;
+        const isRel = (v) => v && !/^(?:[a-z][a-z0-9+.-]*:|\/\/|\/|#)/i.test(v);
+        document.querySelectorAll('[src],[href],[data-href-en],[data-href-es]').forEach(el => {
+            ['src', 'href', 'data-href-en', 'data-href-es'].forEach(attr => {
+                const v = el.getAttribute(attr);
+                if (isRel(v)) el.setAttribute(attr, new URL(v, document.baseURI).href);
+            });
+        });
+    };
+    const syncUrl = (lang) => {
+        if (!window.history || !history.replaceState || location.protocol === 'file:') return;
+        const path = location.pathname;
+        const isEs = /\/es\/(index\.html)?$/.test(path);
+        let next = null;
+        if (lang === 'es' && !isEs) next = path.replace(/\/(index\.html)?$/, '/') + 'es/';
+        if (lang === 'en' && isEs)  next = path.replace(/es\/(index\.html)?$/, '');
+        if (next) { pinRelativeLinks(); try { history.replaceState(null, '', next + location.search + location.hash); } catch (e) {} }
+    };
 
     const langBtn = document.createElement('button');
     langBtn.id = 'lang-toggle';
@@ -665,7 +705,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update <html> lang for screen readers and AI parsers
         document.documentElement.setAttribute('lang', lang);
 
-        try { localStorage.setItem('sqLang', lang); } catch (e) {}
+        if (t.meta_title) document.title = t.meta_title.replace(/&amp;/g, '&');
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && t.meta_desc) metaDesc.setAttribute('content', t.meta_desc);
+        syncUrl(lang);
+
         syncFloatLang(lang);
         document.dispatchEvent(new CustomEvent('sq:lang', { detail: lang }));
         if (themeBtn) { themeBtn.setAttribute('aria-label', themeLabel()); themeBtn.title = themeLabel(); }
@@ -689,6 +733,7 @@ document.addEventListener('DOMContentLoaded', () => {
         html.style.overflowAnchor = 'none';          // we handle anchoring ourselves
 
         currentLang = currentLang === 'en' ? 'es' : 'en';
+        try { localStorage.setItem('sqLang', currentLang); } catch (e) {}
         updateContent(currentLang);
 
         const restore = () => {
